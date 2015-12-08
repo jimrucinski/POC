@@ -3,8 +3,7 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>        
         <script type="text/javascript" src="./scripts/jquery.formatCurrency-1.4.0.min.js"></script>
 	<style>
-		table{border:solid 1px #000000;font-family:calibri;padding-left:3px;padding-right:3px;background-color:#eeeeee;}
-	
+		table{border:solid 1px #000000;font-family:calibri;padding-left:3px;padding-right:3px;background-color:#eeeeee;}	
 		table th{text-align:left;text-transform:capitalize;text-align:right;}	
 		table td{text-transform:capitalize;text-align:right;}
 		.header{font-weight:bolder;text-align:left;}
@@ -14,7 +13,7 @@
 	</style>
 	
 
-	<title>Simple PHP Calculator</title>
+	<title>M&T Estimate Calculator</title>
 
 </head>
 <body>
@@ -112,7 +111,7 @@
 			<td><div id="itemTotal" class='ItemTot'/></td>
 		</tr>
 		<tr id="decorStuff">
-			<td class="header">decor</td>
+			<td class="header">décor</td>
 			<td><input type='text' name='itemCost' value="" /></td>
 			<td><input type='text' name='itemQty' value=""/></td>
 			<td><div id="itemTotal" class='ItemTot'/></td>
@@ -140,9 +139,9 @@
 			<td id="grandTotal"></td>
 		</tr>
 	</table>
-
-</body>
-<script>
+</form>
+    
+    <script>
 		var gratuity =.18;
 		var tax = .085;
 		var sum = 0;
@@ -181,6 +180,7 @@
 		sum = Number(total_amount) + Number(gratuityTot) + Number(taxTot);			
 		$('#grandTotal').html( sum.toFixed(2)).formatCurrency();
 		});
-		
-	</script>
+</script>
+</body>
+
 </html>

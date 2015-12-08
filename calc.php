@@ -1,13 +1,15 @@
 <html>
 <head>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>        
+        <script type="text/javascript" src="./scripts/jquery.formatCurrency-1.4.0.min.js"></script>
 	<style>
-		table{border:solid 1px #000000;font-size:smaller;font-family:calibri;}
-		tr:nth-child(even){background-color:#ebebeb;}
-		table th{text-align:left;text-transform:capitalize;}	
-		table td{text-transform:capitalize;padding-left:3px;text-align:right;}
+		table{border:solid 1px #000000;font-family:calibri;padding-left:3px;padding-right:3px;background-color:#eeeeee;}
+	
+		table th{text-align:left;text-transform:capitalize;text-align:right;}	
+		table td{text-transform:capitalize;text-align:right;}
 		.header{font-weight:bolder;text-align:left;}
-		input{width:50px}
+                .footer{font-weight:bolder;text-align:right;background-color:#cccccc;}
+		input{width:50px;text-align:right;}
 		.ItemTot{width:70px;}
 	</style>
 	
@@ -21,8 +23,8 @@
 	<table cellspacing="0" cellpadding="0">
 		<tr>
 			<th>&nbsp;</th>
-			<th>cost per</th>
-			<th>quantity</th>
+			<th>cost</th>
+			<th>qty.</th>
 			<th>total</th>
 		</tr>
 		<tr id="coffeeStuff">
@@ -121,20 +123,20 @@
 			<td><input type='text' name='itemQty' value=""/></td>
 			<td><div id="itemTotal" class='ItemTot'/></td>
 		</tr>
-		<tr>
-			<td colspan="3" class="header" style="text-align:right;">subtotal</td>
+		<tr class="footer">
+			<td colspan="3" style="text-align:right;">subtotal</td>
 			<td id="subTotal"></td>	
 		</tr>
-		<tr>
-			<td colspan="3" class="header" style="text-align:right;">gratuity</td>
+		<tr class="footer">
+			<td colspan="3" style="text-align:right;">gratuity</td>
 			<td id="gratuityTotal"></td>
 		</tr>
-		<tr>
-			<td colspan="3" class="header" style="text-align:right;">tax</td>
+		<tr class="footer">
+			<td colspan="3" style="text-align:right;">tax</td>
 			<td id="taxTotal"></td>
 		</tr>
-		<tr>
-			<td colspan="3" class="header" style="text-align:right;">total</td>
+		<tr class="footer">
+			<td colspan="3"style="text-align:right;">total estimate</td>
 			<td id="grandTotal"></td>
 		</tr>
 	</table>
@@ -171,13 +173,13 @@
 				total_amount += parseFloat(am, 10);
 			}
 		});
-		$('#subTotal').html('$' + total_amount.toFixed(2));
+		$('#subTotal').html(total_amount.toFixed(2)).formatCurrency();
 		gratuityTot = (total_amount*gratuity).toFixed(2)
-		$('#gratuityTotal').html('$' + gratuityTot);
+		$('#gratuityTotal').html(gratuityTot).formatCurrency();
 		taxTot = (total_amount*tax).toFixed(2);
-		$('#taxTotal').html('$' + taxTot);
+		$('#taxTotal').html(taxTot).formatCurrency();
 		sum = Number(total_amount) + Number(gratuityTot) + Number(taxTot);			
-		$('#grandTotal').html('$' + sum.toFixed(2));
+		$('#grandTotal').html( sum.toFixed(2)).formatCurrency();
 		});
 		
 	</script>

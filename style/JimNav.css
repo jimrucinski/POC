@@ -1,82 +1,125 @@
 body
-		{
-			background-color: #f7efeb;
-			padding: 1.25em; /* 20 */
-		}
+    {
+        font:1em/1.5em 'calibri','Verdana', 'Arial', sans-serif;
+        background-color: #f7efeb;
+        padding:.0 0 0 0;
+        margin:0 0 0 0;
+    }
 
-		#mobileNav
-		{
-			position:absolute;
-			display:none;
-		}
-		#mobileMenuLink{
-			font-size:1.5em;
-			margin-left:1.1em;
-			height:100%;
-			text-transform:uppercase;
-
-
-		}
-		#mobileNav #hamburger{
-			position:absolute;
-			left:0;
-			padding-right:1em;
-			vertical-align:middle;
-			border:1 solid #000;
-			margin-left:0;
-
-
-		}
-		#hamburger div
-		{
-			display:block;
-			width:1.5em;
-			height:.25em;
-			margin:.25em 0;
-			background:#000000;
-			z-index:99;
-		}
-		#menu
-		{
-			width: 100%; /* 1000 */
-			background-color: #ccc;
-			height:1.35em;
+    #mobileNav
+    {
+            position:absolute;
+            display:none;
+            cursor: hand;
+            padding-top:1em;
+            
+    }
+    
+    #mobileMenuLink{
+            font-size:1.5em;
+            padding-top:.05em;
+            margin-left:1.5em;
+            height:100%;
+            text-transform:uppercase;
+    }
+    #mobileNav #hamburger{
+            position:absolute;
+            left:0;
+            padding-right:1em;
+            padding-left:.5em;
+            vertical-align:middle;
+            margin-left:0;
 
 
-		}
-		#menu ul a{
-		color:#000;
-		}
-		
+    }
+    #hamburger div
+    {
+            display:block;
+            width:1.5em;
+            height:.25em;
+            margin:.25em 0;
+            background:#5A4633;
+            z-index:99;
+    }
+    #menu
+    {
+        background-color: #5A4633;
+        height:1.35em;
+        
 
-		
+            
+    }
+    #menu ul a{
+    color:#fff;
+    text-decoration:none;
+    }
+    
+    /* first level */
 
-		/* first level */
 
-		
-		#menu > ul > li
-		{
-			width: 20%;
-			height: 100%;
-			float: left;
-		}
-					
-	@media only screen
+    #menu > ul > li
+    {
+        
+        padding-right:5%;
+        float: left;
+    }
+	
+    
+   
+    @media screen and (max-width:800px)
+
+    {
+        body { 
+        font-size:0.8em; 
+    }
+    
+
+    
+    #menu{
+            display:none;
+            width:15em;	
+            position:relative;
+            top:1.5em;
+            background-color:#f7efeb;
+        }
+        #menu ul{position:relative;
+        }
+        #menu ul li{
+            float:none;
+            display:block;
+            background-color: #5A4633;
+            width:100%;
+            height:1em;                        
+            font-size:larger;
+            padding:.5em 0 .5em .5em;
+        }
+        #mobileNav{display:block;}
+        
+        #menu.showMenu{display:block;}//these two classes are used to resolve the issue with the horizontal menu not showing
+        #menu.hideMenu{display:none;}//after the browser has been shrunk to less than 800 px and then resized again.
+    }
+    
+    
+    @media  screen
     and (min-device-width: 320px)
     and (max-device-width: 640px)
     {
-		#menu{
-			display:none;
-			padding-top:3em;
-			width:15em;
-			height:15em;
-			background-color:#ccc;
-		}
-		#menu ul li{
-			display:inline-block;
-			width:100%;
-			height:2em;
-			
-		}
-		#mobileNav{display:block;}
-	}
+        #menu{
+            display:none;
+            width:15em;	
+            position:relative;
+            top:1.5em;
+            background-color:#f7efeb;
+        }
+        #menu ul{position:relative;
+        }
+        #menu ul li{
+            display:block;
+            background-color: #5A4633;
+            width:100%;
+            height:1em;                        
+            font-size:larger;
+            padding:.5em 0 .5em .5em;
+        }
+        #mobileNav{display:block;}
+}

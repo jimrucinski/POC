@@ -3,10 +3,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="style/JimNav.css">
 <script language="javascript">
+   
 function toggleMobileMenu()
 {
 var elm = document.getElementById("menu");
-elm.style.display = elm.style.display === 'none' ? 'block' : 'none';
+elm.className = elm.className==='hideMenu' || elm.className==='' ? 'showMenu' : 'hideMenu';
 }
 </script>
 </head>
@@ -21,7 +22,7 @@ elm.style.display = elm.style.display === 'none' ? 'block' : 'none';
             </div>
             <div id="MobileMenuLink">menu</div>
 	</div>
-	<div id="menu">
+	<div id="menu" >
             <ul>		
                 <li><a href="http://personifyonline.com/default_responsive.aspx?blog" aria-haspopup="true">Search</a></li>
                 <li><a href="http://personifyonline.com/default_responsive.aspx?blog" aria-haspopup="true">GeoSearch</a></li>		

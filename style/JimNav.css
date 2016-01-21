@@ -1,0 +1,82 @@
+body
+		{
+			background-color: #f7efeb;
+			padding: 1.25em; /* 20 */
+		}
+
+		#mobileNav
+		{
+			position:absolute;
+			display:none;
+		}
+		#mobileMenuLink{
+			font-size:1.5em;
+			margin-left:1.1em;
+			height:100%;
+			text-transform:uppercase;
+
+
+		}
+		#mobileNav #hamburger{
+			position:absolute;
+			left:0;
+			padding-right:1em;
+			vertical-align:middle;
+			border:1 solid #000;
+			margin-left:0;
+
+
+		}
+		#hamburger div
+		{
+			display:block;
+			width:1.5em;
+			height:.25em;
+			margin:.25em 0;
+			background:#000000;
+			z-index:99;
+		}
+		#menu
+		{
+			width: 100%; /* 1000 */
+			background-color: #ccc;
+			height:1.35em;
+
+
+		}
+		#menu ul a{
+		color:#000;
+		}
+		
+
+		
+
+		/* first level */
+
+		
+		#menu > ul > li
+		{
+			width: 20%;
+			height: 100%;
+			float: left;
+		}
+					
+	@media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 640px)
+    {
+		#menu{
+			display:none;
+			padding-top:3em;
+			width:15em;
+			height:15em;
+			background-color:#ccc;
+		}
+		#menu ul li{
+			display:inline-block;
+			width:100%;
+			height:2em;
+			
+		}
+		#mobileNav{display:block;}
+	}

@@ -14,6 +14,13 @@
 	<title>M&T Estimate Calculator</title>
 </head>
 <body>
+
+<?php
+$buyer = "1010000001";
+$supplier="0000100010";
+similar_text($buyer,$supplier,$percent);
+echo $percent;
+?>
     <form method='post' action='calc.php' id='estimator'>
             <table cellspacing="0" cellpadding="0">
                     <tr>
@@ -26,7 +33,7 @@
                             <td class="header">coffee</td>
                             <td><input type='text' name='itemCost' value="" /></td>
                             <td><input type='text' name='itemQty' value=""/></td>
-                            <td><div id="itemTotal" class='ItemTot'/></td>
+                            <td><div id="itemTotal" class='ItemTot'/></td>                            
                     </tr>
                     <tr id="waterStuff">
                             <td class="header">bottled water</td>
@@ -107,7 +114,7 @@
                             <td><div id="itemTotal" class='ItemTot'/></td>
                     </tr>
                     <tr id="decorStuff">
-                            <td class="header">décor</td>
+                            <td class="header">dï¿½cor</td>
                             <td><input type='text' name='itemCost' value="" /></td>
                             <td><input type='text' name='itemQty' value=""/></td>
                             <td><div id="itemTotal" class='ItemTot'/></td>

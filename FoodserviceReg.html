@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+	#FoodserviceRegistrationTable{clear:both;width:100%;}
+    @media
+    only screen and
+    (min-device-width: 641px) and (max-device-width: 1024px)  {
+    /* Force table to not be like tables anymore */
+    #FoodserviceRegistrationHeader, thead, tbody, th, td, tr {
+    /*min-width:100%;*/
+    display: block;
+    border: #eee solid 1px;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    #FoodserviceRegistrationHeader {
+    display:none;
+    }
+    #FoodserviceRegistrationTable  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    }
+    #FoodserviceRegistrationTable   td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+	
+    }
+    /*
+    Label the data
+    */
+    #FoodserviceRegistrationTable td:nth-of-type(1):before {font-weight:bolder;float:left;width:50%; content: " "; }
+    #FoodserviceRegistrationTable td:nth-of-type(2):before {font-weight:bolder;float:left;width:50%; content: "Member Before June 24"; }
+    #FoodserviceRegistrationTable td:nth-of-type(3):before {font-weight:bolder;float:left;width:50%; content: "Non-Member Before June 24"; }
+    #FoodserviceRegistrationTable td:nth-of-type(4):before {font-weight:bolder;float:left;width:50%; content: "Member After June 24"; }
+    #FoodserviceRegistrationTable td:nth-of-type(5):before {font-weight:bolder;float:left;width:50%; content: "Non-Member After June 24"; }
+    }
+    @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 640px)
+    {
+    #FoodserviceRegistrationTable, thead, tbody, th, td, tr {
+    width:100%;
+    display: block;
+    border: #eee solid 1px;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    #FoodserviceRegistrationHeader {
+    display:none;
+    }
+    #FoodserviceRegistrationTable  td:nth-of-type(1) {
+    /* Behave  like a "row" */
+    position: relative;
+    font-size:larger;
+    }
+    #FoodserviceRegistrationTable  td {
+    /* Behave  like a "row" */
+    position: relative;
+    }
+    #FoodserviceRegistrationTable   td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    }
+    /*
+    Label the data
+    */
+    #FoodserviceRegistrationTable td:nth-of-type(1):before {font-weight:bolder;float:left;width:100%; content: " "; }
+    #FoodserviceRegistrationTable td:nth-of-type(2):before {font-weight:bolder;float:left;width:100%; content: "Member Before June 24"; }
+    #FoodserviceRegistrationTable td:nth-of-type(3):before {font-weight:bolder;float:left;width:100%; content: "Non-Member Before June 24"; }
+    #FoodserviceRegistrationTable td:nth-of-type(4):before {font-weight:bolder;float:left;width:100%; content: "Member After June 24"; }
+    #FoodserviceRegistrationTable td:nth-of-type(5):before {font-weight:bolder;float:left;width:100%; content: "Non-Member After June 24"; }
+    }
+    </style>
+    </head>
+    <body>
+       <p style="text-align: center;"><strong>Registration Information</strong></p>
+<br />
+<table id="FoodserviceRegistrationTable">
+
+        <tr id="FoodserviceRegistrationHeader">
+            <td> &nbsp;</td>
+            <td><strong>Member (before June 24) </strong></td>
+            <td><strong>Non-Member (before June 24) </strong></td>
+            <td><strong>Member (after June 24) </strong></td>
+            <td><strong>Non-Member (after June 24) </strong></td>
+        </tr>
+        <tr>
+            <td><strong>Single Registrant</strong></td>
+            <td>$930</td>
+            <td>$1,395</td>
+            <td>$1,055</td>
+            <td>$1,625</td>
+        </tr>
+        <tr>
+            <td><strong>Multi Registrant</strong> (2+)*<br />
+            2 or more submitted from the same company at the same time. Call for discount rates for 10 or more: +1 (302) 738-7100</td>
+            <td>$880</td>
+            <td>$1,345</td>
+            <td>$1,005</td>
+            <td>$1,575</td>
+        </tr>
+        <tr>
+            <td><strong>Foodservice Operator</strong><br />
+            To receive your discounted rate online, enter 16FSCOOP in the &ldquo;Promo Code&rdquo; box at check out.</td>
+            <td>$295</td>
+            <td>$395</td>
+            <td>$295</td>
+            <td>$395</td>
+        </tr>
+        <tr>
+            <td><strong>Hands-On Fruit &amp; Vegetable Training</strong> (Fri, July 29)**</td>
+            <td>$250</td>
+            <td>$250</td>
+            <td>$250</td>
+            <td>$250</td>
+        </tr>
+        <tr>
+            <td><strong>Opening Reception</strong> <br />
+            (Regular Rate)***<br />
+            Additional tickets only. Must accompany registration for advance sales. Opening Reception is included with a Conference registration.</td>
+            <td>$100</td>
+            <td>$150</td>
+            <td>$100</td>
+            <td>$150</td>
+        </tr>
+        <tr>
+            <td><strong>Opening Reception</strong> (Exhibitor)</td>
+            <td>$50</td>
+            <td>$50</td>
+            <td>$50</td>
+            <td>$50</td>
+        </tr>
+        <tr>
+            <td><strong>Center for Growing Talent by PMA&nbsp;<br />
+            Women&rsquo;s Fresh Perspectives Reception</strong>
+            </td>
+            <td>Free</td>
+            <td>Free</td>
+            <td>Free</td>
+            <td>Free</td>
+        </tr>
+        <tr>
+            <td><strong>Center for Growing Talent by PMA<br />
+            Joe Nucci Memorial Golf Tournament</strong>&nbsp;</td>
+            <td>$375</td>
+            <td>$375</td>
+            <td>$375</td>
+            <td>$375</td>
+        </tr>
+        <tr>
+            <td><strong>Center for Growing Talent by PMA 5K Race for Talent</strong>&nbsp;</td>
+            <td>$40</td>
+            <td>$40</td>
+            <td>$40</td>
+            <td>$40</td>
+        </tr>
+
+</table>
+<p>* Multiple registration is the cost per person for two or more from the same company submitted at the same time.</p>
+<p>** Registration is limited to 75 attendees and to the following business segments: Foodservice operators, distributors and chefs.</p>
+<p>*** Additional tickets only. Must accompany registration for advance sales. The Opening Reception is included with a Conference registration.</p>
+Don't forget to review <a href="~/link.aspx?_id=CEBA54532FAA4A4FB52D40D421A6CAFC&amp;_z=z">PMA's registration policies.</a>
+    </body>
+</html>

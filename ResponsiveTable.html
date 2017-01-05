@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+  
+            @media screen and (max-width:600px){
+                table td:before{
+                    content: attr(data-label);
+                    float:left;
+                    text-transform:uppercase;
+                    font-weight:bolder;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Column</th>
+                    <th>Second Column</th>
+                    <th>Third Column</th>
+                    <th>Fourth Column</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="first">Onecy</td>
+                    <td data-label="second">Twocy</td>
+                    <td data-label="third">Threecy</td>
+                    <td data-label="fourth">Fourcy</td>
+                </tr>
+                 <tr>
+                    <td data-label="first">fivecy</td>
+                    <td data-label="second">sixcy</td>
+                    <td data-label="third">sevency</td>
+                    <td data-label="fourth">eightcy</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

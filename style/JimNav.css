@@ -59,7 +59,7 @@ body
 
     #menu > ul > li
     {
-        
+        list-style:none;
         padding-right:5%;
         float: left;
     }

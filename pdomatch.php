@@ -96,7 +96,7 @@ $insertStringValues = rtrim($insertStringValues,',');
 
 $sqlInsert = "INSERT INTO eventmatchpercentages (buyerCompanyName, supplierCompanyName, matchPercentage)
 values " . $insertStringValues . ';';
-//echo $sql;
+//echo $sqlInsert;
 //die();
 }
 catch(PDOException $e){

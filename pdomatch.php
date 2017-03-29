@@ -18,7 +18,7 @@ try{
 $conn = new PDO($dsn, $username, $password);
 //$statement = $conn->query('select * from companies');
 //$statement->setFetchMode(PDO::FETCH_OBJ);
-$sql = 'CAll getBuyersAndSuppliersList()';
+$sql = 'CAll getBuyersAndSuppliersList()';//this procedure calls two additional procedures generateBuerMatchPattern and generateSupplierMatchPattern
 $stmt = $conn->query($sql);
 $i = 0;
 //do{
@@ -45,10 +45,7 @@ foreach($buyers as $buyer){
                 ++$buyerMatches;
             }
         }
-        $matchPercent = ($buyerMatches/$buyerTotal) * 100;
-       // array_push($values,$buyer['companyName']);
-       // array_push($values,$supplier['companyName']);
-       // array_push($values,$matchPercent);
+       $matchPercent = ($buyerMatches/$buyerTotal) * 100;
        $cat = '"' .  $buyer['companyName'] . '","' . $supplier['companyName'] . '",' . $matchPercent;
        array_push($results,$cat);
 //        echo ' - ' . ($buyerMatches/$buyerTotal) * 100  . '<br/>';
@@ -74,39 +71,18 @@ $values = array();
 $insertStringValues='';
 foreach ($results as $rowValues) {
    $insertStringValues .='(' . $rowValues . '),';
-
-   
-    //foreach($rowValues as $value){
-    //    echo '(' . $value .')<br/>';
-   // }
-    //foreach ($rowValues as $key => $rowValue) {
-    //    $rowValues[$key] = $rowValues[$key];
-          
-   // }
-//$values[] = "(" . implode(', ', $rowValues) . ")";
-   
 }
-//echo strlen($insertStringValues);
-//echo '<br/>' . $insertStringValues;
-
 $insertStringValues = rtrim($insertStringValues,',');
-//$insertStringValues = addslashes($insertStringValues);
-
-
 
 $sqlInsert = "INSERT INTO eventmatchpercentages (buyerCompanyName, supplierCompanyName, matchPercentage)
 values " . $insertStringValues . ';';
-//echo $sqlInsert;
-//die();
 }
 catch(PDOException $e){
-
 
 die('could not connect to the database<br/>' . $e->getMessage());
 
 }
 try{
-//echo $insertStringValues;
 $sql2 = 'CALL insertPercentageMatches(?)';
 $stmt2 = $conn->prepare($sql2);
 $stmt2->bindParam(1,$insertStringValues, PDO::PARAM_LOB);
@@ -114,33 +90,35 @@ $stmt2->bindParam(1,$insertStringValues, PDO::PARAM_LOB);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // without this no error is generate when the proc doesn't work
 $stmt2->execute();
 $stmt2->closeCursor();  //must close the cursor or you cannot execute any other commands agains MySql
-
-
-//$sql = 'call insertPercentageMatches("' . addslashes($insertStringValues) . ';")';
-//echo $sql;
-
-//$conn->query($sql);
 }
 catch(PDOException $e){
     die($e->getMessage());
 }
-//echo implode(', ', $values);
 
-//$query = "INSERT INTO table_name ($fields) VALUES (" . implode (', ', $values) . ")";
+$sql = 'SELECT * FROM buyerssuppliers.eventmatchpercentages order by buyerCompanyName asc, matchPercentage desc;';
+$stmt = $conn->query($sql);
+$i = 0;
+$rowset = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$buyers = $rowset;
 
 
-
-
-
-$conn = null; //closet the connection
 ?>
 <html>
 <head>
-	
 </head>
 <body>
 
+<?php
+$curCompany="";
+foreach($buyers as $buyer){
+    if($buyer['buyerCompanyName']!=$curCompany){
+        echo '<h3>' . $buyer['buyerCompanyName'] . '</h3>';
+    }
+        echo'<div>' . $buyer['matchPercentage'] . ' - ' . $buyer['supplierCompanyName'] . '</div>';
+    $curCompany = $buyer['buyerCompanyName'];
+}
 
+$conn = null; //closet the connection
+?>
 </body>
-
 </html>

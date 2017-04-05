@@ -1,32 +1,16 @@
 <?php
-class MatchingDataDataLoad
-{
-    private $pathToFile;
-    private $obj;
-    
-    public function __contruct(MatchingDataUpload $obj)
-    {
-        $this->obj = $obj;
-    }
-
-    public function Test(){
-        echo 'here';
-        var_dump($this->obj);
-    }
-
-
-}
-
 class MatchingDataUpload
 {
     private $uploadPath='Uploads/';
     private $allowedFileTypes = array('application/vnd.ms-excel');
-
     private $targetFileWithPath;
     private $csvFile;
     private $fileName;
     private $fileType;
     private $tableName="uploadedData";
+
+    public $ColumnNames = array();
+    public $Data=array();
 
    
     public function __construct($csvFile){
@@ -37,10 +21,14 @@ class MatchingDataUpload
                        
     }
     
-
-    public function uploadFile(){
+/**
+    *Description goes hear. 
+*/
+    public function UploadFile(){
         if(in_array($this->fileType, $this->allowedFileTypes)){
             move_uploaded_file($this->csvFile["tmp_name"], $this->targetFileWithPath); 
+            $this->generateColumnNames();
+            $this->generateData();
             return true;
         }
         else{            
@@ -49,18 +37,87 @@ class MatchingDataUpload
         }
     }
 
-    public function generateInsertStatement(){
+//Get the column names of the file necessary for creating an the SQL create Table statment.
+    private function generateColumnNames(){
         $file = fopen($this->targetFileWithPath, "r");
-            $insertSQL = "INSERT into " . $this->tableName . "(" . $cols . ")";
+        $cols = "";
+        $data =fgetcsv($file);        
+
+        for($i=0;$i<sizeof($data);$i++){
+            if(trim($data[$i])<>"")
+            $this->ColumnNames[] = trim($data[$i]);
+        } 
+    }
+
+    private function generateData(){
+        $file = fopen($this->targetFileWithPath, "r");
+        $data =fgetcsv($file);
+        $skipFirstRow = true;
+        $curval = array();
+        while(($data = fgetcsv($file,100000,",")) !== FALSE)
+        {
+            $curval="";
+            for($i=0;$i<sizeof($data);$i++){                    
+                $curval[] = trim($data[$i]);
+            }
+            $this->Data[] = $curval;
+        }
+    }
+    
+    public function GenerateInsertStatement(){
+
+        $out = "INSERT INTO " . $this->tableName ;
+        $cols = "";
+        $curval = "";
+        foreach($this->ColumnNames as $ColumnName){
+            $cols .= $ColumnName . ',';
+        }
+        $cols = rtrim($cols,',');
+        
+        $out .= '(' . $cols . ') VALUES(';
+
+        foreach($this->Data as $items)
+        {
+            $curval=' (';
+            for($i=0;$i<sizeof($items);$i++)
+            {
+                $curval.=trim($items[$i]);
+                //$curval.=trim($items[$i]) <> ''?1:0;
+            }
+            //foreach($items as $item){
+            //    $curval .= trim($item) <> ''?1:0;;
+            //}
+            //$curval .= rtrim($curval,',');
+            $curval .= '),';
+            $out .= $curval;
+            $curval='';
+        }
+        $out .= rtrim($out,',');
+        $out .=")";
+        return rtrim($out,',');
+
+
+
+        /*
+            $file = fopen($this->targetFileWithPath, "r");
+            $insertSQL = "INSERT INTO " . $this->tableName;
             $vals="";
+            $cols = "";
             $skipFirstRow = true;
             while(($data = fgetcsv($file,100000,",")) !== FALSE)
             {
                 $curval="";
-                if($skipFirstRow){$skipFirstRow=false;}
+                if($skipFirstRow){
+                    $skipFirstRow=false;//Skip the header row.
+                     for($i=0;$i<sizeof($data);$i++){
+                         $cols .= trim($data[$i]) . $i . ',';
+                     }
+                     $cols = rtrim($cols,',');
+                    }
                 else{
                     $curval = "(";
                 for($i=0;$i<sizeof($data);$i++){
+                    
                     if($i==0)
                         $curval .= '"' . trim($data[$i]) . '"';
                     else
@@ -73,8 +130,11 @@ class MatchingDataUpload
                 $vals .= $curval;
             }
             $vals = rtrim($vals,',');
-            $insertSQL .= ' VALUES' . $vals;
+            $insertSQL .= '(' . $cols . ') VALUES' . $vals;
+            return $insertSQL;
+            */
     }
+    
 }
 
 ?>

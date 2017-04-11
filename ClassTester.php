@@ -2,6 +2,20 @@
     include 'MatchingData.class.php';
     include 'PmaMatching.class.php';
 
+function recursive($array){
+    foreach($array as $key => $value){
+        //If $value is an array.
+        if(is_array($value)){
+            //We need to loop through it.
+            recursive($value);
+        } else{
+            //It is not an array, so print it out.
+            echo '<strong>' . $key . '</strong>' . ' = ' . $value, '<br>';
+        }
+    }
+}
+
+
     if (isset($_FILES['first'])){
         try{
 
@@ -15,13 +29,94 @@
             }
 
 
-var_dump($buyers->AssociativeData);
+///add in a check to ensure that both arrays have the same amount of columns
+$buyers =$buyers->AssociativeData;
+$suppliers = $suppliers->AssociativeData;//var_dump($buyers);
+$curKeyName = "";
+$keys = "";
+$masterArray = Array();
+$coArray = Array();
+foreach($buyers as $buyer){
+    $keys = array_keys($buyer);
+    $buyerCompanyName = $buyer[$keys[0]]; //company name should always be in position zero.
+    echo '<h2>' . $buyerCompanyName  . '</h2>';
+   $coArray = array('PrimaryCompanyName' => $buyerCompanyName);
+    
+   // $childArray= Array();
+   // $indivMatches = array();
+    for ($i=1;$i<sizeof($keys);$i++){
+        //$matches=Array();
+        $items = str_split($buyer[$keys[$i]]); //array of all the buyers responses for the current product or region
+        $itemCares = array_sum($items); // total amount of things the buyer cares about
+        echo 'cares about ' . $itemCares . '<br/>';
+        
+        foreach($suppliers as $supplier){
+            
+            $buyerMatches = 0;
+            $supplierKeys = array_keys($supplier);
+            $supplierCompanyName = $supplier[$supplierKeys[0]];  
+            $supplierItems = str_split($supplier[$supplierKeys[$i]]);//array of all the suppliers responses for the current product or region                      
+            echo '<br/><i>' . $supplierCompanyName . '</i>';
+            
+             //for($supi=1;$supi<sizeof($supplierKeys);$supi++)
+           // {
+            //   array_push($childArray,$supplierCompanyName);
+            for($x=0;$x<sizeof($supplierItems);$x++){
+                if($items[$x] !=0 && $items[$x] == $supplierItems[$x])
+                    ++$buyerMatches;                    
+            }
+            
+           // $matches[$supplierKeys[$i]] = ($buyerMatches/$itemCares)*100;
+           
+            echo '<br/>&nbsp;&nbsp;&nbsp;' .  $supplierKeys[$i] . ' MATCHES = ' . $buyerMatches.' percent match = ' . ($buyerMatches/$itemCares)*100 ;
+            $supArray = array('SecondaryCompanyName' => $supplierCompanyName, $supplierKeys[$i] => $buyerMatches);
+            //var_dump($matches);
+           // }
+           if($i===sizeof($keys)-1)//if we are done with this record add to the array ... otherwise records add multiple times
+            array_push($coArray, $supArray);  
+        }
+         //var_dump($matches);
+    }
 
+    array_push($masterArray,$coArray);
+}
 
+//var_dump($masterArray);
+echo '<p>';
+recursive($masterArray);
+echo '</p>';
+//var_dump($buyers);
+//var_dump($suppliers);
+ /*
+$keys = array_keys($buyers);
+for($i = 0; $i < count($buyers); $i++) {
+   
+    $companyName=true;    
+    foreach($buyers[$keys[$i]] as $key => $value) {
+       $items = str_split($value);
+       //var_dump($items);
+        $buyerTotal = "";
+        if(!$companyName)
+            $buyerTotal = array_sum(str_split($value));
+        else{
+            echo $value .'<br/>';
+            $companyName = false;
+        }
+        
+        foreach($suppliers[$keys[$i]] as $key => $value){
+            echo '     ' . $value . '<br/>';
+        }
+        //echo $buyerTotal . '  ';
+        //echo $key . " " . $value . "<br>";
+    }
+    echo "}<br>";
+    
+}
+*/
 $BuyerSupplierResults= Array();
 $Indie = Array();
 
-foreach($buyers->Data as $buyer){
+/*foreach($buyers->Data as $buyer){
      $arBuy = str_split($buyer[1]);
      $buyerTotal = array_sum($arBuy);
      foreach($suppliers->Data as  $supplier){
@@ -48,7 +143,7 @@ foreach($buyers->Data as $buyer){
 
         
 
-}
+}*/
 
 //var_dump($BuyerSupplierResults);
 

@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        background-color:#EEECEA;
+      }
+      #imageFormPersonalize{
+        float:left;
+      }
+      #imageFormPersonalize li{
+        list-style: none;
+        padding-bottom:1em;
+      }
+      #imageFormPersonalize li label{
+        display:block;
+        font-weight:bolder;
+        text-transform: capitalize;
+      }
+      .countDown{
+        display:inline-block;
+        border:none;
+        text-align:left;
+        color:#666666;
+
+        font-size:smaller;
+      }
+      #myCanvas{
+        display:inline-block;
+      }
+
+   @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 800px)
+    {
+      #imageFormPersonalize{
+        display:block;
+      }
+      #myCanvas{
+        display:block;
+      }
+    }
+    </style>
+    <script language="javascript" type="text/javascript">
+function limitText(limitField, limitCount, limitNum) {
+	if (limitField.value.length > limitNum) {
+		limitField.value = limitField.value.substring(0, limitNum);
+	} else {
+		limitCount.value = limitNum - limitField.value.length;
+	}
+}
+</script>
+
+  </head>
+  <body>
+    
+
+<div style="margin: 2em;">
+    <form id="modImage" name="modImage">
+      <ul id="imageFormPersonalize">
+        <li>
+          <label>line one text</label><input type='text' tabindex="1" id="line1" name="line1" maxlength="50" value="" onKeyDown="limitText(this.form.line1,this.form.countdown,50);"/>
+          <div class="countDown"><input readonly type="text" name="countdown" size="1" value="50" class="countDown"  style="text-align:right;" > characters left.</div>
+        </li>
+        <li>
+          <label>line two text</label><input type="text" tabindex="2" id="line2" name="line2" maxlength="50" value ="" onKeyDown="limitText(this.form.line2,this.form.countdown2,50);" />
+          <div class="countDown"><input readonly type="text" name="countdown2" size="1" value="50" class="countDown" style="text-align:right;"> characters left.</div>
+        </li>
+        <li>
+          <input type="button" onclick="javascript:modMe()" value="Generate Image"/>
+        </li>
+      </ul>
+
+    </form>
+    </div>
+<div id="pngHolder"></div>
+<div id="BaseImageHolder" style="visibility:hidden;"><img id="EventImage" src="./images/PMA_Email-Signature.jpg"></div>
+
+
+     <script>
+         function modMe(){   
+          
+          //Clear the image holder 
+          document.getElementById('pngHolder').innerHTML="";
+           // Get the image
+          var sampleImage = document.getElementById("EventImage");
+          var canvas = convertImageToCanvas(sampleImage);
+          
+          // Actions
+          
+          document.getElementById("pngHolder").appendChild(convertCanvasToImage(canvas));
+
+         }
+          function convertImageToCanvas(image) {
+  
+            var canvas = document.createElement("canvas");
+          
+            var context = canvas.getContext("2d");
+           
+            canvas.width = image.width;
+            canvas.height = image.height;
+
+            context.drawImage(image, 1, 5);
+
+            var x = canvas.width / 2;
+            var y = canvas.height / 2;
+            
+            //context.font = ".9em 'times new roman'";
+            context.font = "12px 'calibri'";
+            context.fillStyle="#ffffff";
+            context.textAlign="center";       
+            context.shadowColor="#000000";
+            context.shadowBlur=3;
+            context.lineWidth=2;                    
+            context.fillText(document.getElementById("line1").value, x, 104);
+            context.fillText(document.getElementById("line2").value, x, 116);
+                
+            return canvas;
+          }
+
+
+
+         function convertCanvasToImage(canvas) {
+
+				var image = new Image();
+				image.src = canvas.toDataURL("image/png");
+				return image;
+         }
+
+    </script>
+  </body>
+</html>      

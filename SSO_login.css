@@ -1,0 +1,808 @@
+body {
+	background: url(images/bg.png) repeat 0 0;
+	color: #000000;
+	font-family:Arial, Helvetica sans-serif;
+	font-size:100%;
+}
+
+.sso-body {
+    
+    display:block;
+    margin:0 auto;
+}
+
+
+#main_ForgotPasswordUserControl1_SubmitButton {
+    background-color: #b9d973;
+    background-position: -5px -5px;
+    padding: 5px 10px;
+    background-repeat: no-repeat;
+    border: 1px solid #adc570;
+    vertical-align: middle;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #5D7731;
+    text-shadow: 1px 1px #cfe5a4;
+}
+
+
+
+
+
+
+.clear-fix { clear: both;float: none;margin: 0 auto;padding: 0;}
+
+.navlink a {display:block; background-color:#06C; color:#fff; padding:5px 10px; border-radius:.7em}
+
+label {display:block; margin:.5em 0px}
+input.Button, input.TextBox {clear:both;  margin:.5em 0 }
+
+fieldset {margin:1em; border:1px solid #ccc; border-radius:1em; background-color:#eee}
+h1 {font-weight:bold; font-size:120%; margin:1em}
+
+.Dialog 
+{
+	background-color: #D1F1B5;
+	border: solid 1.0pt #8ECA59;
+}
+.Dialog td
+{
+	padding: 4px ;
+}
+.Button 
+{
+
+}
+
+.FieldLabel 
+{
+	
+	font-size: 10pt;
+	font-weight: bolder;
+}
+.Label
+{
+	
+	color: #454545;
+}
+.TextBox 
+{
+	
+}
+.RequiredFieldValidator
+{
+	font-weight: bolder;
+	font-size: 10pt;
+	color: #ff0000;
+	
+}
+.RequiredFieldValidatorMarker 
+{
+	
+	font-size: 10pt;
+	font-weight: bolder;
+	color: #0000FF;	
+}
+.ValidationSummary
+{
+	border-right: #a10000 0.5pt solid;
+	padding-right: 5px;
+	border-top: #a10000 0.5pt solid;
+	padding-left: 5px;
+	font-weight: bolder;
+	padding-bottom: 5px;
+	border-left: #a10000 0.5pt solid;
+	color: #fefe77;
+	padding-top: 5px;
+	border-bottom: #a10000 0.5pt solid;
+	background-color: #f42a41;
+}
+.HyperLink 
+{
+	
+	font-size: 8pt;
+}
+.CheckBox
+{
+	
+}
+.EmailTextBox 
+{
+	width: 250px;
+}
+.cssnav	{
+	position:relative;
+	
+	background-image: url(usercontrols/NeedHelp.gif);
+	background-repeat: no-repeat;display: block;
+	width: 540px;
+	height: 301px;
+	margin: 0; 
+	margin-bottom:0px;
+	padding: 0; 
+	}
+	.cssnav a {
+	display:block;
+	font-size: 11px;
+	width: 125px;
+	height: 25px;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	color: black;
+	text-decoration: none;
+	}
+	.cssnav img {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	}
+	* html a:hover {visibility:visible}
+	.cssnav a:hover img{visibility:hidden}
+	.cssnav span {	position:absolute;
+		left:5px;
+		top:3px;
+		margin:0;
+		cursor: pointer;
+	}
+	.content {font-size: 11px; color: #000000; text-decoration: none;}
+	.contentred {font-size: 11px; color: #FF0000; text-decoration: none;}
+	.contentSearch a:link {color: #0000ff; text-decoration: none;}
+	.content a:link {color: #990000; text-decoration: none;}
+	.content a:visited {color: #990000; text-decoration: none;}
+	.content a:active {color: #990000; text-decoration: none;}
+	.content a:hover {color: #990000; text-decoration: none;}
+	
+    .login-sumary
+     {
+        display: block;
+        max-width: 865px;
+        margin: 0 auto;
+        position: relative;
+        float: none;
+        clear: both;
+        background-color: #fff;
+        
+    }
+	
+	.red-top-bar {
+	   /* background-color:#036; 
+        height:10px; 
+        width:98%; 
+        clear:both; 
+        display:block; 
+        max-width:960px;
+	    margin-top: 1.5em;*/
+	}
+	
+
+    .login-wrapper > .row {
+        display: block;
+        float: none;
+        clear: both;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    form { background-color: #fff;}
+	
+    .form-sso-container {
+        
+        clear:both; 
+        display:block; 
+        min-height:400px;
+        
+    }
+
+    
+    .right-sso-decoration {
+        width:24%; 
+        float:left; 
+        display:block; 
+        padding:5% 8px;
+    }
+
+
+    .sso-sub-form {
+        padding: 4% 0;
+        line-height: 120%;
+        vertical-align: middle;
+    }
+
+    .sso-sub-form > input[type="text"] {
+
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    .button-row {
+        margin: 1% auto;
+
+    }
+
+    .button-row > .Button,
+    .button-row > .btn
+     {
+        border-radius: 3px;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        font-weight: 700;
+
+    }
+
+    .button-row > .Button:first-child,
+    .button-row > .btn:first-child {
+        margin-left: 0;
+        margin-right: 4px;
+    }
+
+    .button-row > .Button:last-child,
+    .button-row > .btn:last-child {       
+        margin-right: 0;
+    }
+
+    .button-row > .Button:only-child,
+    .button-row > .btn:only-child
+     {       
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+    .button-row > .btn.btn-default,
+    .button-row > .Button.btn-default {
+        vertical-align:middle;
+    }
+    
+    .button-row .btn.btn-primary,
+    .button-row .Button.btn-primary {
+        background-color:#b9d973;
+	    background-image:url(images/home/signInBtn-blank.png); 
+        background-position:-5px -5px; padding:5px 10px; background-repeat:no-repeat; border:1px solid #adc570; 
+        vertical-align:middle;
+        font-weight:bold; 
+        color:#5D7731; 
+        text-shadow: 1px 1px #cfe5a4;}
+    
+
+
+
+
+    .sso-sub-form label {
+        padding-right: 6px;    
+    }
+
+      .content.mobile-login {
+        text-align: left;
+        float: left;
+        
+        padding: 4%;
+            
+    }
+
+      label {
+          float: left; 
+      }
+
+	/* for mobile template */
+	
+.mobileContainer {font-size: 1.9em;}
+.mobileContainer #RememberMeCheckBox {width:50px; height:50px; margin-right:20px}
+.mobileContainer .loginLinks a {display:block; background-color:#06C; color:#fff; padding:5px 10px; border-radius:.4em; text-align:center; font-size:110%; margin:.5em 0; text-decoration:none}
+.mobileContainer .loginLinks a:hover, .mobileContainer .loginLinks a:active {background-color:#09C}
+.loginLinks .reset {display:none}
+
+
+.mobileContainer #RememberMeCheckBox:checked + label {background-color:#ccc;}
+
+.mobileContainer label {display:block; margin:.5em 0px}
+.mobileContainer .remember {margin:1em 0; padding:.6em; border-radius:.4em;  color:#000; text-align:center; border:1px solid #ccc;}
+.mobileContainer .remember input {}
+.mobileContainer .remember label {display:inline;}
+.mobileContainer .remember input {margin:0 .6em 0 0}
+.mobileContainer input.Button, .mobileContainer input.TextBox {clear:both;  margin:.5em 0; font-size:110%; padding:5px 10px }
+
+.mobileContainer fieldset {margin:1em; border:1px solid #ccc; border-radius:1em; background-color:#eee; font-size:120%}
+.mobileContainer h1 {font-weight:bold; font-size:120%; margin:1em}
+.mobileContainer .loginLinks a.hide {display:none}
+
+/* Replicating Ebusiness skinning */
+
+    /* Universal styles */
+
+        body {
+            margin: 0;
+        }
+
+        .wrapper {
+            background: url(images/bg2.jpg) no-repeat 50% 0;
+            min-height: 600px;
+        }
+
+        .container {
+            width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        @media screen and (max-width: 994px) {
+            header .container {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 0 10px;
+            }
+
+        }
+
+
+
+        .default-login-table {
+            width: 100%;
+        }
+
+    /* Header */
+
+        .header-container {
+            height: 110px;
+        }
+
+        a.logo {
+            background: url(images/logo.png) no-repeat;
+            width: 421px;
+            height: 61px;
+            text-indent: -9999px;
+            position: absolute;
+            bottom: 5px;
+            left: 4px;
+        }
+
+        @media screen and (max-width: 470px) {
+            .header-container {
+                height: 70px;
+            }
+
+            a.logo {
+                    width: inherit;
+                    background-size: contain;
+                    margin: 0px auto;
+                    display: block;
+                    position: relative;
+                    top: 5px;
+                    left: inherit;
+    
+            }
+
+
+            #main_ForgotPasswordUserControl1_SubmitButton,
+            #main_ForgotPasswordUserControl1_CancelButton {
+                padding: 14px 12px;
+                font-size: 135%;
+            }
+        }
+
+        .secondary2 {
+            float: right;
+            margin: 14px 0 7px;
+            padding: 0;
+        }
+
+        @media screen and (max-width: 40.5em) {
+            .secondary2 {
+                display: none;
+            }
+        }
+
+        .secondary2 a,
+        .secondary2 .connected {
+            font-size: 14px;
+            color: #FFF;
+        }
+
+        .secondary2 a {
+            background: url(images/secondaryDivide.png) no-repeat 100% 50%;
+            margin-right: 12px;
+            padding-right: 14px;
+        }
+
+        .secondary2 .social {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .secondary2 .social a {
+            background: url(images/social.png) no-repeat;
+            display: block;
+            text-indent: -9999px;
+            width: 20px;
+            height: 26px;
+            margin-right: 7px;
+            padding: 0;
+            float: left;
+        }
+
+        .secondary2 .social a.fb {
+            margin-right: 6px;
+            background-position: -4px 0;
+        }
+        .secondary2 .social a.fb:hover,
+        .secondary .social a.fb:focus { background-position: -4px -42px; }
+        .secondary2 .social a.twitter { background-position: -31px 0; }
+        .secondary2 .social a.twitter:hover,
+        .secondary .social a.twitter:focus { background-position: -31px -42px; }
+        .secondary2 .social a.yt { background-position: -57px 0; }
+        .secondary2 .social a.yt:hover,
+        .secondary .social a.yt:focus { background-position: -57px -42px; }
+        .secondary2 .social a.linked {
+            background-position: -83px 0;
+            margin-right: 0;
+        }
+        .secondary2 .social a.linked:hover,
+        .secondary .social a.linked:focus { background-position: -83px -42px; }
+
+    /* Footer */
+
+        .footerNav {
+            background: #3F5D8B;
+            padding: 32px 22px 27px;
+            margin-top: 28px;
+            clear: both;
+        }
+
+        .footerNav ul.col {
+            list-style: none;
+            float: left;
+            width: 150px;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media screen and (max-width: 40.5em) {
+            .footerNav ul.col {
+                padding-bottom: 10px;
+            }
+        }
+
+        div.footerNav ul.col li.title a {
+            font-size: 18px;
+            margin-bottom: 8px;
+            
+            font-weight: normal;
+        }
+
+        .footerNav ul.col li a {
+            color: #FFF;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        .clear {
+            clear: both;
+            display: block;
+            float: none;
+        }
+
+        .contentInfo {
+            background: #05142A;
+            padding: 26px 22px 27px;
+        }
+
+        .contentInfo a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .contentInfo a:hover,
+        .contentInfo a:focus {
+            color: #2a6496;
+            text-decoration: underline;
+        }
+
+        .contentInfo h2 {
+            font-size: 18px;
+            color: #FFF;
+            
+            font-weight: normal;
+            margin-bottom: 13px;
+            line-height: 1.2;
+        }
+
+        .contentInfo address {
+            font-size: 12px;
+            line-height: 1.21;
+            color: #FFF;
+            margin-bottom: 10px;
+            font-style: normal;
+        }
+
+        .contentInfo .credit {
+            font-size: 9px;
+            color: #FFF;
+            letter-spacing: 0.025em;
+        }
+
+/* END Replicating Ebusiness skinning - Matt H */
+
+@media screen and (max-width: 40.5em) {
+ 
+    .mobile-hide {
+        display: none;
+        visibility: hidden;
+    }
+
+    .container {
+        display: block;
+        float: none;
+        clear: both;
+        width: inherit;
+    }
+
+
+    .mobile-sumary.mobile-way {        
+        max-width: 500px;
+   
+    }
+
+    .red-top-bar {
+        display: none;
+    }
+
+    #ForgotUsernameUserControl1_CancelButton,
+    #ForgotPasswordUserControl1_CancelButton {
+        border: 1px solid #ddd;
+        border: 1px solid #ccc;
+        text-shadow: 1px 1px #fff;
+        background: rgb(242,242,242);
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodï¿½EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top, rgba(242,242,242,1) 0%, rgba(221,221,221,1) 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,242,242,1)), color-stop(100%,rgba(221,221,221,1)));
+        background: -webkit-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(221,221,221,1) 100%);
+        background: -o-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(221,221,221,1) 100%);
+        background: -ms-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(221,221,221,1) 100%);
+        background: linear-gradient(to bottom, rgba(242,242,242,1) 0%,rgba(221,221,221,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#dddddd',GradientType=0 );
+        color: #525252;
+        font-weight: bold;
+
+    }
+
+    #divPhoneHelp {
+        width: 99% !important;
+        margin: 0 auto;
+        max-width: 500px !important;
+        margin: 0 auto;
+        
+    }
+
+    #divPhoneHelp table {
+        max-width: 480px !important;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #divPhoneHelp td
+	{
+        display: block !important;
+    }
+   
+    
+    .button-row.mobile-way input {
+        margin: 2% auto;
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        box-shadow: 2px 2px 2px #ddd;
+        cursor: pointer;
+        letter-spacing: 0.2px;
+        text-shadow: 1px 1px 1px #efefef;
+                
+    } 
+   
+
+    .mobile-login-table-sub {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 470px;
+        display: block;
+    }
+
+    .mobile-login {
+        text-align:center;
+    }
+
+	 .content tr td {
+        float: left !important;	
+		
+    }
+	
+	 .content tr {
+	 display:block !important;
+	 clear:both;
+	 width:100% !important;
+	 min-width:200px;}
+
+	.content tbody:nth-child(3) {
+	clear:both !important;
+	float:none !important;}
+	
+
+
+    .sso-table,
+    .sso-row,
+    .sso-cell {
+        margin: 0;
+        padding: 0;
+        clear: both;
+        float: none;
+        display: block;
+    }
+
+    .EmailTextBox 
+{
+	width: 99%;
+    min-width: 250px;
+}
+
+	.content .EmailTextBox,
+    .content.mobile-login .TextBox,
+    .content.mobile-login input[type=text]
+     	{
+	padding:0 3%;
+	color:#666;
+	text-shadow:1px 1px 1px #efefef;
+	font-size:145%;
+	height:44px;
+	line-height:44px;
+	border:1px solid #ccc;
+	border-radius:4px; 
+	background: rgb(252,252,252); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(252,252,252,1) 45%, rgba(238,238,238,1) 96%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(45%,rgba(252,252,252,1)), color-stop(96%,rgba(238,238,238,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, rgba(252,252,252,1) 45%,rgba(238,238,238,1) 96%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, rgba(252,252,252,1) 45%,rgba(238,238,238,1) 96%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, rgba(252,252,252,1) 45%,rgba(238,238,238,1) 96%); /* IE10+ */
+        background: linear-gradient(to bottom, rgba(252,252,252,1) 45%,rgba(238,238,238,1) 96%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+        -moz-box-shadow: 0 1px 1px #e2e2e2 inset, 0 1px 0 #fff;
+        -webkit-box-shadow: 0 1px 1px #e2e2e2 inset, 0 1px 0 #fff;
+        box-shadow: 0 1px 1px #e2e2e2 inset, 0 1px 0 #fff;
+		
+	
+	}
+	
+	.content.mobile-login input.Button {
+	padding:3% 0%;	
+	clear:both;
+	width:99%;
+	font-size:105%;
+	}
+	
+	#ForgotUsernameUserControl1_SubmitButton, 
+	#ForgotPasswordUserControl1_SubmitButton,
+    #SubmitButton	{
+	
+	border:1px solid #adc671;
+	-webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.54);
+    -moz-box-shadow:    0px 1px 2px rgba(50, 50, 50, 0.54);
+    box-shadow:         0px 1px 2px rgba(50, 50, 50, 0.54);
+
+    background: rgb(202,226,133); /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NhZTI4NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5ZmNiNTciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(202,226,133,1) 0%, rgba(159,203,87,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(202,226,133,1)), color-stop(100%,rgba(159,203,87,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(202,226,133,1) 0%,rgba(159,203,87,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(202,226,133,1) 0%,rgba(159,203,87,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(202,226,133,1) 0%,rgba(159,203,87,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(202,226,133,1) 0%,rgba(159,203,87,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cae285', endColorstr='#9fcb57',GradientType=0 ); /* IE6-8 */
+	
+	cursor:pointer;
+    color:#5B6028; 
+    font-weight:bold; 
+	}
+
+
+
+
+    .login-wrapper.mobile-login {
+        float: none;
+        clear: both;width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        min-height: 100px;
+        padding: 0;
+    }
+
+    .default-login-table.mobile-login {
+        clear: both;
+        display: block;
+        width: 99%;
+        margin: 0 auto;
+    }
+
+    
+    
+    .content.mobile-login {
+        text-align: left;
+        float: none;
+        width: inherit;
+        padding: 10px;
+        display: block;
+        clear: both;
+    }
+
+
+    .button-row > .Button:first-child,
+    .button-row > .btn:first-child,
+    .button-row > .Button:last-child,
+    .button-row > .btn:last-child,
+    .button-row > .Button:only-child,
+    .button-row > .btn:only-child
+     {
+
+        margin-left:auto;    
+        margin-right:auto;    
+        
+    }
+
+
+    .content.mobile-login big {
+        font-size: 140%;
+    }
+
+    .content.mobile-login p,
+    .content.mobile-login p a
+     {
+        font-size: 110%;
+        line-height: 135%;
+        color: #666;
+
+    }
+
+    .content.mobile-login p a {
+        color: #0066cc;
+    }
+
+    .content.mobile-login .login-wish-list {
+        line-height:230% ;
+    }
+
+     .content.mobile-login b {
+        font-size: 110%;
+         color: #555;
+         text-shadow: 1px 1px 1px #efefef;
+    }
+
+
+     .content.mobile-login .CheckBox input,
+     .content.mobile-login .CheckBox label{
+         float: left;
+     }
+
+     .content.mobile-login .CheckBox label {
+         font-style: italic;
+         color: #888;
+         font-size: 105%;
+     }
+
+      .content.mobile-login .CheckBox input {
+          width: 20px;
+          height: 30px;
+          line-height: 30px;
+          vertical-align: middle;
+      }
+
+      .content.mobile-login .CheckBox label {
+          height: 30px;
+          line-height: 30px;
+          vertical-align: middle;
+          margin: 3px 0 0 0 !important;
+          
+      }
+
+}
+
+

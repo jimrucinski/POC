@@ -2,20 +2,6 @@
     include 'MatchingData.class.php';
     include 'PmaMatching.class.php';
 
-function recursive($array){
-    foreach($array as $key => $value){
-        //If $value is an array.
-        if(is_array($value)){
-            //We need to loop through it.
-            recursive($value);
-        } else{
-            //It is not an array, so print it out.
-            echo '<strong>' . $key . '</strong>' . ' = ' . $value, '<br>';
-        }
-    }
-}
-
-
     if (isset($_FILES['first'])){
         try{
 
@@ -36,6 +22,8 @@ $suppliers = $suppliers->AssociativeData;//var_dump($buyers);
 $curKeyName = "";
 $keys = "";
 
+//var_dump($buyers);
+//var_dump($suppliers);
 
 $masterArray=array();
 
@@ -51,9 +39,6 @@ foreach($buyers as $buyer){
             $skipPrimaryCompany=false;
         }            
         else{
-           // $items = str_split($buyer[$val]); //array of all the buyers responses for the current product or region
-           // $itemCares = array_sum($items);             
-           // $curBuyer[$val . 'Cares']=$itemCares;
             $curBuyer[$val] = $buyer[$val];  
             if($val==$lastPosition){
             $curSupplier=Array();   
@@ -75,42 +60,51 @@ foreach($buyers as $buyer){
     foreach ($masterArray as $i => $values) {
         $first = true;
         $str="";
+        $h2="";
+       
         foreach ($values as $itm => $value)
             {     
+                 $header = "";
                 if($first==true){
-                    $str = '<h2>' . $value . '</h2>';
+                    $h2 = '<h2>' . $value . '</h2>';
                     $first = false;
                 }
 
-
+                
                 if(!is_array($value))
                     echo '';
-                   // echo $itm . ' = ' . $value . '<br/>';
-                else{
-                                 
-                    foreach($value as $key =>$val)
+                else{                                 
+                    foreach($value as $key =>$val) 
                     {
-                        $buyerMatches=0;
-                        if(array_key_exists($key,$masterArray[$i])){
+                        $header .= "<td>" . $key . "</td>";
+                        $buyerMatches=0;                        
+                        if(array_key_exists($key,$masterArray[$i])){                            
                             $items = str_split($masterArray[$i][$key]);
                             $supplierItems = str_split($values[$itm][$key]);
-                             for($x=0;$x<sizeof($items);$x++){
+                             for($x=0;$x<sizeof($items)-1;$x++){
                                 if($items[$x] !=0 && $items[$x] == $supplierItems[$x])
                                     ++$buyerMatches;               
                             }
-                            $str .=  $key . " Match Percent: " .  $buyerMatches/array_sum($items)*100 . '<br/>';
-                            //$str .= $masterArray[$i][$key] . ' - ' . $values[$itm][$key] .  $key .  $buyerMatches/array_sum($items)*100 . '<br/>';
-                            //echo $masterArray[$itm][$key] . ' = ' . $val . '<br/>';                         
+                            if(array_sum($items)>0)
+                                $matchPercent = ($buyerMatches/array_sum($items)*100);
+                            else
+                                $matchPercent = 0;
+                            
+                            $str .="<td>" . number_format($matchPercent,2) . "%</td>";
+                            
+                     
                         }
                        else
-                        $str .="<strong>" .  $val . "</strong><br/>";
-                    }
+                        $str .="<td><strong>" .  $val . "</strong></td>";                        
+                    }  
+                   $str = "<tr>" . $str . "</tr>";
                    
-                    
-                }
+                }                
             }
-            echo $str;
-    }
+            echo $h2;
+          
+            echo "<table border='1'>" . $header . $str . "</table>";
+        }
 
         }
         catch(Exception $ex){

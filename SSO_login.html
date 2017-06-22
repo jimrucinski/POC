@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Single Sign On</title>
+<link href="https://svc.pma.com//SSO/skins/default/default.css" type="text/css" rel="stylesheet"/>
+<link href="SSO_login_Override.css" type="text/css" rel="stylesheet"/>
+<script language="javascript">
+// <!--
+// onerror
+window.onerror = window_onerror;
+function window_onerror(message,url,lineNumber) {
+	var queryString = '?onerror_message=' + escape(message) + '&onerror_url=' + escape(url) + '&onerror_lineNumber=' + lineNumber;
+	var onerrorImage = new Image();
+	onerrorImage.src = queryString;
+	return true;
+}
+// -->
+
+</script>
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <div class="container empty-header-contatiner" style="">
+
+            </div>
+        <div class="container header-container">
+            <div class="secondary-and-action clearfix">
+                <a href="http://www.pma.com" class="logo">Produce Marketing Association</a>
+              
+            </div>        
+        </div>
+    </header>
+    <div id="InteriorBodyContent" class="container sso-body">
+        
+	<form method="post" action="LoginTemplates/DefaultLogin.aspx?vi=7&amp;vt=e5860048553f32fde1a3c435e3f19a6d5fe8f0aa173fac215daaed46c7b571f5d5a66afea06484847caa65349b92e4b6d63c16fcf9a51ba091325480d46dc402ee96170e530d1f3ba7e3a5a8d34a93cae475e9b33d4228e5cdcae8313af42df2a51dd6b8c4956e27ab467f08a3e97da040b8e622d4fe0ef2b3ca388070563b26" onsubmit="javascript:return WebForm_OnSubmit();" id="LoginForm" class="login-wrapper mobile-login">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTExNTY3NTQ2NDMPFgQeAnZpBQE3HgJ2dAWAAmU1ODYwMDQ4NTUzZjMyZmRlMWEzYzQzNWUzZjE5YTZkNWZlOGYwYWExNzNmYWMyMTVkYWFlZDQ2YzdiNTcxZjVkNWE2NmFmZWEwNjQ4NDg0N2NhYTY1MzQ5YjkyZTRiNmQ2M2MxNmZjZjlhNTFiYTA5MTMyNTQ4MGQ0NmRjNDAyZWU5NjE3MGU1MzBkMWYzYmE3ZTNhNWE4ZDM0YTkzY2FlNDc1ZTliMzNkNDIyOGU1Y2RjYWU4MzEzYWY0MmRmMmE1MWRkNmI4YzQ5NTZlMjdhYjQ2N2YwOGEzZTk3ZGEwNDBiOGU2MjJkNGZlMGVmMmIzY2EzODgwNzA1NjNiMjYWAmYPZBYCAgEPZBYCAgEPZBYQAgYPDxYCHgJyb2hkZAIKDw8WAh8CaGRkAg4PDxYCHgtOYXZpZ2F0ZVVybAWeAn4vRm9yZ290UGFzc3dvcmQuYXNweD92aT03JnZ0PWU1ODYwMDQ4NTUzZjMyZmRlMWEzYzQzNWUzZjE5YTZkNWZlOGYwYWExNzNmYWMyMTVkYWFlZDQ2YzdiNTcxZjVkNWE2NmFmZWEwNjQ4NDg0N2NhYTY1MzQ5YjkyZTRiNmQ2M2MxNmZjZjlhNTFiYTA5MTMyNTQ4MGQ0NmRjNDAyZWU5NjE3MGU1MzBkMWYzYmE3ZTNhNWE4ZDM0YTkzY2FlNDc1ZTliMzNkNDIyOGU1Y2RjYWU4MzEzYWY0MmRmMmE1MWRkNmI4YzQ5NTZlMjdhYjQ2N2YwOGEzZTk3ZGEwNDBiOGU2MjJkNGZlMGVmMmIzY2EzODgwNzA1NjNiMjZkZAIQDw8WAh8DBZ4Cfi9Gb3Jnb3RVc2VybmFtZS5hc3B4P3ZpPTcmdnQ9ZTU4NjAwNDg1NTNmMzJmZGUxYTNjNDM1ZTNmMTlhNmQ1ZmU4ZjBhYTE3M2ZhYzIxNWRhYWVkNDZjN2I1NzFmNWQ1YTY2YWZlYTA2NDg0ODQ3Y2FhNjUzNDliOTJlNGI2ZDYzYzE2ZmNmOWE1MWJhMDkxMzI1NDgwZDQ2ZGM0MDJlZTk2MTcwZTUzMGQxZjNiYTdlM2E1YThkMzRhOTNjYWU0NzVlOWIzM2Q0MjI4ZTVjZGNhZTgzMTNhZjQyZGYyYTUxZGQ2YjhjNDk1NmUyN2FiNDY3ZjA4YTNlOTdkYTA0MGI4ZTYyMmQ0ZmUwZWYyYjNjYTM4ODA3MDU2M2IyNmRkAhIPDxYCHwMFngJ+L0ZvcmdvdFBhc3N3b3JkLmFzcHg/dmk9NyZ2dD1lNTg2MDA0ODU1M2YzMmZkZTFhM2M0MzVlM2YxOWE2ZDVmZThmMGFhMTczZmFjMjE1ZGFhZWQ0NmM3YjU3MWY1ZDVhNjZhZmVhMDY0ODQ4NDdjYWE2NTM0OWI5MmU0YjZkNjNjMTZmY2Y5YTUxYmEwOTEzMjU0ODBkNDZkYzQwMmVlOTYxNzBlNTMwZDFmM2JhN2UzYTVhOGQzNGE5M2NhZTQ3NWU5YjMzZDQyMjhlNWNkY2FlODMxM2FmNDJkZjJhNTFkZDZiOGM0OTU2ZTI3YWI0NjdmMDhhM2U5N2RhMDQwYjhlNjIyZDRmZTBlZjJiM2NhMzg4MDcwNTYzYjI2ZGQCFA8PFgIeB1Zpc2libGVoZGQCFg8PFgIfAwWYAn4vUmVnaXN0ZXIuYXNweD92aT03JnZ0PWU1ODYwMDQ4NTUzZjMyZmRlMWEzYzQzNWUzZjE5YTZkNWZlOGYwYWExNzNmYWMyMTVkYWFlZDQ2YzdiNTcxZjVkNWE2NmFmZWEwNjQ4NDg0N2NhYTY1MzQ5YjkyZTRiNmQ2M2MxNmZjZjlhNTFiYTA5MTMyNTQ4MGQ0NmRjNDAyZWU5NjE3MGU1MzBkMWYzYmE3ZTNhNWE4ZDM0YTkzY2FlNDc1ZTliMzNkNDIyOGU1Y2RjYWU4MzEzYWY0MmRmMmE1MWRkNmI4YzQ5NTZlMjdhYjQ2N2YwOGEzZTk3ZGEwNDBiOGU2MjJkNGZlMGVmMmIzY2EzODgwNzA1NjNiMjZkZAIYDxAPFgIeB0NoZWNrZWRoZGRkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUdY3RsMDAkbWFpbiRSZW1lbWJlck1lQ2hlY2tCb3iudH47tHj8Kt830jxeFj8xcxwQlw==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['LoginForm'];
+if (!theForm) {
+    theForm = document.LoginForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/SSO/WebResource.axd?d=Nw2fvAEL66Jh9rxVmyfCYJhrYdtWVa2BOnXuK0EDobD1SoXSYLWNtoijBoPXAwkHH1mqwjsoYeUiOMVr0&amp;t=636160660665894255" type="text/javascript"></script>
+
+
+<script src="/SSO/WebResource.axd?d=9-_lMf-xPpPk7iuKHivNwQi5ID8huDxTKKcKlRZ-UJkxPTvCZn1-7mfaaz4Bu4tgjynStT67X2G7s3NXGN-1mGIlzpM1&amp;t=636160660665894255" type="text/javascript"></script>
+<script src="/SSO/WebResource.axd?d=fLIaW8IDR1hfKFwMik0nxUaxURdjZzB9YHMnP2d84l0r2wVXiFKW_MFh6MCd4IOmv3ils9jGe1_UeYr40&amp;t=636160660665894255" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="293A410C" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAWkUaFuBU1a7EIgGA2EfQJ37Sp6wVFalUloUwHZZykGaXbn/IFxWq3p64TMzodjhCw1rOGaYQUgSieAHHfiyZbvM327fadFjESaId7MG5dPtV+RrR4efF4QYZpVTFUangUFBb2g" />
+</div>
+	<table cellSpacing="5" cellPadding="5" border="0" class="default-login-table mobile-login">
+			<tr>
+				<td colSpan="2"></td>
+			</tr>
+			<tr>
+				<td class="content mobile-login" vAlign="top" bgColor="#ffffff" height="320">			
+					<p><big>Please login to continue.</big>
+					</p>
+					<p>
+	                    <b>User Name:</b>&nbsp;<span id="main_UserNameRegularExpressionValidator" class="RegularExpressionValidator" style="color:Red;display:none;">Invalid Username.</span>
+	                    <br>
+						<input name="ctl00$main$LoginTextBox" type="text" id="main_LoginTextBox" class="TextBox" /><br>
+						<br>
+	                    <b>Password:</b>&nbsp;<span id="main_PasswordRegularExpressionValidator" class="RegularExpressionValidator" style="color:Red;display:none;">Invalid Password.</span>
+	                    <br>
+						<input name="ctl00$main$PasswordTextBox" type="password" id="main_PasswordTextBox" class="TextBox" />&nbsp;&nbsp;<input type="submit" name="ctl00$main$SubmitButton" value="Go" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$main$SubmitButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="main_SubmitButton" class="Button" class="btn btn-primary Button" /><br>
+					</p>
+					<p class="login-wish-list">I would like to reset my password.
+						<a id="main_ResetPasswordHyperLink" class="HyperLink" href="ForgotPassword.aspx?vi=7&amp;vt=e5860048553f32fde1a3c435e3f19a6d5fe8f0aa173fac215daaed46c7b571f5d5a66afea06484847caa65349b92e4b6d63c16fcf9a51ba091325480d46dc402ee96170e530d1f3ba7e3a5a8d34a93cae475e9b33d4228e5cdcae8313af42df2a51dd6b8c4956e27ab467f08a3e97da040b8e622d4fe0ef2b3ca388070563b26">Click here</a>.
+						<br>
+						I would like to update my Username.
+						<a id="main_ResetUsernameHyperLink" class="HyperLink" href="ForgotUsername.aspx?vi=7&amp;vt=e5860048553f32fde1a3c435e3f19a6d5fe8f0aa173fac215daaed46c7b571f5d5a66afea06484847caa65349b92e4b6d63c16fcf9a51ba091325480d46dc402ee96170e530d1f3ba7e3a5a8d34a93cae475e9b33d4228e5cdcae8313af42df2a51dd6b8c4956e27ab467f08a3e97da040b8e622d4fe0ef2b3ca388070563b26">Click here</a>.
+						<br>
+						I forgot my password.
+						<a id="main_ForgotPasswordHyperLink" class="HyperLink" href="ForgotPassword.aspx?vi=7&amp;vt=e5860048553f32fde1a3c435e3f19a6d5fe8f0aa173fac215daaed46c7b571f5d5a66afea06484847caa65349b92e4b6d63c16fcf9a51ba091325480d46dc402ee96170e530d1f3ba7e3a5a8d34a93cae475e9b33d4228e5cdcae8313af42df2a51dd6b8c4956e27ab467f08a3e97da040b8e622d4fe0ef2b3ca388070563b26">Click here to reset</a>.
+						<br>
+					    
+						I would like to register for a new account.
+						<a id="main_RegisterHyperLink" class="HyperLink" href="Register.aspx?vi=7&amp;vt=e5860048553f32fde1a3c435e3f19a6d5fe8f0aa173fac215daaed46c7b571f5d5a66afea06484847caa65349b92e4b6d63c16fcf9a51ba091325480d46dc402ee96170e530d1f3ba7e3a5a8d34a93cae475e9b33d4228e5cdcae8313af42df2a51dd6b8c4956e27ab467f08a3e97da040b8e622d4fe0ef2b3ca388070563b26">Click here to register</a>.					
+						<br>
+					</p>
+					<span class="CheckBox"><input id="main_RememberMeCheckBox" type="checkbox" name="ctl00$main$RememberMeCheckBox" /><label for="main_RememberMeCheckBox">Remember my login information for 90 days.</label></span>				
+					<div class="clear-fix"></div>
+				</td>
+			</tr>
+		</table>
+	
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("main_UserNameRegularExpressionValidator"), document.getElementById("main_PasswordRegularExpressionValidator"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var main_UserNameRegularExpressionValidator = document.all ? document.all["main_UserNameRegularExpressionValidator"] : document.getElementById("main_UserNameRegularExpressionValidator");
+main_UserNameRegularExpressionValidator.controltovalidate = "main_LoginTextBox";
+main_UserNameRegularExpressionValidator.display = "Dynamic";
+main_UserNameRegularExpressionValidator.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+main_UserNameRegularExpressionValidator.validationexpression = "^[a-zA-Z0-9 @!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9@!#$%&\'*+/=?^_`{|}~-]+)*";
+var main_PasswordRegularExpressionValidator = document.all ? document.all["main_PasswordRegularExpressionValidator"] : document.getElementById("main_PasswordRegularExpressionValidator");
+main_PasswordRegularExpressionValidator.controltovalidate = "main_PasswordTextBox";
+main_PasswordRegularExpressionValidator.display = "Dynamic";
+main_PasswordRegularExpressionValidator.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+main_PasswordRegularExpressionValidator.validationexpression = "^[a-zA-Z0-9 @!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9@!#$%&\'*+/=?^_`{|}~-]+)*";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        WebForm_AutoFocus('main_LoginTextBox');//]]>
+</script>
+</form>
+
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footerNav">
+               
+                
+                <div class="clear"></div>
+            </div>
+            <div role="contentinfo" class="contentInfo">
+                <p><img src="images/PMA_NewLogo_White_sm.png"/></p>
+                <address>
+                   1500 Casho Mill Road<br/>Newark, DE USA 19711<br/>+1 (302) 738-7100
+                </address>
+                <div class="credit">
+                    <a href="http://www.pma.com" target="new">pma.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

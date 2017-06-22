@@ -1,0 +1,33 @@
+{
+    "UserId":"999999",
+    "Subscribe":"1",   
+    "Subscription":[
+        {            
+        "SubscribeId":"Guid0000",
+        "SubscribeLabel":"Food Safety",
+        "Subscription":[
+            {
+                "SubscribeId":"Guid1111",
+                "SubscribeLabel":"Center For Produce Safety"
+            },
+            {
+                "SubscribeId":"Guid2222",
+                "SubscribeLabel":"Crisis Mgmt"
+            },
+            {
+                "SubscribeId":"Guid3333",
+                "SubscribeLabel":"FSMA"
+            },
+            {
+                "SubscribeId":"Guid4444",
+                "SubscribeLabel":"Risk Mgmt"
+            }
+        ]
+        },
+        {
+            "SubscribeId":"Guid5555",
+            "SubscribeLabel":"Foodservice"
+        }
+    ]
+    
+}

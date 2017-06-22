@@ -82,12 +82,7 @@ class MatchingDataUpload
             for($i=0;$i<sizeof($items);$i++)
             {
                 $curval.=trim($items[$i]);
-                //$curval.=trim($items[$i]) <> ''?1:0;
             }
-            //foreach($items as $item){
-            //    $curval .= trim($item) <> ''?1:0;;
-            //}
-            //$curval .= rtrim($curval,',');
             $curval .= '),';
             $out .= $curval;
             $curval='';
@@ -97,42 +92,6 @@ class MatchingDataUpload
         return rtrim($out,',');
 
 
-
-        /*
-            $file = fopen($this->targetFileWithPath, "r");
-            $insertSQL = "INSERT INTO " . $this->tableName;
-            $vals="";
-            $cols = "";
-            $skipFirstRow = true;
-            while(($data = fgetcsv($file,100000,",")) !== FALSE)
-            {
-                $curval="";
-                if($skipFirstRow){
-                    $skipFirstRow=false;//Skip the header row.
-                     for($i=0;$i<sizeof($data);$i++){
-                         $cols .= trim($data[$i]) . $i . ',';
-                     }
-                     $cols = rtrim($cols,',');
-                    }
-                else{
-                    $curval = "(";
-                for($i=0;$i<sizeof($data);$i++){
-                    
-                    if($i==0)
-                        $curval .= '"' . trim($data[$i]) . '"';
-                    else
-                        $curval .= trim($data[$i]) <> ''?1:0;
-                    $curval .= ',';
-                }
-                $curval = rtrim($curval, ",");
-                $curval .=  "),";
-                }
-                $vals .= $curval;
-            }
-            $vals = rtrim($vals,',');
-            $insertSQL .= '(' . $cols . ') VALUES' . $vals;
-            return $insertSQL;
-            */
     }
     
 }

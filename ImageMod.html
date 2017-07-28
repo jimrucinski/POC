@@ -1,16 +1,19 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="X-UA-Compatible" content="IE=9"><!--needed to work in IE-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
       body {
-        margin: 0px;
+        margin: 0;
         padding: 0px;
         background-color:#EEECEA;
+        font-family:sans-serif
       }
       #imageFormPersonalize{
-        float:left;
+        margin:0;
+        padding:0;
+        display:block;
       }
       #imageFormPersonalize li{
         list-style: none;
@@ -26,7 +29,7 @@
         border:none;
         text-align:left;
         color:#666666;
-
+        background-color:#EEECEA;
         font-size:smaller;
       }
       #myCanvas{
@@ -46,91 +49,111 @@
     }
     </style>
     <script language="javascript" type="text/javascript">
-function limitText(limitField, limitCount, limitNum) {
-	if (limitField.value.length > limitNum) {
-		limitField.value = limitField.value.substring(0, limitNum);
-	} else {
-		limitCount.value = limitNum - limitField.value.length;
-	}
-}
-</script>
+      function limitText(limitField, limitCount, limitNum) {
 
-  </head>
-  <body>
-    
-
-<div style="margin: 2em;">
-    <form id="modImage" name="modImage">
-      <ul id="imageFormPersonalize">
-        <li>
-          <label>line one text</label><input type='text' tabindex="1" id="line1" name="line1" maxlength="50" value="" onKeyDown="limitText(this.form.line1,this.form.countdown,50);"/>
-          <div class="countDown"><input readonly type="text" name="countdown" size="1" value="50" class="countDown"  style="text-align:right;" > characters left.</div>
-        </li>
-        <li>
-          <label>line two text</label><input type="text" tabindex="2" id="line2" name="line2" maxlength="50" value ="" onKeyDown="limitText(this.form.line2,this.form.countdown2,50);" />
-          <div class="countDown"><input readonly type="text" name="countdown2" size="1" value="50" class="countDown" style="text-align:right;"> characters left.</div>
-        </li>
-        <li>
-          <input type="button" onclick="javascript:modMe()" value="Generate Image"/>
-        </li>
-      </ul>
-
-    </form>
-    </div>
-<div id="pngHolder"></div>
-<div id="BaseImageHolder" style="visibility:hidden;"><img id="EventImage" src="./images/PMA_Email-Signature.jpg"></div>
-
-
-     <script>
-         function modMe(){   
-          
+        if (limitField.value.length > limitNum) {
+          limitField.value = limitField.value.substring(0, limitNum);
+        } else {
+          limitCount.value = limitNum - limitField.value.length;
+        }
+      }
+      function modMe(){   
+          //hide the base image
+          document.getElementById('BaseImageHolder').style.visibility='hidden';
           //Clear the image holder 
           document.getElementById('pngHolder').innerHTML="";
            // Get the image
           var sampleImage = document.getElementById("EventImage");
           var canvas = convertImageToCanvas(sampleImage);
           
-          // Actions
-          
+          // Actions          
           document.getElementById("pngHolder").appendChild(convertCanvasToImage(canvas));
 
          }
-          function convertImageToCanvas(image) {
-  
-            var canvas = document.createElement("canvas");
-          
-            var context = canvas.getContext("2d");
-           
-            canvas.width = image.width;
-            canvas.height = image.height;
-
-            context.drawImage(image, 1, 5);
-
+          function convertImageToCanvas(image) {            
+            var canvas = document.createElement("canvas");    
+            var lineOneText = document.getElementById("line1").value.trim();
+            var lineTwoText = document.getElementById("line2").value.trim();      
+            var context = canvas.getContext("2d");  
             var x = canvas.width / 2;
             var y = canvas.height / 2;
-            
-            //context.font = ".9em 'times new roman'";
-            context.font = "12px 'calibri'";
+            //determine where the vertical center point is.
+            var lineOne = 104;
+            var fontSize = 20;
+            var fontMeasurement = "px ";
+            var fontFace="Times New Roman";
+            canvas.width = image.width;
+            canvas.height = image.height;
+            context.drawImage(image, 1, 5);
             context.fillStyle="#ffffff";
             context.textAlign="center";       
             context.shadowColor="#000000";
             context.shadowBlur=3;
-            context.lineWidth=2;                    
-            context.fillText(document.getElementById("line1").value, x, 104);
-            context.fillText(document.getElementById("line2").value, x, 116);
-                
+            context.lineWidth=3;  
+            context.font = fontSize + fontMeasurement + fontFace;
+
+            if(lineTwoText.length==0){
+              lineOne = 110;  
+              while(context.measureText(lineOneText).width > canvas.width){
+                fontSize = fontSize-1;
+                if(fontSize<=9){
+                  var pos = lineOneText.indexOf(' ', 50); //Assume that 50 characters is what can fit on a line.
+                  var origText = lineOneText;                  
+                  lineOneText =origText.substring(0,pos);
+                  lineTwoText =origText.substring(pos);
+                  fontSize="12";
+                  lineOne=104;
+                  break;
+                }
+                context.font = fontSize + fontMeasurement + fontFace;                
+              }              
+            }
+            else{
+              fontSize=12;
+            }
+
+            context.font = fontSize + fontMeasurement + fontFace;
+            context.fillText(lineOneText, x+3, lineOne);//the plus 3 is to give padding to the left side
+            context.fillText(lineTwoText, x, 116);                
             return canvas;
           }
 
-
-
          function convertCanvasToImage(canvas) {
-
-				var image = new Image();
-				image.src = canvas.toDataURL("image/png");
-				return image;
+          var image = new Image();
+          image.src = canvas.toDataURL("image/png");
+          return image;
          }
+</script>
 
-    </script>
+  </head>
+  <body>
+    
+
+<div style="display:block;">
+    <form id="modImage" name="modImage">
+      <ul id="imageFormPersonalize">
+        <li>
+          <label>Enter your personal signature text</label><input type='text' tabindex="1" style="width:630px;" id="line1" name="line1" maxlength="100" value="" onkeyup="limitText(this.form.line1,this.form.countdown,100);"/>
+          <div class="countDown"><input readonly type="text" name="countdown" size="1" value="100" class="countDown"  style="text-align:right;" > characters left.</div>
+        </li>
+
+        <li style="display:none;">
+          <label>line two text (optional)</label><input type="text" tabindex="2" id="line2" name="line2" maxlength="50" value ="" onkeyup="limitText(this.form.line2,this.form.countdown2,50);" />
+          <div class="countDown"><input readonly type="text" name="countdown2" size="1" value="50" class="countDown" style="text-align:right;"> characters left.</div>
+        </li>
+
+        <li>
+          <input type="button" onclick="javascript:modMe()" value="Generate Image"/>
+        </li>
+        <li>
+          <a href="#" id="downloader">click to download image</a>
+          </li>
+      </ul>
+
+    </form>
+    </div>
+<div id="pngHolder"></div>
+<div id="BaseImageHolder" style="visibility:visible;"><img id="EventImage" src="./images/PMA_Email-Signature.jpg"></div>
+
   </body>
 </html>      

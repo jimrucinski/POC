@@ -41,6 +41,7 @@ class PmaMatching
         $returnVal = array();
         $header = null;
 
+ 
         while(($row = fgetcsv($file)) !== false){
             if($header === null){
                 $header = $row;
@@ -65,17 +66,14 @@ class PmaMatching
                         $concat.=trim($row[$i]) <> ''?1:0;
                     }
                     }
-                }
-                    
+                }                    
                     $newRow[$uniqueHeader] = $concat;
-                    
-                    
                 }
                 $newRow[$header[0]] = $label;//add in the company name to the appropriate position in the array
             $returnVal[] = $newRow;
         }
         $this->AssociativeData = $returnVal;
-        fclose($file);
+
     }
         
 

@@ -1,0 +1,9 @@
+body{font-family: calibri;font-size:10px;}
+h2{font-size:2em;}
+table{border:solid 1px #000000;padding:0;border-spacing:0;margin:1em 0;min-width:500px;}
+tr:nth-child(even) {
+    background-color: #CBE86B;
+}
+
+.header{font-weight:bolder;text-transform: capitalize;background-color:#000000;color:#ffffff;}
+#errors{font-size:large;color:maroon;}

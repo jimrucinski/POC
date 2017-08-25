@@ -3,15 +3,18 @@
     <style>
         body{
             background-color:salmon;
+
         }
-        .wrapper {        
+        .wrapper {   
+        width:95%;     
         margin:auto;
+        
         /*max-width:1440px;*//*Set this to stop the use of the full monitor display*/
         overflow:hidden;        
         }
 
         .wrapper div {
-        padding: 10px;
+        padding: 4px;
         
         }
        .wrapper ul{
@@ -32,7 +35,7 @@
     { 
         display:inline-block;        
         margin-right:20px;
-        width:350px;
+        width:400px;
         min-height:300px;
         border:1px solid cornflowerblue;
         margin-bottom:10px;
@@ -40,21 +43,108 @@
         background-color:#ffffff;
         }
 
+        #footer{
+            font-family: "myriad-pro", sans-serif;            
+            background-color:#5A4633;
+            width:100%;
+            color:#A4998E;
+            padding-bottom:2em;
+            padding-top:2em;
+        }
+        #footer ul{margin:auto;width:100%;max-width:920px;font-size: 12px}
+        #footer li{list-style:none;display:inline-block;margin-right:2em;vertical-align:middle }
+        #footer li a{font-size:larger;font-weight:bolder;color:#A4998E;text-transform: uppercase;text-decoration: none;}
+        #social{width:100px;}
+        #social li{margin:0px;padding:0px;}
+
         @media  screen
             and (min-device-width: 320px)
-            and (max-device-width: 500px){        
+            and (max-device-width: 700px){        
 
         .boxMe{
             display:block;
             width:95%;
             border:none;
             min-height: 0;
+            margin:auto;
+            
         }
+        #footer li{
+            display:block;
+            width:95%;
+            border:none;
+            min-height: 0;
+            margin:auto;
+            padding:1em;
+        }
+
+            }
+            table{width:100%;
+            border:#000000 1px solid;
+            border-collapse: collapse;}
+
+            table td{border:1px solid #000000;}
+            table thead{background-color:#000000;color:#fff}
+    @media screen and (max-width: 600px) {
+
+    table {
+      border: 0;
+    }
+
+    table thead {
+      display: none;
+    }
+
+    table tr {
+      margin-bottom: 10px;
+      display: block;
+      border-bottom: 2px solid #333333;
+    }
+
+    table td {
+      display: block;
+      text-align: right;
+      font-size: 13px;
+
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+
+    table td:before {
+      content: attr(data-label);
+      float: left;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  
+        
     }
     </style>
 
 </head>
 <body>
+    <div class="wrapper">
+        <h2>Example of Responsive Table Design</h2>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Position</th>
+            </thead>
+            <tr>
+                <td data-label="Name">Jerry Butt</td>
+                <td data-label="Company">MIXTEC Group</td>
+                <td data-label="Position">Co-Chairman</td>
+            </tr>
+            <tr>
+                <td data-label="Name">Juan Alarcon</td>
+                <td data-label="Company">Fyffes N.A.</td>
+                <td data-label="Position">Member</td>
+            </tr>
+        </table>
+    </div>
     <div class="wrapper">
         <div class="boxMe">
             <ul>
@@ -326,6 +416,9 @@
                 </li>
             </ul>
         </div>
+    </div>
+    <h2>another group of stuff</h2>
+    <div class="wrapper">
         <div class="boxMe">
             <ul>
                 <li>
@@ -575,6 +668,38 @@
         </div>        
     </div>
     
-
+<div id="footer">
+    <ul>
+        <li style="margin-right:1em;">
+                    <img src="https://www.pma.com/~/media/homepage/pma_newlogo_white_sm.png" class="footer__logo">
+                    <div style="padding-top:35px;" >
+                        1500 Casho Mill Road<br>
+                        Newark, DE USA 19711<br>
+                        +1 (302) 738-7100
+                    </div>
+                </li>
+        <li><a href="https://www.pma.com/topics">Topics</a></li>
+        <li><a href="#">Global</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Membership</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+            <ul id="social" >
+                <li>
+                    <a href="https://www.Facebook.com/producemarketingassociation"><span style="background:url(http://www.pma.com/assets/images/spritesheet.png);background-position: 0 -52px;"></span></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/pma">TW</a>
+                </li>
+                <li>
+                    <a href="http://www.flickr.com/photos/producemarketing/">FK</a>
+                </li>
+                <li>
+                    <a href="http://www.youtube.com/user/ProduceMktg">YT</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
 
 </body>

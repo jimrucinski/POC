@@ -1,0 +1,305 @@
+<html>  
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+<head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<style>
+
+
+progress {
+  text-align: center;
+  height: 1.5em;
+  width: 100%;
+  -webkit-appearance: none;
+  border:1px solid #000;
+  margin:.5em;
+  
+
+width:300px;
+  /* Set the progressbar to relative */
+  position:relative;
+
+}
+progress:before {
+  content: attr(data-label);
+font-size:smaller;
+  vertical-align: 0;
+
+  
+  /*Position text over the progress bar */
+  position:absolute;
+  left:0;
+  right:0;
+}
+progress::-webkit-progress-bar {
+  background-color: #c9c9c9;
+}
+progress::-webkit-progress-value {
+  background-color: #7cc4ff;
+}
+progress::-moz-progress-bar {
+  background-color: #7cc4ff;
+}
+
+#displayTable{
+   display:table;
+}
+.displayTr{
+    display:table-row;
+    height:3em;
+}
+.displayTd{
+    display:table-cell;vertical-align:middle;width:100%;
+}
+            </style>
+    <body>
+        
+    <style>
+        body{font-family: sans-serif}
+    .tbl img{height:40px;}
+    .tbl{display:table;margin:.5em;width:100%; max-width:800px;}
+    .tblTdItem{width:2em;vertical-align: middle;font-weight:bolder;}
+    .tblTdBar{
+        display:table-cell;
+        /*background:#4EABA0;*/
+        background-color:#594534;
+        color:#fff;
+        text-align: left;
+        padding-left:.5em;
+        padding-right:1em;
+        text-transform: capitalize;
+        vertical-align: middle;
+    }
+    .goingUp{color:#ADFF2F}
+    .goingDown{color:#ff0000;}
+    .newToList{color:#ffd700;}
+    .tblTdItem{display:table-cell;padding-left:1em;text-transform: capitalize}
+    .subsection{
+        display:table-cell;
+    }
+    @media all and (max-width: 500px) {
+        .tbl img{height:30px;}
+        .subsection{display:block;}
+        .tblTdBar{font-size:small;}
+        }
+    </style>
+
+<div style="display:table;padding:10px;">
+        <div style="display:table-row;color:#000;height:20px;"><i style="background-color:#594534;" class="fas fa-arrow-circle-up goingUp"></i>&nbsp;positive change since 2017</div>
+        <div style="display:table-row;color:#000;height:20px;"><i style="background-color:#594534;" class="fas fa-arrow-circle-down goingDown"></i>&nbsp;negative change since 2017</div>
+    <div style="display:table-row;color:#000;height:20px"><i style="background-color:#594534;" class="fas fa-star-of-life newToList" ></i>&nbsp;new to the list</div>
+    </div>
+    <div style="display:table;width:100%;">
+       
+        <div class="subsection">
+                
+            <h3>Fruits</h3>
+            <div class="tbl">
+                <div class="tblTdItem" >1.</div>
+                <div class="tblTdBar" style="width:73%">bananas - 73%</div>
+                <div class=""><img src="banana.png"  style="margin-left:.25em;"/></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem" >2.</div>
+                <div class="tblTdBar" style="width:69%;">apples - 69%</div>
+                <div class=""><img src="apple.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">3.</div>
+                <div class="tblTdBar" style="width:62%;">grapes - 62%</div>
+                <div class=""><img src="grape.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">4.</div>
+                <div class="tblTdBar" style="width:62%;">strawberries - 62%</div>
+                <div class=""><img src="Strawberry.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">5.</div>
+                <div class="tblTdBar" style="width:56%;">oranges - 56%</div>
+                <div class=""><img src="orange.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">6.</div>
+                <div class="tblTdBar" style="width:54%;">Watermelon - 54%</div>
+                <div class=""><img src="watermelon.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">7.</div>
+                <div class="tblTdBar" style="width:48%;">Lemons - 48%</div>
+                <div class=""><img src="lemon.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">8.</div>
+                <div class="tblTdBar" style="width:45%;">blueberries - 45%</div>
+                <div class=""><img src="blueberry.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">9.</div>
+                <div class="tblTdBar" style="width:42%;">peaches - 42%</div>
+                <div class=""><img src="peach.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">10. </div>
+                <div class="tblTdBar" style="width:42%;"><i title="Up two places from 2017"  class="fas fa-arrow-circle-up goingUp">&nbsp;</i>pineapple - 42%</div>
+                <div class=""><img src="pineapple.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">11.</div>
+                <div class="tblTdBar" style="width:39%;">avocados - 39%</div>
+                <div class=""><img src="avocado.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">12.</div>
+                <div class="tblTdBar" style="width:38%;"><i title="Down two places from 2017" class="fas fa-arrow-circle-down goingDown">&nbsp;</i>cantaloupe - 38%</div>
+                <div class=""><img src="cantaloupe.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">13.</div>
+                <div class="tblTdBar" style="width:34%;">cherries - 34%</div>
+                <div class=""><img src="cherry.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">14.</div>
+                <div class="tblTdBar" style="width:33%;"><i title="Up one places from 2017" class="fas fa-arrow-circle-up goingUp">&nbsp;</i>limes - 33%</div>
+                <div class=""><img src="lime.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">15.</div>
+                <div class="tblTdBar" style="width:32%;"><i title="Down one places from 2017" class="fas fa-arrow-circle-down goingDown">&nbsp;</i>pears - 32%</div>
+                <div class=""><img src="pear.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">16.</div>
+                <div class="tblTdBar" style="width:31%;">raspberries - 31%</div>
+                <div class=""><img src="raspberry.png" /> </div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">17.</div>
+                <div class="tblTdBar" style="width:28%;">blackberries - 28%</div>
+                <div class=""><img src="blackberry.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">18.</div>
+                <div class="tblTdBar" style="width:23%;">plums - 23%</div>
+                <div class=""><img src="plum.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">19.</div>
+                <div class="tblTdBar" style="width:23%;"><i title="New to the list in 2018!" class="fas fa-star-of-life newToList" >&nbsp;</i>mangoes - 23%<br/><i style="font-size:.75em;">new to list, replacing 2017 nectarines</i></i></div>
+                <div class=""><img src="mango.png" /></div>
+            </div>
+            <div class="tbl">
+                <div class="tblTdItem">20.</div>
+                <div class="tblTdBar" style="width:22%;"><i title="New to the list in 2018!" class="fas fa-star-of-life newToList" >&nbsp;</i>honeydew - 22%<br/><i style="font-size:.75em;">new to list, replacing 2017 grapefruit</i></div>
+                <div class=""><img src="honeydew.png" /></div>
+            </div>
+        </div>
+        <div class="subsection">
+            <h3>Vegetables</h3>
+            <div class="tbl" >
+                    <div class="tblTdItem" >1.</div>
+                    <div class="tblTdBar" style="width:68%">potatoes - 68%</div>
+                    <div class=""><img src="potatoe.png" style="margin-left:.25em;"/></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem" >2.</div>
+                    <div class="tblTdBar" style="width:66%;"><i title="Up one places from 2017" class="fas fa-arrow-circle-up goingUp">&nbsp;</i>onions - 66%</div>
+                    <div class=""><img src="onion.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">3.</div>
+                    <div class="tblTdBar" style="width:65%;"><i title="Down one places from 2017" class="fas fa-arrow-circle-down goingDown">&nbsp;</i>tomatoes - 65%</div>
+                    <div class=""><img src="tomatoe.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">4.</div>
+                    <div class="tblTdBar" style="width:60%;">carrots - 60%</div>
+                    <div class=""><img src="carrot.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">5.</div>
+                    <div class="tblTdBar" style="width:53%;"><i title="Up three places from 2017" class="fas fa-arrow-circle-up goingUp">&nbsp;</i>bell peppers - 53%</div>
+                    <div class=""><img src="bellpepper.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">6.</div>
+                    <div class="tblTdBar" style="width:53%;"><i title="Down one places from 2017" class="fas fa-arrow-circle-down goingDown">&nbsp;</i>lettuce - 53%</div>
+                    <div class=""><img src="lettuce.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">7.</div>
+                    <div class="tblTdBar" style="width:51%;"><i title="Down one places from 2017" class="fas fa-arrow-circle-down goingDown">&nbsp;</i>broccoli - 51%</div>
+                    <div class=""><img src="broccoli.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">8.</div>
+                    <div class="tblTdBar" style="width:50%;"><i title="Down one places from 2017" class="fas fa-arrow-circle-down goingDown">&nbsp;</i>salad mix - 50%</div>
+                    <div class=""><img src="saladmix.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">9.</div>
+                    <div class="tblTdBar" style="width:49%;"><i title="Up one places from 2017" class="fas fa-arrow-circle-up goingUp">&nbsp;</i>cucumbers - 49%</div>
+                    <div class=""><img src="cucumber.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">10. </div>
+                    <div class="tblTdBar" style="width:46%;"><i title="Down one places from 2017" class="fas fa-arrow-circle-down goingDown">&nbsp;</i>celery - 46%</div>
+                    <div class=""><img src="celery.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">11.</div>
+                    <div class="tblTdBar" style="width:45%;">corn - 45%</div>
+                    <div class=""><img src="corn.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">12.</div>
+                    <div class="tblTdBar" style="width:42%;"><i title="Up one places from 2017" class="fas fa-arrow-circle-up goingUp">&nbsp;</i>mushrooms - 42%</div>
+                    <div class=""><img src="mushroom.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">13.</div>
+                    <div class="tblTdBar" style="width:41%;"><i title="Down one places from 2017" class="fas fa-arrow-circle-down goingDown">&nbsp;</i>garlic - 41%</div>
+                    <div class=""><img src="garlic.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">14.</div>
+                    <div class="tblTdBar" style="width:40%;"><i title="Up one places from 2017" class="fas fa-arrow-circle-up goingUp">&nbsp;</i>spinach - 40%</div>
+                    <div class=""><img src="spinach.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">15.</div>
+                    <div class="tblTdBar" style="width:39%;"><i title="Up two places from 2017" class="fas fa-arrow-circle-up goingUp">&nbsp;</i>green beans - 39%</div>
+                    <div class=""><img src="greenbeans.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">16.</div>
+                    <div class="tblTdBar" style="width:38%;"><i title="Down two places from 2017" class="fas fa-arrow-circle-down goingDown">&nbsp;</i>sweet potatoes - 38%</div>
+                    <div class=""><img src="sweetpotatoe.png" /> </div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">17.</div>
+                    <div class="tblTdBar" style="width:33%;"><i title="Up two places from 2017" class="fas fa-arrow-circle-up goingUp">&nbsp;</i>green onions - 33%</div>
+                    <div class=""><img src="greenonion.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">18.</div>
+                    <div class="tblTdBar" style="width:33%;">cauliflower - 33%</div>
+                    <div class=""><img src="cauliflower.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">19.</div>
+                    <div class="tblTdBar" style="width:33%;"><i title="Down three places from 2017" class="fas fa-arrow-circle-down goingDown">&nbsp;</i>cabbage - 33%</div>
+                    <div class=""><img src="cabbage.png" /></div>
+                </div>
+                <div class="tbl">
+                    <div class="tblTdItem">20.</div>
+                    <div class="tblTdBar" style="width:30%;">asparagus - 30%</div>
+                    <div class=""><img src="asparagus.png" /></div>
+                </div>
+            </div>
+        </div>
+        *Percentage notes the portion of survey respondents who have bought this item in past 12 months.
+    
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style/search.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+        <style>
+            #wrapper{font-family: 'Helvetica','Arial',sans-serif}
+            #headWrap{display:table;width:100%;padding:.25em;font-size:.85em;margin:0;}
+            #header{display:table-row;height:80px;}
+            .cell{display:table-cell;color:#fff;vertical-align: middle;}
+            #hamburger{text-align:right;display:table-cell;padding-right:.5em;}
+            .menuItem{width:100%; line-height: 40px;color:#000;
+                text-transform: capitalize;text-align: left;font-size:larger;margin-bottom:1px;border-bottom:solid 1px #fafafa;}
+            .bar1, .bar2, .bar3 {            
+                width: 25px;
+                height: 3px;
+                background-color: #fff;
+                margin: 6px 0 0 10px;
+                transition: 0.4s;  
+            }    
+            .searchbox { position: relative;  }
+            .searchbox input { text-indent: 30px;}
+            .searchbox .fa-search { 
+                position: absolute;
+                top: 3px;
+                left: 7px;
+                font-size: 15px;
+            }
+        </style>
+    </head> 
+    <body>
+        <div id="wrapper">
+            <!--
+            <div id="headWrap">
+                <div id="header">
+                    <div class="cell"><img width="60" src="./PMA_NewLogo_White_sm.png"/></div>
+                    <div class="cell">Menu Item 1</div>
+                    <div class="cell">Menu Item 2</div>
+                    <div class="cell" style="width:15px;"><i class="fas fa-user">&nbsp;&nbsp;</i></div>
+                    <div class="cell" style="width:25px;">
+                        <div id="hamburger" style="display:table-cell; vertical-align: top;text-align:right;">
+                            <div class="bar1" style="text-align: right;"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>                        
+                        </div>
+                    </div>
+                </div>           
+            </div>-->
+            <div id="cancel" style="margin-bottom:2em;"><i class="far fa-window-close" style="font-size: 2em"></i></div>
+            <div class="search" style="margin-bottom:1em;">
+                <span class="fa fa-search"></span>
+                <input placeholder="Search term">
+            </div>
+            <div id="Menu" style="background-color:#ebebeb;padding:1em;"">
+                <div class="menuItem">member directory</div>
+                <div class="menuItem">membership</div>
+                <div class="menuItem">industry insights</div>
+                <div class="menuItem">events</div>
+                <div class="menuItem">volunteers</div>
+                <div class="menuItem">awards</div>
+                <div class="menuItem">media resources</div>
+                <div class="menuItem">advertising</div>
+                <div class="menuItem">about us</div>
+            </div>
+            <div style="text-align: center;margin-top:1em">
+                <strong>PMA in your country</strong><br/>See what pma can do for you in your country.
+                <button style="margin-top:.5em;border-radius: 23px;background-color:#71BE44;color:#000;height:4em;width:70%;border-color:#B3D235;font-size:1em;">PMA in your country</button>
+            </div>
+        </div>
+    </body>
+</html>

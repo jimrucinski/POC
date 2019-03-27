@@ -4,7 +4,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="stylesheet" href="./style/BoxStyles.css">
+        <link rel="stylesheet" href="./style/menu.css"> 
+        <link rel="stylesheet" href="./style/search.css">
         <style type="text/css">
+
         body{font-family: sans-serif;padding:0; margin:0;}
         #topper{background-color:#fff;color:#000;
             display:table-row;
@@ -13,9 +16,8 @@
         margin: auto; 
         text-align:right;
         font-size:smaller;
-
- 
         }
+        
         #topper p{display:table-cell;vertical-align: middle;padding:auto;}
         #hero{width:100%;max-width:1920px;min-height:500px;
             background:url("./Sizzle Thumbnail.png");
@@ -47,9 +49,43 @@
        #footer{width:100%; min-height:100px;background-color:#6BC155;color:#000}
 
         </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          $("#hideMenu").click(function(){
+            $("#menu").hide(1000);
+          });
+          $("#hamburger").click(function(){
+            $("#menu").show(1000);
+          });
+        });
+        </script>
     </head>
     <body>
         <div id="wrapper">
+            <div id="menu">
+                <div id="hideMenu" style="margin-bottom:2em;"><i class="far fa-window-close" style="font-size: 2em"></i></div>
+                <div class="search" style="margin-bottom:1em;">
+                    <span class="fa fa-search"></span>
+                    <input placeholder="Search term">
+                </div>
+                <div id="Menu" style="background-color:#ebebeb;padding:1em;"">
+                    <div class="menuItem">member directory</div>
+                    <div class="menuItem">member resources</div>
+                    <div class="menuItem">industry insights</div>
+                    <div class="menuItem">events</div>
+                    <div class="menuItem">volunteers</div>
+                    <div class="menuItem">awards</div>
+                    <div class="menuItem">media resources</div>
+                    <div class="menuItem">advertising</div>
+                    <div class="menuItem">about us</div>
+                </div>
+                <div style="text-align: center;margin-top:1em">
+                    <p><strong>PMA in your country</strong><br/>See what pma can do for you<br/>in your country.</p>
+                    <button>PMA in your country</button>
+                </div>
+            
+            </div>
             <div id="topper">
             
                 

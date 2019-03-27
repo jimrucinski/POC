@@ -1,0 +1,12 @@
+#menu{
+   padding: 10px 10px 10px 5px; border:1px solid #666;width:300px;background-color:#ccc;
+   display:none;position:absolute;top:75px;left:0;z-index: 1;opacity: .9;;
+}    
+.menuItem{width:100%; line-height: 30px;color:#000;padding-left:.5em;
+    text-transform: capitalize;text-align: left;font-size:larger;margin-bottom:1px;border-bottom:solid 1px #fafafa;
+}
+.menuItem:hover{background-color:#FBAA19;cursor: pointer;}
+#menu button{margin:0 auto;border-radius: 23px;background-color:#71BE44;color:#000;height:4em;
+    display:block;width:70%;border-color:#B3D235;font-size:1em;
+}
+#hideMenu{width:100%;position:relative;right:10px;text-align:right;cursor:pointer;}

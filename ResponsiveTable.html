@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <head>
     <style>
@@ -105,3 +106,112 @@
         </table>
     </div>
 </body>
+=======
+<!DOCTYPE html>
+<head>
+    <style>
+        body{
+            font-family:calibri, sans-serif;
+        }
+
+        .wrapper {   
+        width:70%;     
+        margin:auto;
+        
+        /*max-width:1440px;*//*Set this to stop the use of the full monitor display*/
+        overflow:hidden;        
+        }
+        table{
+            margin:auto;
+            width:90%;
+            border:#000000 1px solid;
+            border-collapse: collapse;
+            }
+            table td{
+                border:1px solid #000000;
+            }
+            table thead{
+                background-color:#000000;
+                color:#fff
+            }
+        @media screen and (max-width: 600px) {
+
+            table {
+            border: 0;
+            }
+
+            table thead {
+            display: none;
+            }
+
+            table tr {
+            margin-bottom: 10px;
+            display: block;
+            border-bottom: 2px solid #333333;
+            }
+
+            table td {
+            display: block;
+            text-align: right;
+            font-size: 13px;
+
+            }
+
+            table td:last-child {
+            border-bottom: 0;
+            }
+
+            /*this is the piece that puts label to the left of the data cell*/
+            table td:before {
+            content: attr(header-label);
+            float: left;
+            font-weight: bold;
+            }       
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <p>
+            This page is an example of creating a responsive table. The source of the page contains
+            everything you need. The page will "respond" when the browser width is <=600px. The header
+            text will shift to the left of the data cells in responsive mode.
+        </p>
+        <p>
+            In order to make this work, I added a custom attribute to each TD tag called
+            header-label. The value of header-value is the text you want to appear to the left of the
+            data in reponsive mode. In this case the value of the header-label is the same as the value
+            of the TH tags, but that doesn't have to be the case.
+        </p>
+        <p>
+            Of course, all this would be generated on the server side. That way, you can dynamically
+            created your "header-label" if desired. Or if the column names are always the same for
+            your need you can hard code the values in the CSS statically.
+        </p>
+
+        <h2>Example of Responsive Table Design</h2>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Position</th>
+            </thead>
+            <tr>
+                <td header-label="Name">Jerry Butt</td>
+                <td header-label="Company">MIXTEC Group</td>
+                <td header-label="Position">Co-Chairman</td>
+            </tr>            
+            <tr>
+                <td header-label="Name">Michael Reed</td>
+                <td header-label="Company">SunSelect Produce</td>
+                <td header-label="Position">Member</td>
+            </tr>
+            <tr>
+                <td header-label="Name">Austin Savage</td>
+                <td header-label="Company">JV Smith Companies</td>
+                <td header-label="Position">Member</td>
+            </tr>
+        </table>
+    </div>
+</body>
+>>>>>>> setting up local linux

@@ -11,7 +11,11 @@
     text-align: center;
     background-color:#333333;
     -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+<<<<<<< HEAD
     animation: 3s ease 0s normal forwards 1 fadein;
+=======
+    animation: 5s ease 0s normal forwards 1 fadein;
+>>>>>>> setting up local linux
 }
 
 #slide {

@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 <html>
 <head>
 </head>
 <body>
 </body>
+=======
+<html>
+<head>
+</head>
+<body>
+</body>
+>>>>>>> setting up local linux
 </html>

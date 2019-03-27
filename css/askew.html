@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
     <head></head>
     <title></title>
@@ -57,4 +58,65 @@
         </div>
        
     </body>
+=======
+<html>
+    <head></head>
+    <title></title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        .wrapper{
+            background-color:cornflowerblue;
+            height:80%;
+            width:100%;
+            padding:10px 10px 20px 20px;
+        }
+        .skew{
+            background-color:yellowgreen;
+            background: repeating-linear-gradient(
+            11deg,
+            #606dbc,
+            #606dbc 10px,
+            #465298 10px,
+            #465298 20px
+            );
+            position:absolute;
+            top:190px;
+            left:0px;
+            right:0px;
+            height:290px;
+            color:#fff;
+            text-shadow:1px 1px #000;
+            font-family:verdana;
+            transform:skewY(4deg);
+            -ms-transform:skewY(4deg);
+            -webkit-transform: skewY(4deg);
+            border-top:solid 1px #666;
+            border-bottom:solid 1px #666;
+        }
+        
+        .unskew{
+            transform:skewY(-4deg);
+            -ms-transorm:skewY(-4deg);
+            -webkit-transform: skewY(-4deg);
+            padding:10px 10px 20px 20px;
+        }
+        
+    </style>
+    <body>
+        <div class="wrapper">
+            <div class="skew" align="center">
+                <h1 class="unskew">This is my header</h1>
+                <p class="unskew">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p>                
+            </div>
+            
+          
+        </div>
+       
+    </body>
+>>>>>>> setting up local linux
 </html>

@@ -27,13 +27,15 @@
         figure{float:left;padding-right:1em;}
         figcaption{color:#CFCBC5;font-style:oblique }
         #loginForm{width:100%;
-            position:relative;
-            top:-200px;
+
+            position:absolute;
             background-image: linear-gradient(124deg, #edf2e5 16.67%, #ffffff 16.67%, #ffffff 50%, #e6ebd3 50%, #e6ebd3 66.67%, #ffffff 66.67%, #ffffff 100%);
             background-size: 3.62px 5.36px;
             margin-bottom:.25em;
             padding-bottom:1em;
             padding-top:.15em;
+            border:solid #000 2px;
+            border-radius: 10px;
         }
         #loginForm p{
             font-size:larger;
@@ -102,6 +104,9 @@
         #testArticle{display:none;}
         #mobileTitle{display:block;}
         h1{font-size:1.2em;text-align:center;}
+        #loginForm{
+            top:100px;
+        }
         #loginForm div{
    
            width:80%;
@@ -112,7 +117,8 @@
         
             
         }
-        
+        #form{padding:10px;}
+        #readMore {position:absolute;bottom:-100px;font-size:1.25em;}
 
 
         }
@@ -123,6 +129,7 @@
             $(document).ready(function(){
                 $("#readMore").click(function(){
                 $("#loginForm").show(500);
+
             })
 
             $("#logoHome").click(function(){
@@ -226,10 +233,7 @@
                         
                         
                 </div>
-                <div class="fadeout"></div>
-                </section>
-                
-                <div id="readMore"><p id="readMoreLink">Read more</p></div>
+                <div class="fadeout"><div id="readMore"><p id="readMoreLink">Read more</p></div>
                 <div id="loginForm" style="display:none;">
                     <p style="text-align:center;">
                         This is part of a series of PMA global consumer studies.<br/>
@@ -239,7 +243,11 @@
                         <label for="password">Password</label><input type="password"/><br/>
                         &nbsp;<input type="submit" text="Login" />
                     </div>
-                </div>
+                </div></div>
+                
+                </section>
+                
+                
             </div>   
             <div id="footer">
                     <div class="footerCol">

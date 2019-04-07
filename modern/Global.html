@@ -7,26 +7,25 @@
         <link rel="stylesheet" href="./style/modal.css">
         <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
         <style type="text/css">
-<<<<<<< HEAD
-        body{font-family:  'Rubik', sans-serif;padding:0; margin:0;background-color:#030303;}
-=======
-        body{font-family:  'Rubik', sans-serif;padding:0; margin:0;}
->>>>>>> setting up local linux
-        #topper{background-color:#E1D91E;color:#000;font-size:1em;    
+        body{font-family:"Myriad Pro"; padding:0; margin:0;}
+        #topper{color:#fff;font-size:1em;    
             display:inline-block;
+            position:absolute;
+            right:2em;
         width: 100%; 
         height:20px;
-        margin: auto; 
+         
         text-align:right;
-        padding-right:.5em;
+        padding-right:.0;
 
  
         }
         #topper p{display:table-cell;vertical-align: middle;padding:auto;}
-        #hero{width:100%;max-width:1920px;min-height:800px;
-            background:url("./images/GlobalHero.png");
+        #hero{width:100%;max-width:1920px;min-height:1000px;
+            background:url("./images/tractorHero.jpg" );
             background-repeat: no-repeat;
             background-size:100% auto;
+            object-fit: cover;
         }
         #logoMenu{ padding:1.5em 1em;width:95%;}
         #hamburger{text-align:left;display:table-cell;padding-top:1.75em;padding-right:3em;}
@@ -42,73 +41,69 @@
         #right{display:table-cell;border-left:1px solid #fff;width:50%;max-width:960px;}
         #oneThird{display:inline-block;border:1px solid #fff;height:200px;width:33%;}
         #userLogin{color:#fff;display:table-cell;text-align: right;vertical-align: middle;padding-right:2em;}
-        #tagline{text-align:left;font-size:2em;font-weight:bolder;color:#fff;padding-left:2em;padding-top:18%;}
+        #tagline{text-align:left;font-size:2em;font-weight:bolder;color:#fff;padding-left:2em;padding-top:12%;width:100%;text-align:center;}
         #tagline form{display:inline-block;}
         #tagline form select{font-size: 1em; color:#fff;background-color:transparent}
-        #tagline form select option{background-color:transparent;color:#000;}
-
-        
-       .interrupter{margin:auto;width:100%;max-width:1268;max-height:713;background-color:azure}
-<<<<<<< HEAD
-       #GrowThis{}
+        #tagline form select option{background-color:transparent;color:#000;}        
+       .interrupter{margin:auto;width:100%;max-width:1268;max-height:713;background-color:azure}       
        #cookies{width:100%; min-height:100px;background-color:#eeeeee;color:#000}
 
         @media screen and (max-width:500px)
         {
+            #topper{color:#fff;font-size:1em;    
+            display:inline-block;
+            position:absolute;
+            right:.6em;
+        width: 100%; 
+        height:20px;
+         
+        text-align:right;
+        padding-right:0;
+
+ 
+        }
+        #topper p{display:inline-block;position:absolute;right:0em;}
             #hero{width:100%;
-            background:url("./images/GlobalHeroMobile400.png");
+            background:url("./images/tractorHeromobile.jpg");
             background-repeat: no-repeat;
             background-size:100% auto;
             }
-            #tagline{text-align:center;font-size:1em;font-weight:bolder;color:#fff;padding-left:1em;padding-top:50%;}
-            
+            #tagline{width:100%;text-align:center;font-size:1em;font-weight:bolder;color:#fff;padding-top:40%;padding-left:0;}            
         }
+        #userLogin{color:#fff;display:table-cell;text-align: right;vertical-align: middle;padding-right:0em;}
         </style>
     </head>
-    <body>
-=======
-       
-       #cookies{width:100%; min-height:100px;background-color:#eeeeee;color:#000}
-
-        </style>
-    </head>
-    <body style="background-color: #000">
->>>>>>> setting up local linux
-        <div id="wrapper">
-            <div id="topper">            
-                <i class="fas fa-globe"></i>&nbsp; PMA in your country
-            </div>
-            <div id="hero">
-<<<<<<< HEAD
-                
-=======
     
->>>>>>> setting up local linux
+
+        
+    <body style="background-color: #000">
+        <div id="wrapper">
+            
+            <div id="hero">
+                    
                 <div id="logoMenu">                          
-                   
+                <div id="topper">            
+                    <i class="fas fa-globe"></i>&nbsp; PMA in your region
+                </div>
                 <div style="display: flex;align-items:center;width:100%;color:#fff">
-                    <img src="./PMA_NewLogo_White_sm.png" style="vertical-align: middle;"/>&nbsp <h2 style="display:none;font-family:  'Rubik', sans-serif;padding-left:50px;padding-top:20px;">The Produce Marketing Association</h2>
+                    <img src="./PMA_NewLogo_White_sm.png" style="vertical-align: middle;"/>&nbsp <h2 style="display:none;font-family:'Rubik', sans-serif;padding-left:50px;padding-top:20px;">The Produce Marketing Association</h2>
                     <span id="userLogin" style="position:absolute;right:10px;">
-                            <i class="fas fa-user">&nbsp;&nbsp;</i><div style="display:inline-block;text-decoration: underline">Login</div>
+                            <i class="fas fa-user">&nbsp;&nbsp;</i><div style="display:inline-block;">LOG IN</div>
                     </span>
                 </div>
                 
                 
                 </div>
                     <div id="tagline" >
-<<<<<<< HEAD
-                         We are an association that serves the global fresh produce and floral community to
+                        We are an association that serves the global fresh produce and floral community to
                         <div id="GrowThis">grow a healthier world.</div>
-=======
-                        The Produce Marketing Association works with the global produce and floral industries to<br/>
-                        <em>Grow a Healthier World</em>
->>>>>>> setting up local linux
                     </div>  
                     
                     <div class="slideWrapper">
                         
-                        <p>Learn more about PMA in your area. </p>
-                        <a href="./mtf.html"><button style="width:150px;height:40px;background-color:#666666;color:#fff;cursor:hand">PMA in the U.S.</button></a>
+                        <p>Learn more about PMA in your region. </p>
+                        <a href="./mtf.html">
+                            <button style="width:150px;height:40px;background-color:#fff;color:#000;cursor:hand">PMA in Mexico</button></a>
                     </div>
                 </div>
        

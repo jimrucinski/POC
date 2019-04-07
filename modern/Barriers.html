@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="./style/BoxStyles.css">
+        <link rel="stylesheet" href="./style/footer.css">
+        <link rel="stylesheet" href="./style/search.css">
+
+        <style type="text/css">
+        body{font-family:"Myriad Pro"; padding:0; margin:0;font-size:1.25em;}
+        #topper{background-image:url("./images/MTF-leafy-BG.jpg");padding:.5em 1em .5em 1em;}
+        #hamburger{text-align:left;display:table-cell;padding-top:1.75em;padding-right:3em;}
+        .bar1, .bar2, .bar3 {            
+        width: 22px;
+        height: 4px;
+        background-color: #fff;
+        margin: 6px 0 0 10px;
+        transition: 0.4s;  
+        }
+        #mobileTitle{display:none;}
+        #userLogin{color:#fff;display:table-cell;width:100%;text-align: right;vertical-align: middle;padding-right:2em;padding-top:1em;}
+        #contentWell{width:80%;margin:0 auto;padding-top:1em;}
+        #breadCrumbs{font-size: smaller;color:#ccc;padding-bottom:1em;border-bottom:solid 1px #CFCBC5;}
+        #content{width:95%;}
+        li{list-style: disc;}
+        figure{float:left;padding-right:1em;}
+        figcaption{color:#CFCBC5;font-style:oblique }
+        #loginForm{width:100%;
+            position:relative;
+            top:-200px;
+            background-image: linear-gradient(124deg, #edf2e5 16.67%, #ffffff 16.67%, #ffffff 50%, #e6ebd3 50%, #e6ebd3 66.67%, #ffffff 66.67%, #ffffff 100%);
+            background-size: 3.62px 5.36px;
+            margin-bottom:.25em;
+            padding-bottom:1em;
+            padding-top:.15em;
+        }
+        #loginForm p{
+            font-size:larger;
+        }
+        #loginForm div{
+            border:1px solid #000;
+           width:20%;
+            display:block;
+            position:relative;
+            margin:0 auto;
+            text-align: center;
+            border-radius: 10px;
+            
+        }
+        #loginForm label{
+            font-weight:bolder;
+            width:100%;
+            text-align: center;
+  
+            display:block;
+        }
+
+        
+        #readMore {position:absolute;bottom:-100px;font-size:1.25em;}
+        #readMoreLink{color:#40A9A0;cursor: pointer;}
+
+        .fadeout {
+    position: relative; 
+    bottom: 15em;
+    height: 15em;
+    background: -webkit-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    ); 
+    background-image: -moz-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: -o-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    background-image: -ms-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+} 
+
+
+        @media only screen and (max-width: 500px){
+            body{font-size:1em;}
+            #breadCrumbs{display:none;}
+            h1{font-size:smaller;}
+            #testArticle img{height:100px;}
+            figure{display:block;float:none;padding:0;margin:0;}
+            figure img{width:300px;}
+            figcaption{font-size:smaller;margin-bottom:1em;}
+            #readMore {position:relative;bottom:200px;font-size:1.25em;}
+            #loginForm p{
+            font-size:1.25em;
+        }
+        #testArticle{display:none;}
+        #mobileTitle{display:block;}
+        h1{font-size:1.2em;text-align:center;}
+        #loginForm div{
+   
+           width:80%;
+            display:block;
+            position:relative;
+            margin:0 auto;
+            text-align: center;
+        
+            
+        }
+        
+
+
+        }
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#readMore").click(function(){
+                $("#loginForm").show(500);
+            })
+
+            $("#logoHome").click(function(){
+            document.location.href = "./mtf.html";
+          })
+            })
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+                
+                <div id="topper">                
+                    <div>                        
+                        <div id="logoMenu">                                                         
+                            <div id="hamburger" style="display:table-cell; vertical-align: top">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>                        
+                            </div>
+                            <div style="display:table-cell;padding-right:2em;">
+                                <img  src="./PMA_NewLogo_White_sm.png"/>
+                            </div>
+                            <div style="display:table-cell;font-size:2em;font-weight:lighter;color:#fff;position:relative;top:-.4em;"><i class="fas fa-globe"></i></div>   
+                        </div>
+                        <div id="userLogin" style="position:absolute;top:30px;width:100%" >                    
+                            <div id="login" class="login" style="display:inline-block;text-decoration: underline"><i class="fas fa-user">&nbsp;&nbsp;</i>LOG IN</div>
+                                <span id="userProfile" style="text-decoration: underline;display:none;">
+                                    <i id="loggedInIcon"  class="fas fa-user">&nbsp;&nbsp;</i>Hello Dr. Dover
+                                    <ul id="userResources" style="display:none;">
+                                        <li>user profile</li>
+                                        <li>member direcory</li>
+                                        <li>attendee lookup</li>
+                                    </ul>
+                                </span>
+                                <div class="search" >
+                                <span class="fa fa-search" style="color:#666"></span>
+                                <input placeholder="Search term">
+                            </div>                            
+                        </div>                
+                </div>
+            </div>
+            <div id="contentWell" >
+                <div id="breadCrumbs">
+                    <span id="logoHome" style="color:#40A9A0;cursor:pointer">Home</span> > Drivers and Barriers for Produce Consumption in the U.S.
+                </div>
+                <div id="social"><img src="./images/social.png"/></div>
+                <h1 id="mobileTitle">
+                        Drivers and Barriers for Produce Consumption in the U.S.
+                        </h1>
+                <div class="module" id="testArticle" style="cursor: pointer">
+                    <img src="./images/TomatoesBigArticle.jpg" style="width:100%;"/>
+                        <header>
+                            <h1>
+                            Drivers and Barriers for Produce Consumption in the U.S.
+                            </h1>                        
+                        </header>
+                </div>
+                <section>
+                <div id="content">
+                     <p>
+                        This study gives us insight into when, why and how U.S. consumers choose fruits and vegetables.
+                    </p>
+                    <p>
+                        By understanding current habits and behaviors limiting consumption, fresh produce retailers and 
+                        marketers can change the game to break through consumers' perceptions to increase consumption. 
+                        </p>
+                       
+                            <figure>
+                                <img src="./images/WomanMakingSoup.jpg"/>
+                                <figcaption>
+                                        Food plays both a functional role and an<br/> emotional role, which
+                                         differ between lunch at<br/> work school and lunch at home.
+                                </figcaption>
+                            </figure>
+                            Here's how:
+                        <ul>
+                            <li >
+                                <strong>Do the work for the consumer.</strong><br/>
+                                Make fruits and vegetables more convenient to the consumer<br/>
+                             throughout the day with ready-to-eat, 
+                                snack packs, single serve and mini-varieties.                             
+                            </li>
+                            
+                            <li><strong>Younger consumers are less habitual eaters.</strong> <br/>
+                                There is more of a chance to capture them with smaller portion sizes and <br/>
+                                mini-varieties, as well as with exotic or unfamiliar varieties.
+                            </li>
+                            <li>
+                                
+                                <strong>Help vegetables "own" dinner at home and shine as the star of the meal.</strong><br/>
+                                 Move beyond promoting fruits and vegetables just as "smart choices" and "good for you." 
+                                 These attributes may restrict when and why consumers will eat them. Showcase the full flavor 
+                                 potential of fruits and vegetables, making them fun, sweet and satisfying.</li>
+                        </ul>
+                       <p>Women Making Soup - A Healthy Choice Food plays both a functional role and an emotional role, which differ between 
+                           lunch at work/school and lunch at home.</p> 
+                        <p>
+                        The full report, available exclusively to members, identifies thought-provoking strategies to leverage what is working 
+                        and sought after in fruits and vegetables and to develop products, communication or packaging ideas to remove barriers. 
+                        </p>
+                        
+                        
+                </div>
+                <div class="fadeout"></div>
+                </section>
+                
+                <div id="readMore"><p id="readMoreLink">Read more</p></div>
+                <div id="loginForm" style="display:none;">
+                    <p style="text-align:center;">
+                        This is part of a series of PMA global consumer studies.<br/>
+                        Please log in to see the rest of the article.</p>
+                    <div id="form">
+                        <label for="username">Username</label><input type="text" />
+                        <label for="password">Password</label><input type="password"/><br/>
+                        &nbsp;<input type="submit" text="Login" />
+                    </div>
+                </div>
+            </div>   
+            <div id="footer">
+                    <div class="footerCol">
+                        <img src="./PMA_NewLogo_White_sm.png"/>
+                        <!--
+                        <ul>
+                            <li>australia + new zealand</li>
+                            <li>brazil</li>
+                            <li>chile</li>
+                            <li>china</li>
+                            <li>mexico</li>
+                            <li>southern africa</li>
+                            <li>united states</li>
+                        </ul>-->
+                    </div>
+                    <div class="footerCol footerColExtra">
+                        <strong>CONNECT</strong>
+                        <ul>
+                            <li>find your peers</li>
+                            <li>volunteer</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="footerCol footerColExtra">
+                        <strong>ATTEND</strong>
+                        <ul>
+                            <li>events</li>
+                            <li>webinars</li>
+                            <li>listeria workshops</li>
+                            <li>hort connections</li>
+                        </ul>
+                    </div>
+                    <div class="footerCol footerColExtra">
+                        <strong>GROW</strong>
+                        <ul>
+                            <li>demand creation</li>
+                            <li>floral</li>
+                            <li>food safety & tech</li>                            
+                            <li>sustainability</li>
+                            <li>talent</li>
+                        </ul>
+                    </div>
+                    <div class="footerCol footerColExtra">
+                        <strong>ABOUT</strong>
+                        <ul>
+                            <li>advertise & sponsor</li>
+                            <li>careers</li>
+                            
+                        </ul>
+                    </div>
+                </div>               
+        </div>
+
+    </body>
+</html> 

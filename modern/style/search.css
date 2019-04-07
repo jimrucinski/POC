@@ -1,8 +1,20 @@
-.search { position: relative; margin-top:5px; text-align: center;}
+.search{display:inline-block;width:200px;position:absolute;right:350px;margin-right:10px;}
 .search input { text-indent: 30px; width:90%;background-color:#fafafa;border-radius: 10px; }
 .search .fa-search { 
   position: absolute;
   top: 5px;
-  left: 20px;
+  left: 35px;
   font-size: 15px;
+}
+.mobilesearch{display:none;}
+@media only screen and (max-width: 500px){
+  .search{display:none;}
+.mobilesearch { display:block;position: relative; margin-top:2em; text-align: center;}
+.mobilesearch input { text-indent: 30px; width:90%;background-color:#fafafa;border-radius: 10px; }
+.mobilesearch .fa-search { 
+  position: absolute;
+  top: 5px;
+  left: 25px;
+  font-size: 15px;
+}
 }

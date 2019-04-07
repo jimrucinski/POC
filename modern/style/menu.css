@@ -1,12 +1,47 @@
+
 #menu{
-   padding: 10px 10px 10px 5px; border:1px solid #666;width:300px;background-color:#ccc;
-   display:none;position:absolute;top:75px;left:0;z-index: 1;opacity: .9;;
+   padding: 10px 10px 10px 5px; border:1px solid #ccc;width:300px;background-color:#70BE44;
+   display:none;position:absolute;top:0px;left:0;z-index: 1;opacity: .95;
 }    
-.menuItem{width:100%; line-height: 30px;color:#000;padding-left:.5em;
-    text-transform: capitalize;text-align: left;font-size:larger;margin-bottom:1px;border-bottom:solid 1px #fafafa;
+#menu li{list-style: none;}
+.menuItem{width:100%; line-height: 30px;color:#fff;padding-left:2em;
+    text-transform: uppercase;text-align: left;margin-bottom:1px;
 }
-.menuItem:hover{background-color:#FBAA19;cursor: pointer;}
-#menu button{margin:0 auto;border-radius: 23px;background-color:#71BE44;color:#000;height:4em;
+.menuItem li{list-style: none;}
+.menuItem:hover{cursor: pointer;}
+#menu button{margin:0 auto;border-radius: 23px;background-color:#71BE44;color:#fff;height:4em;
     display:block;width:70%;border-color:#B3D235;font-size:1em;
 }
-#hideMenu{width:100%;position:relative;right:10px;text-align:right;cursor:pointer;}
+#hideMenu{position:absolute;top:0;text-align:right;cursor:pointer;font-size:1.5em;color:#fff;}
+#menuLogin{display:none;}
+#loginLink{display:inline-block;text-decoration: underline}
+.submenu{display:none;}
+.industryInsights:before{content:"+ "; font-size:larger;}
+.industryNsights:before{content:"- ";font-size:larger;}
+
+.eventsNsights:before{content:"- ";font-size:larger;}
+.countryItem{text-transform: capitalize;border-bottom:solid 1px #B3D335;width:80%;}
+#mobileUserPass{display:none;}
+@media only screen and (max-width: 500px){
+    #menu{
+       
+
+        display:none;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:2;
+        opacity:1;
+     } 
+    #menuItems{padding-bottom:1em;}
+    #menu button{margin-top:1em;}
+    #menuLogin{display:block;color:#fff;position:absolute;right:20px;top:1.2em;}
+    #userLogin{text-align:left;position:absolute;left:10px;}
+    #hideMenu{position:absolute;top:.9em;left:10px;width:20px;text-align:right;cursor:pointer;font-size:1.25em;margin-bottom:1em;}
+    #loginLink{display:none;}
+    #mobileUserPass{display:none; top:50px; width:"80%"; background-color:#B3D335;padding:.5em;text-align:center;opacity: .9;}
+    #mobileUserPass label{text-align:left;text-transform: capitalize;}
+    #mobileUserPass a{font-size:smaller;}
+    #mobileUserPass button{border-radius:10px;}
+
+}

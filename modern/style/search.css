@@ -1,4 +1,4 @@
-.search{display:inline-block;width:200px;position:absolute;right:350px;margin-right:10px;}
+.search{display:inline-block;width:200px;position:relative;right:350px;margin-right:10px;}
 .search input { text-indent: 30px; width:90%;background-color:#fafafa;border-radius: 10px; }
 .search .fa-search { 
   position: absolute;

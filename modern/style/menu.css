@@ -5,7 +5,7 @@
 }    
 #menu li{list-style: none;}
 .menuItem{width:100%; line-height: 30px;color:#fff;padding-left:2em;
-    text-transform: uppercase;text-align: left;margin-bottom:1px;
+    text-transform: uppercase;text-align: left;margin-bottom:1px;text-shadow:.25px .25px #666;
 }
 .menuItem li{list-style: none;}
 .menuItem:hover{cursor: pointer;}

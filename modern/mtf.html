@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="./style/menu.css"> 
         <link rel="stylesheet" href="./style/search.css">
         <link rel="stylesheet" href="./style/footer.css">
+        <link rel="stylesheet" type="text/css" href="https://github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
+
         <style type="text/css">
 
 
@@ -18,8 +20,9 @@
         h1 h2 h3 h4{font-family:"Myriad Pro"}
     
         #heroImage{
-            max-height:500px;
-            width:100%;max-width:1920px;
+            
+            width:100%;
+            margin-bottom:.5rem;
         }
         #topper p{color:#fff;display:inline-block;vertical-align: middle;position:absolute;right:350px;font-size:1em;}
         
@@ -33,26 +36,26 @@
         transition: 0.4s;  
         }
         
-        #left{display:table-cell;border-right:1px solid #fff;width:50%;max-width:960px;}
-        #right{display:table-cell;border-left:1px solid #fff;width:50%;max-width:960px;}
+        #left{display:table-cell;border-right:1px solid #fff;width:50%;max-width:960px;padding:.5rem .5rem 1rem 1rem;}
+        #right{display:table-cell;border-left:1px solid #fff;width:50%;max-width:960px;padding:.5rem 1rem 1rem .5rem;}
         #oneThird{display:inline-block;border:1px solid #fff;height:200px;width:33%;}
         #userLogin{position:absolute;top:10px;right:0;width:100%;color:#fff;display:inline-block;
             text-align: right;vertical-align: middle;padding-right:2em;}
         #tagline{text-align:center;padding-top:2em;font-size:2em;color:#fff;
-            font-weight:600;font-display: "Myriad Pro";text-shadow: 1px 1px #000;}
+            font-weight:600;font-display: "Myriad Pro";text-shadow: 1px 1px #000;z-index:0;}
         #tagline form{margin-left:.25em;display:inline-block;}
         #tagline form select{font-size: .85em; color:#fff;background-color:#fff;color:#000}
         #tagline form select option{background-color:transparent;color:#000;}        
               
        #footer{width:100%; min-height:100px;background-color:#6BC155;color:#000}
         #loggedInIcon:hover #userResources{display:block;}
-        #userResources{position:absolute;right:30px;
-            background-color:#6BC155;color:#000; border:1px solid #000;padding:1em;}
-        #userResources li{line-height:2em;cursor:pointer;}
+        #userResources{position:absolute;right:45px;top:3rem;
+            background-color:#B14169;color:#fff; padding:1em;margin:0;z-index:100;}
+        #userResources li{line-height:2em;cursor:pointer;margin:0;}
         .interrupter{
             width:100%;
-            padding-top:2em;
-            padding-bottom:2em;
+            padding-top:1rem;
+            padding-bottom:1rem;
             background-image: linear-gradient(124deg, #edf2e5 16.67%, #ffffff 16.67%, #ffffff 50%, #e6ebd3 50%, #e6ebd3 66.67%, #ffffff 66.67%, #ffffff 100%);
             background-size: 3.62px 5.36px;
         }
@@ -64,6 +67,27 @@
         .articleDescription{font-size:large;}
         .globalIcon{font-size:1.25em;padding-right:.5em;}
         #inCountry{font-weight:500;}
+        #joinNow{text-transform: capitalize;color:#fff;font-weight: bold;position:relative;
+            display:inline-block;padding: .3rem 1rem;border:0.16em solid rgba(255,255,255,0);
+            border-radius:10px;box-sizing: border-box;text-decoration:none;font-family:'Roboto',sans-serif;font-weight:300;
+            color:#FFFFFF;text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);text-align:center;transition: all 0.2s;background-color:#6BC155;
+        
+        }
+        .currentFlag{margin-right:1em;}
+        .buttonStyle{display:inline-block;
+            background-color:#000;
+   
+            padding:.25rem .1rem .25rem 1rem;
+            border-radius: 10px;
+            color:#fff;
+            text-shadow:#000 1px 1px;
+        
+            margin:1em;}
+     
+        #countries{position:absolute;margin-top:.5rem;display:block;background-color:#000;text-shadow:#000 1px 1px;z-index:100;}
+        #countries ul{display:none;text-align:left;background-color:#000;padding:0;margin-top:0;z-index:10;width:190px;}
+        #countries li{border-bottom:solid 1px #ccc;color:#fff;list-style: none;padding:.5rem 1rem;font-weight: lighter;font-size:.9em;}
+        #countries li:hover{background-color:#666;}
 
        @media only screen and (max-width: 500px){
            h1{font-size:1.1em;}
@@ -72,6 +96,7 @@
            #heroImage{
             max-height:500px;
             width:100%;max-width:1920px;
+            margin-bottom:.25rem;
  
         }
         #hamburger{text-align:left;display:table-cell;padding-right:1em;}
@@ -84,13 +109,14 @@
         }
         #topper p{display:-block;position:absolute;top:0;left:10px;}
         #inCountry{display:none;}
-        #userLogin{position:absolute;top:10px;left:170px;width:200px;display:inline-block;color:#fff;text-shadow: 1px 1px #000}
+        .currentFlag{margin-right:.5rem;width:20px;}
+        #userLogin{position:absolute;top:10px;left:00px;width:100%;;display:inline-block;color:#fff;text-shadow: 1px 1px #000}
         #tagline{padding-top:30%;font-size:1.5em;color:#fff;margin:0 auto;}
         #tagline form{display:inline-block;}
         #tagline form select{font-size: 1em;}
         #tagline form select option{background-color:transparent;color:#000;}    
-        #left{display:block;border:1px solid #fff;border:1px solid #fff;margin-top:2px;width:100%;margin:0 auto;}
-        #right{display:block;border:1px solid #fff;border:1px solid #fff;margin-top:2px;width:100%;margin:0 auto;}
+        #left{display:block;border:1px solid #fff;border:1px solid #fff;width:100%;margin:0 auto;padding:.25rem 0;}
+        #right{display:block;border:1px solid #fff;border:1px solid #fff;width:100%;margin:0 auto;padding:.25rem 0;}
         .interrupter{margin:0 auto;width:100%;background-color:#fafafa;} 
 
         #oneThird{display:block;border:1px solid #fff;width:100%;margin:2px;}
@@ -100,7 +126,22 @@
         .centeredAd h3{display:inline-block;font-size:1.4em;text-align:center;padding:0;}
         .centeredAd p{text-align: center;}
         .articleDescription{font-size:smaller}
-        .globalIcon{display:none}/*figure out how to get this on the mobile screen*/
+        .globalIcon img{width:15px;}/*figure out how to get this on the mobile screen*/
+        #joinNow{position:absolute;right:0;top:50px;}
+
+        #countries{position:absolute;margin-top:0rem;display:block;background-color:#000;text-shadow:#000 1px 1px;z-index:100;}
+        #countries ul{display:none;text-align:left;background-color:#000;padding:0;margin-top:0;z-index:10;width:190px;}
+        #countries li{border-bottom:solid 1px #ccc;color:#fff;list-style: none;padding:.5rem 1rem;font-weight: lighter;font-size:.9em;}
+        #countries li:hover{background-color:#666;}
+
+        .buttonStyle{display:inline-block;
+            background-color:#000;
+            padding:3px;
+            border-radius: 5px;
+            color:#fff;
+            text-shadow:#000 1px 1px;        
+            margin:.25em;}
+
        }
 
         </style>
@@ -124,21 +165,37 @@
                     rightImg: './images/ExportingToChinaBig950.jpg',
                     rightTitle: "Special Report: Exporting to China",
                     rightDesc: "Understand which commodities China allows, and learn what your best strategy is to gain access to Chinese markets."
+                },
+                {hero: './images/GlobalTradeHero.jpg', 
+                    leftImg: './images/EUFoodMarket950.jpg', 
+                    leftTitle: "EU's Food-to-Go Market - Opportunities for Global Suppliers",
+                    leftDesc: "The food-to-go/convenience space is growing as retailers and food-to-go operators are capitalizing on shoppers' changing behaviors and priorities.",
+                    rightImg: './images/transform950.jpg',
+                    rightTitle: "Transformation of the American Meal: How Consumers Live and eat",
+                    rightDesc: "Fundamental shifts in American culture are reshaping the way consumers live and eat today, according to The Hartman Group’s recently released Transformation of the American Meal report."
+                },
+                {hero: './images/GlobalTradeHero.jpg', 
+                    leftImg: './images/TechRoad950.jpg', 
+                    leftTitle: "8 Steps to Consider when Creating a Technology Roadmap",
+                    leftDesc: "The food-to-go/convenience space is growing as retailers and food-to-go operators are capitalizing on shoppers' changing behaviors and priorities.",
+                    rightImg: './images/TechKnow950.jpg',
+                    rightTitle: "Tech Knowledge",
+                    rightDesc: "Engage in conversations about today's most effective and exciting solutions in the ag-tech field."
                 }
             ];
 
             var bgArray = [
             './images/MexicoHero1980.jpg',
-            './images/GlobalTradeBig.jpg',
-            './images/RetailBig.jpg',
-            './images/HiTechFarming.jpg'
+            './images/GlobalTradeHero1a.jpg',
+            './images/Retail1920.jpg',
+            './images/plantlab.jpg'
             ]
 
             var bgArrayMobile=[
                 './images/MexicoHeroMobile.jpg',
                 './images/GlobalTradeMobile.jpg',
                 './images/RetailHeroMobile.jpg',
-                './images/HiTechFarmingMobile.jpg'
+                './images/plantlabMobile.jpg'
             ]
 
             var articleData = {};
@@ -204,15 +261,25 @@
               $("#eventsSubmenu").toggle(500);
               $("#eventsMenu").toggleClass( "eventsNsights");
           })
-
+/*
           $("#userLogin").click(function(){
 
-              $("#login").toggle();
-              $("#userProfile").toggle();              
+             $("#loginText").toggle();
+              $("#userProfile").toggle();      
+              $("#joinNow").toggle();        
           })
           $("#loggedInIcon").mouseover(function(){
 ;
               $("#userResources").toggle(500);
+          })
+          */
+         $("#loginText").click(function(){
+
+            $("#userResources").slideToggle("slow");
+         })
+          $("#globalRep").click(function(){
+
+              $("#countriesList").slideToggle("slow");
           })
         });
         </script>
@@ -305,6 +372,7 @@
                                                     <option value="1">global trade</option>
                                                     <option value="2">retail</option>
                                                     <option value="3">technology</option>
+                                                    <option value="4">PMA events</option>
                                                 </select>
                                             </form>
                                         </div>
@@ -329,39 +397,55 @@
                     </div>                
                 </div>
                 
-                <div id="userLogin" >               
-                        
+                <div id="userLogin">               
+                        <div class="search" >
+                                <span class="fa fa-search" style="color:#666"></span>
+                                <input placeholder="Search term">
+                            </div>       
                     <div id="login" class="login" style="display:inline-block;">
-                            <span class="fas fa-globe globalIcon">
-                          
-                             
-                                </span>
-                               <img width="30px"  src="./images/MexicoFlag.png" style="margin-right:1em;"/>
-                               <span id="inCountry">PMA in Mexico</span>&nbsp;&nbsp;
-                        
-                        <i class="fas fa-user">&nbsp;&nbsp;</i>LOG IN</div>
-                        <span id="userProfile" style="text-decoration: underline;display:none;">
-                            <i id="loggedInIcon"  class="fas fa-user">&nbsp;&nbsp;</i>Hello Dr. Dover
-                            <ul id="userResources" style="text-align:left;display:none;list-style: none;color:#fff;text-transform: capitalize">
+                            
+                        <div id="globalRep" class="buttonStyle">
+                            <span class="fas fa-globe globalIcon"></span>
+                            <span id="inCountry">PMA in Mexico</span>&nbsp;&nbsp;
+                            <img width="30px"  src="./images/MexicoFlag.png" class="currentFlag" />
+                            <div id="countries"   style="margin-left:-.5em;">
+                                <ul id="countriesList" class="f32" >
+                                    <li> <span  class="flag au" style="vertical-align: middle;"></span>PMA in Australia</li>
+                                    <li> <span  class="flag br" style="vertical-align: middle;"></span>PMA in Brazil</li>
+                                    <li> <span  class="flag ca" style="vertical-align: middle;"></span>Canada</li>
+                                    <li> <span  class="flag cl" style="vertical-align: middle;"></span>PMA in Chile</li>
+                                    <li> <span  class="flag cn" style="vertical-align: middle;"></span>PMA in China</li>
+                                    <li> <span  class="flag de" style="vertical-align: middle;"></span>Germany</li>
+                                    <li> <span  class="flag mx" style="vertical-align: middle;"></span>PMA in Mexico</li>
+                                    <li> <span  class="flag nl" style="vertical-align: middle;"></span>Netherlands</li>
+                                    <li> <span  class="flag nz" style="vertical-align: middle;"></span>PMA in New Zealand</li>
+                                    <li> <span  class="flag us" style="vertical-align: middle;"></span>PMA in the USA</li>                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <span id="loginText" class="buttonStyle" style="background-color:#B14169;color:#fff;width:150px;text-align:center;">
+                            <i class="fas fa-user">&nbsp;&nbsp;</i>My PMA&nbsp;&nbsp;</span>
+                        <!--<button id="joinNow" class="buttonStyle" style="background-color:#000;color:#fff;" title="Seriously, like right now. No filling in a pdf, finding a stamp somewhere and mailing it in!. STAMPS ... REALLY STAMPS?">join now</button>-->
+                    </div>
+                        <!--<span id="userProfile" style="text-decoration: underline;display:none;">
+                            <i id="loggedInIcon"  class="fas fa-user"></i>Hello Dr. Dover-->
+                            <ul id="userResources" style="text-align:left;list-style: none;color:#fff;text-transform: capitalize;display:none;">
                                 <li>user profile</li>
+                                <li>preferences</li>
                                 <li>member direcory</li>
                                 <li>attendee lookup</li>
                                 <li style="border-top:1px solid #e6ebd3">logout</li>
                             </ul>
-                        </span>
-                        <div class="search" >
-                        <span class="fa fa-search" style="color:#666"></span>
-                        <input placeholder="Search term">
-                    </div>                            
+                        <!--</span>-->
                 </div>                
                 </div>
                         
                 </div>
-                <div>
-                    <div id="left">
+                <div style="display:table;width:100%;">
+                    <div id="left" >
                         <div class="module">
-                            <img src="./images/MexicoLeftImage950.jpg" id="leftArticleImage" style="width:100%;max-width:960px;"/>
-                              <header>
+                            <img src="./images/MexicoLeftImage950.jpg"  id="leftArticleImage" style="width:100%;"/>
+                              <header >
                               <h1 id="leftTitle">
                                     Mexican Fresh Produce Suppliers Work To Appeal To U.S. Consumers
                               </h1>
@@ -371,7 +455,7 @@
                     </div>
                     <div id="right">
                         <div class="module">
-                            <img id="rightArticleImage" src="./images/MexicoRight950.jpg" style="width:100%;max-width:960px;"/>
+                            <img id="rightArticleImage" src="./images/MexicoRight950.jpg" style="width:100%;"/>
                             <header>
                                 <h1 id="rightTitle">Mexican Fresh Produce Exporters Adapt for Consumer-Driven Packaging Trends</h1>
                                 <h1 id="rightDesc" class="articleDescription">Mexican exporters can change packaging to respond to global consumer demand for e-commerce, sustainability and convenience.</h1>
@@ -409,7 +493,7 @@
                     </div>
                 </div>
                 
-                <div style="width:100%;">
+                <div style="width:100%;padding:1rem;">
 
                     <div id="oneThird" style="color:#000">
                         <div class="module"   style="cursor: pointer"  id="testArticle">
@@ -422,7 +506,7 @@
                             </header>
                         </div>
                     </div>
-                    <div id="oneThird" style="background-color: cornflowerblue;color:#000">
+                    <div id="oneThird" style="color:#000">
                             <div class="module">
                                 <img src="./images/MedBurger_Cred-LeslieDurso.jpg" style="width:100%;"/>
                                     <header>
@@ -433,7 +517,7 @@
                                 </header>
                             </div>
                         </div>
-                        <div id="oneThird" style="background-color: cornflowerblue;color:#000">
+                        <div id="oneThird" style="color:#000">
                                 <div class="module">
                                     <img src="./images/topfruits.jpg" style="width:100%;"/>
                                         <header>

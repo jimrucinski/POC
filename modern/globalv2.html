@@ -2,28 +2,33 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="stylesheet" href="./style/BoxStyles.css">
         <link rel="stylesheet" href="./style/modal.css">
         <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
         <style type="text/css">
-        
-        body{font-family:  'Rubik', sans-serif;padding:0; margin:0;}
-        #topper{background-color:#E1D91E;color:#000;font-size:1em;    
+        body{font-family: 'Open Sans', sans-serif; padding:0; margin:0;}
+        #topper{color:#fff;font-size:1em;    
             display:inline-block;
+            position:absolute;
+            right:.7em;
         width: 100%; 
         height:20px;
-        margin: auto; 
+         
         text-align:right;
-        padding-right:.5em;
+        padding-right:.0;
 
  
         }
         #topper p{display:table-cell;vertical-align: middle;padding:auto;}
-        #hero{width:100%;max-width:1920px;min-height:800px;
-            background:url("./images/GlobalHero.png");
+        #hero{width:100%;max-width:1920px;min-height:1000px;
+            background:url("./images/tractorHero.jpg" );
             background-repeat: no-repeat;
             background-size:100% auto;
+            object-fit: cover;
         }
         #logoMenu{ padding:1.5em 1em;width:95%;}
         #hamburger{text-align:left;display:table-cell;padding-top:1.75em;padding-right:3em;}
@@ -39,54 +44,154 @@
         #right{display:table-cell;border-left:1px solid #fff;width:50%;max-width:960px;}
         #oneThird{display:inline-block;border:1px solid #fff;height:200px;width:33%;}
         #userLogin{color:#fff;display:table-cell;text-align: right;vertical-align: middle;padding-right:2em;}
-        #tagline{text-align:left;font-size:2em;font-weight:bolder;color:#fff;padding-left:2em;padding-top:18%;}
+        #tagline{text-align:left;font-size:1.5em;font-weight:bolder;color:#fff;width:100%;text-align:center;text-shadow: 1px 1px #333;}
         #tagline form{display:inline-block;}
         #tagline form select{font-size: 1em; color:#fff;background-color:transparent}
-        #tagline form select option{background-color:transparent;color:#000;}
-
-        
-       .interrupter{margin:auto;width:100%;max-width:1268;max-height:713;background-color:azure}
-       
+        #tagline form select option{background-color:transparent;color:#000;}        
+       .interrupter{margin:auto;width:100%;max-width:1268;max-height:713;background-color:azure}       
        #cookies{width:100%; min-height:100px;background-color:#eeeeee;color:#000}
+        #GrowThis{margin-bottom:1em;}
+       #countriesList {
+       
+        
 
+           /*
+            display: flex;
+
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: space-between;
+
+            color:#fff;
+            white-space: nowrap;
+            */
+        }
+       .countryButton{
+        overflow: auto;
+        color:#fff;
+        white-space: nowrap;
+        float: left;
+        margin: 1%;
+        cursor: pointer;
+        padding:.25em .5em;
+        border:1px #70BE44 solid;
+        color:#fff;
+        margin: 10px 10px 10px 40px;;
+        text-align: center;
+        font-size: 1em;
+        /*background-color:#0E83AB;*/
+        border-radius: 8px 0 8px 0;
+          
+            
+        }
+        
+
+        @media screen and (max-width:500px){
+            #topper{color:#fff;font-size:1em;    
+            display:inline-block;
+            position:absolute;
+            right:.6em;
+            width: 100%; 
+            height:20px;
+            
+            text-align:right;
+            padding-right:0;
+            }
+
+ 
+       
+        #topper p{display:inline-block;position:absolute;right:0em;}
+            #hero{width:100%;
+            background:url("./images/tractorHeromobile.jpg");
+            background-repeat: no-repeat;
+            background-size:100% auto;
+            }
+            #tagline{width:100%;text-align:center;font-size:1em;font-weight:bolder;color:#fff;padding-top:40%;padding-left:0;margin-bottom:1em;}            
+  
+        #userLogin{color:#fff;display:table-cell;text-align: right;vertical-align: middle;padding-right:0em;}
+        #tagline{padding-top:0;color:#fff;text-shadow: none;font-size: smaller;}
+
+        .countryButton{
+            font-size:.75em;
+            padding:0 .5em;
+            margin:.25em;
+            border:none;
+            color:#fff;
+            width:60px;
+            text-align: left;
+            line-height:.75;
+
+        color:#fff;
+          
+            
+        }
+        .countryName{display:none;}
+        
+        #countriesList {
+
+            align-content:center;
+            overflow:auto;
+        }
+       
+       #countriesList div:hover{
+           background-color:#061a00;
+       }
+    }
+       
         </style>
     </head>
+    
+
+        
     <body style="background-color: #000">
         <div id="wrapper">
-            <div id="topper">            
-                <i class="fas fa-globe"></i>&nbsp; PMA in your country
-            </div>
-            <div class="module">
-                <img src="images/GlobalHero1600x900.png" style="width:100%;max-width:900px;"/>
-                  <header>
-                  <h1>
-                    Droning on about tech in agriculture.
-                  </h1>
-                  <h4>blah blah ditty blah</h4>
-                </header>
-              </div>
-                
+            
+            <div id="hero">
+                    
                 <div id="logoMenu">                          
-                   
+                <div id="topper">            
+                    <i class="fas fa-globe"></i>&nbsp; PMA in your region
+                </div>
                 <div style="display: flex;align-items:center;width:100%;color:#fff">
-                    <img src="./PMA_NewLogo_White_sm.png" style="vertical-align: middle;"/>&nbsp <h2 style="display:none;font-family:  'Rubik', sans-serif;padding-left:50px;padding-top:20px;">The Produce Marketing Association</h2>
+                    <img src="./PMA_NewLogo_White_sm.png" style="vertical-align: middle;"/>&nbsp <h2 style="display:none;font-family:'Rubik', sans-serif;padding-left:50px;padding-top:20px;">The Produce Marketing Association</h2>
                     <span id="userLogin" style="position:absolute;right:10px;">
-                            <i class="fas fa-user">&nbsp;&nbsp;</i><div style="display:inline-block;text-decoration: underline">Login</div>
+                            <i class="fas fa-user">&nbsp;&nbsp;</i><div style="display:inline-block;">LOG IN</div>
                     </span>
                 </div>
                 
                 
                 </div>
-                    <div id="tagline" >
-                        The Produce Marketing Association works with the global produce and floral industries to<br/>
-                        <em>Grow a Healthier World</em>
-                    </div>  
+                    
                     
                     <div class="slideWrapper">
+                        <div id="tagline" >
+                            We are an association that serves the global fresh produce and floral community to
+                            <div id="GrowThis">grow a healthier world.</div>
+                            
+                            <p style="font-size:.75em;font-weight: lighter;">Select your default country and learn more about PMA in your region. </p>
+                            <div class="f32 countryButton" style="float:none;position:relative;text-align:center;background-color:#0E83AB;margin:0 auto;width:200px;" >
+                                <a style="font-size:1em;color:#fff;text-decoration: none;" href="mtf.html">
+                                    <span  class="flag mx" ></span>Mexico</a>
+                            </div>
+                        </div>  
+                        <div style="margin-top:2.5em;">
                         
-                        <p>Learn more about PMA in your area. </p>
-                        <a href="./mtf.html"><button style="width:150px;height:40px;background-color:#666666;color:#fff;cursor:hand">PMA in the U.S.</button></a>
-                    </div>
+                        <div id="countries" >
+                            <div id="countriesList" class="f32" >
+                                <div class="countryButton"  > <span  class="flag au" ></span><span class="countryName">Australia</span></div>
+                                <div class="countryButton"> <span  class="flag br" ></span><span class="countryName">Brazil</span></div>
+                                <div class="countryButton"> <span  class="flag ca" ></span><span class="countryName">Canada</span></div>
+                                <div class="countryButton"> <span  class="flag cl" ></span><span class="countryName">Chile</span></div>
+                                <div class="countryButton"> <span  class="flag cn" ></span><span class="countryName">China</span></div>
+                                <div class="countryButton"> <span  class="flag de" ></span><span class="countryName">Germany</span></div>
+                                <!--<div style="background-color:cornflowerblue" > <a style="color:#fff;text-decoration: none;" href="mtf.html"><span  class="flag mx" ></span>Mexico</a></div>-->
+                                <div class="countryButton"> <span  class="flag nl" ></span><span class="countryName">Netherlands</span></div>
+                                <div class="countryButton"> <span  class="flag nz" ></span><span class="countryName">New Zealand</span></div>
+                                <div class="countryButton"> <span  class="flag us" ></span><span class="countryName">USA</span></div>                                    
+                            </div>
+                        </div>   
+                    </div>                 </div>
                 </div>
        
     </body>

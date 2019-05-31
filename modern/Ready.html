@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color:#333;
+                font-size: 62.5%;
+  font-style: Arial;
+            }
+            .centered {
+            background-color:#000;
+            color:#fff;
+            
+            
+
+            }    
+
+
+
+
+.animation-box {
+    position:relative;
+  width:100%;
+  height:768px;
+  background-color:#333;
+  margin: 0 auto;
+  overflow: hidden;
+
+
+}
+
+.animation-container {
+
+    width:1024px;
+  height:768px;
+}
+
+@keyframes topFadeOut {
+  0% {
+    position: absolute;
+    top: -3rem;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    top: 50%;
+    opacity: 1;
+
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bottomFadeOut {
+  0% {
+    position: absolute;
+    bottom: -5rem;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    bottom: 50%;
+    opacity: 1;
+  }
+
+  100% {
+    opacity:20%;
+  }
+  
+}
+
+@keyframes topFadeOutVertical {
+  0% {
+    position: absolute;
+    top: -3rem;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    top: 45%;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rightFadeInOut {
+  0% {
+    position: absolute;
+    right: -3rem;
+    opacity: 0;
+  }
+
+  75% {
+    position: absolute;
+    right: 10rem;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    right: 10rem;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+@-webkit-keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;animation-play-state: paused;}
+            
+         }
+         
+         @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;animation-play-state: paused;}
+            
+         }
+
+
+.first-text {
+  font-size: 10rem;
+  position: absolute;
+  left: 2.5rem;
+  top: 5rem;
+  opacity: 0;
+  animation-name: topFadeOut;
+  animation-duration: 15s;
+  color: white;
+  animation-fill-mode: forwards;
+}
+
+.second-text {
+  font-size: 8rem;
+  position: absolute;
+  top: 70%;
+  opacity: 0;
+  animation-name: rightFadeInOut;
+  animation-delay: 3s;
+  animation-duration: 10s;
+  color: #fff;
+}
+
+.third-text {
+  transform: rotate(-90deg);
+  font-size: 9rem;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  opacity: 0;
+  animation-name: topFadeOutVertical;
+  animation-delay: 7.5s;
+  animation-duration: 15s;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.fourth-text {
+  font-size: 10rem;
+  position: absolute;
+  top: 10.5rem;
+  left: 10%;
+  opacity: 0;
+  color: #fff;
+  animation-name: fadeInOut;
+  animation-delay: 8.5s;
+  animation-duration: 15s;
+}
+
+.fifth-text {
+  font-size: 9rem;
+  position: absolute;
+  text-align:center;
+  bottom: 50%;
+  width:100%;
+
+  opacity: 0;
+
+  animation-name: fadeIn;
+  animation-delay: 20s;
+  animation-duration: 20s; 
+  animation-fill-mode: forwards;
+
+  color: #e0dfdc;
+    background-color: #333;
+    letter-spacing: .1em;
+    text-shadow: 
+      0 -1px 0 #fff, 
+      0 1px 0 #2e2e2e, 
+      0 2px 0 #2c2c2c, 
+      0 3px 0 #2a2a2a, 
+      0 4px 0 #282828, 
+      0 5px 0 #262626, 
+      0 6px 0 #242424, 
+      0 7px 0 #222, 
+      0 8px 0 #202020, 
+      0 9px 0 #1e1e1e, 
+      0 10px 0 #1c1c1c, 
+      0 11px 0 #1a1a1a, 
+      0 12px 0 #181818, 
+      0 13px 0 #161616, 
+      0 14px 0 #141414, 
+      0 15px 0 #121212, 
+      0 22px 30px rgba(0, 0, 0, 0.9);
+  }
+  
+}
+
+
+
+        </style>
+    </head>
+    <body>
+<div class="centered">
+    <section class="animation-box">
+        <div class="first-text">Modern</div>
+        <div class="second-text">Global</div>
+        <div class="third-text">Mobile First</div>
+        <div class="fourth-text">Personalized</div>
+        
+        
+    </section>
+    <div class="fifth-text"><a style="color:#fff;text-decoration: none;" href="./global.html">Y'all ready for this?</a></div>
+</div>
+
+
+
+    </body>
+</html> 

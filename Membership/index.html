@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/membership.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./scripts/membership.js"></script>
+    </head>
+    <body>
+        <form id="membership">
+            <ul>
+                <li>
+                    <label for="selectCountry">Country</label>
+                    <select name="selectCountry">
+                        <option></option>
+                        <option>Australia + New Zealand</option>
+                        <option>Southern Africa</option>
+                        <option>All Others</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="companyName">Company Name</label>
+                    <input type="text" name="companyName" />
+                </li>
+                <li>
+                    <label for="mainBusiness">Business Type</label>
+                    <select id="mainBusiness" name="mainBusiness">
+                        <option></option>
+                        <option value="Floral">floral</option>
+                        <option value="Produce">produce</option>
+                        <option value="ProduceAndFloral">both</option>
+                    </select>
+                </li>
+                <li id="floralSegmentItems">
+                    <label for="floralSegment">Floral Business Segment</label>
+                    <select name="floralSegment" id="floralSegment">
+                        <option></option>
+                        <option value="SolutionProviders">Business Solutions Providers</option>
+                        <option value="Distributors">Distributors</option>
+                        <option value="Exporters">Exporters</option>
+                        <option value="Growers">Growers</option>
+                        <option value="Importers">Importers</option>
+                        <option value="Wholesalers">Wholesalers</option>
+                    </select>
+                </li>
+                <li id="produceSegmentItems">
+                    <label for="produceSegment">Produce Business Segments</label>
+                    <select name="produceSegment" id="produceSegment">
+                        <option></option>
+                        <option value="Associations">Associations</option>
+                        <option value="Brokers">Brokers</option>
+                        <option value="BusinessSrvices">Business services</option>
+                        <option value="Consultants">Consultants</option>
+                        <option value="ConvenienceStore">Convenience Store</option>
+                        <option value="Distributors">Distributors</option>
+                        <option value="EducationalInstitutions">Educational Institutions</option>
+                        <option value="Equipment">Equipment</option>
+                        <option value="Exporters">Exporters</option>
+                        <option value="FeedingInstitutions">Feeding Institutions</option>
+                        <option value="FinanceServices">Finance services</option>
+                        <option value="FoodserviceOperations">Foodservice Operations</option>
+                        <option value="GovernmentEntities">Government Entities</option>
+                        <option value="Growers">Growers</option>
+                        <opton value="Grocers">Grocers</opton>
+                        <option value="Hotels">Hotels</option>
+                        <option value="Importers">Importers</option>
+                        <option value="Logistics">Logistics</option>
+                        <option value="Machinery">Machinery</option>
+                        <option value="NotForProfit">Not For Profit</option>
+                        <option value="OnlineProduceRetailers">Online produce retailers</option>                        
+                        <option value="Packaging">Packaging</option>
+                        <option value="Processors">Processors</option>
+                        <option value="PromotionalBoards">Promotional Boards</option>
+                        <option value="ProvidersOfAgSupplies">Providers of Ag Supplies</option>
+                        <option value="Restaurants">Restaurants</option>
+                        <option value="Shippers">Shippers</option>
+                        <option value="Supermarkets">Supermarkets</option>
+                        <option value="Technology">Technology</option>
+                        <option value="TradePress">Trade Press</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="WholesaleGrocers">Wholesale Grocers</option>
+                        <option value="Wholesalers">Wholesalers</option>
+                    </select>
+                </li>
+                <li id="numberOfStoresSegment">
+                    <label for="numberOfStores">Number of Stores</label>
+                    <input type="text" id="NumberOfStores" name="NumberOfStores"/>
+                </li>
+                <li id="annualSalesSegement">
+                    <label for="annualSales">Annual Sales</label>
+                    <input type="text" id="AnnualSales" name="AnnualSales"/>
+                </li>
+            </ul>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+
+#menu{
+   padding: 10px 10px 10px 5px; border:1px solid #ccc;width:100%;background-color:#333;
+   display:none;position:absolute;top:0px;left:0;z-index: 1;opacity: .95;
+}    
+#menu li{list-style: none;}
+.menuItem{width:100%; line-height: 30px;color:#fff;padding-left:2em;
+    text-transform: uppercase;text-align: left;margin-bottom:1px;text-shadow:.25px .25px #666;
+}
+.menuItem li{list-style: none;}
+.menuItem:hover{cursor: pointer;}
+#menu button{margin:0 auto;border-radius: 23px;background-color:#71BE44;color:#fff;height:4em;
+    display:block;width:70%;border-color:#B3D235;font-size:1em;
+}
+#hideMenu{position:absolute;top:0;text-align:right;cursor:pointer;font-size:1.5em;color:#fff;}
+#menuLogin{display:none;}
+#loginLink{display:inline-block;text-decoration: underline}
+.submenu{display:none;}
+.industryInsights:before{content:"+ "; font-size:larger;}
+.industryNsights:before{content:"- ";font-size:larger;}
+
+.eventsNsights:before{content:"- ";font-size:larger;}
+.countryItem{text-transform: capitalize;border-bottom:solid 1px #B3D335;width:80%;}
+#mobileUserPass{display:none;}
+@media only screen and (max-width: 500px){
+    #menu{
+        display:none;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:2;
+        opacity:1;
+     } 
+    #menuItems{position:relative; top:2em;padding-bottom:1em;margin-bottom:4rem;}
+    #menu button{margin-top:1em;}
+
+    #userLogin{text-align:left;position:absolute;left:10px;}
+    #hideMenu{position:absolute;top:0em;right:10px;width:20px;text-align:right;cursor:pointer;font-size:1.25em;margin-bottom:1em;}
+    #loginLink{display:none;}
+    .mobilesearch{display:none;}
+    #mobileUserPass{display:none; top:50px; width:"80%"; background-color:#B3D335;padding:.5em;text-align:center;opacity: .9;}
+    #mobileUserPass label{text-align:left;text-transform: capitalize;}
+    #mobileUserPass a{font-size:smaller;}
+    #mobileUserPass button{border-radius:10px;}
+    #menuCountries{display:none;margin-top:2rem;}
+
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head><meta name="viewport" content="initial-scale=1">
+<title>Single Sign On</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+<style type="text/css">
+
+
+    body{font-family: 'Open Sans', sans-serif; padding:0; margin:0;}
+.box{
+    font-size:larger;   
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border:solid 2px #70BE44;
+    border-radius: 10px;
+    color:#000;        
+    text-align: center;
+    background-color: #fafafa;
+    padding:1em;
+}
+.footer{margin-top:2em;}
+.footer h2{font-size:1em;margin-bottom:0;}
+.footer address{font-style: unset;font-size: .75em;}
+.buttons{
+    margin-top:1em;
+}
+input{font-size:.75em;}
+@media screen and (max-width:750px){
+    
+    .box{width:80%;}
+}
+@media screen and (max-width:500px){
+    .box{font-size:1em;width:80%;}
+
+}
+</style>
+<script language="javascript">
+// <!--
+// onerror
+window.onerror = window_onerror;
+function window_onerror(message,url,lineNumber) {
+	var queryString = '?onerror_message=' + escape(message) + '&onerror_url=' + escape(url) + '&onerror_lineNumber=' + lineNumber;
+	var onerrorImage = new Image();
+	onerrorImage.src = queryString;
+	return true;
+}
+// -->
+
+</script>
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <div class="container header-container">
+            <div class="secondary-and-action clearfix">
+                <!--  <a href="#" class="logo">Produce Marketing Association</a>	-->
+              
+            </div>
+        </div>
+    </header>
+    <div id="InteriorBodyContent" class="container sso-body">
+        
+    <form method="post" action="./ForgotUsername.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="ForgotUsernameForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMzg3MzEzMzI3D2QWAmYPZBYCAgEPZBYCAgEPZBYCAgMPZBYCAgcPDxYCHgJyb2hkZGQe0g4Z4KIRlXfuKhLx1Jzo9Op9gA==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ForgotUsernameForm'];
+if (!theForm) {
+    theForm = document.ForgotUsernameForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/SSO/WebResource.axd?d=Nw2fvAEL66Jh9rxVmyfCYJhrYdtWVa2BOnXuK0EDobD1SoXSYLWNtoijBoPXAwkHH1mqwjsoYeUiOMVr0&amp;t=636845566382185503" type="text/javascript"></script>
+
+
+<script src="/SSO/WebResource.axd?d=9-_lMf-xPpPk7iuKHivNwQi5ID8huDxTKKcKlRZ-UJkxPTvCZn1-7mfaaz4Bu4tgjynStT67X2G7s3NXGN-1mGIlzpM1&amp;t=636845566382185503" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+        <div id="divPhoneHelp" class="login-sumary mobile-way">
+            <div class="red-top-bar">
+            </div>
+            <div class="form-sso-container">
+                <div class="content mobile-login">
+                    <p>
+                        
+                    </p>
+                    <p>
+                        
+
+<div class="box">
+    <img src="https://www.pma.com/~/media/pma-images/pma-logos/pma-logo.png"/><br/>
+    <p>
+        <span id="main_ForgotUsernameUserControl1_InstructionLabel" class="Label">Please enter the e-mail address for your account and you will receive username reset instructions via e-mail.</span>
+    </p>
+    <div class="sso-sub-form">
+        <label>
+            <span id="main_ForgotUsernameUserControl1_EmailLabel" class="FieldLabel" key="forgotusername_Email">E-mail Address</span></label>
+        <span id="EmailRequiredFieldValidator" class="RequiredFieldValidatorMarker">*</span>
+        <input name="ctl00$main$ForgotUsernameUserControl1$EmailTextBox" type="text" id="main_ForgotUsernameUserControl1_EmailTextBox" class="EmailTextBox" />
+        <span id="main_ForgotUsernameUserControl1_EmailRegularExpressionValidator" class="RegularExpressionValidator" style="color:Red;display:none;">Invalid Email.</span>
+    </div>
+    <div class="buttons">
+        <input type="submit" name="ctl00$main$ForgotUsernameUserControl1$SubmitButton" value="Send Reset Username" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$main$ForgotUsernameUserControl1$SubmitButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="main_ForgotUsernameUserControl1_SubmitButton" class="btn btn-primary Button" />&nbsp;<input type="submit" name="ctl00$main$ForgotUsernameUserControl1$CancelButton" value="Cancel" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$main$ForgotUsernameUserControl1$CancelButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="main_ForgotUsernameUserControl1_CancelButton" class="btn btn-link Button" />
+    </div>
+
+    <div role="contentinfo" class="footer">
+        <h2>Produce Marketing Association</h2>
+        <address>
+            1500 Casho Mill Rd, Newark DE 19711  USA<br>
+            +1-302-738-7100 
+        </address>
+        <div class="credit">
+            
+        </div>
+    </div>
+
+</div>
+
+                   
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("main_ForgotUsernameUserControl1_EmailRegularExpressionValidator"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var main_ForgotUsernameUserControl1_EmailRegularExpressionValidator = document.all ? document.all["main_ForgotUsernameUserControl1_EmailRegularExpressionValidator"] : document.getElementById("main_ForgotUsernameUserControl1_EmailRegularExpressionValidator");
+main_ForgotUsernameUserControl1_EmailRegularExpressionValidator.controltovalidate = "main_ForgotUsernameUserControl1_EmailTextBox";
+main_ForgotUsernameUserControl1_EmailRegularExpressionValidator.display = "Dynamic";
+main_ForgotUsernameUserControl1_EmailRegularExpressionValidator.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+main_ForgotUsernameUserControl1_EmailRegularExpressionValidator.validationexpression = "^[a-zA-Z0-9!#$%&\'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&\'*+/=?^_`{|}~-]+)*@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([a-zA-Z0-9\\-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$";
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F6C35D82" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAQ7z4QZfA7wlXjCbiWYG4U9+UkcVDHQCN2AijmiUWZGeLK+ip+vZrazqUDiTVDlty2ILAqcpXZbKuTAE5Ld8yYltFKFJSH+CpP1n8ZpMdWS+/LQKyk=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footerNav">
+               
+                
+                <div class="clear"></div>
+            </div>
+            
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -23,6 +23,7 @@ $(document).ready(function(){
             case 'Produce':
                 $('#floralSegmentItems').hide();
                 $('#produceSegmentItems').show();
+
                 $('#floralSegment').val('');
                 break;
             case 'ProduceAndFloral':
@@ -34,7 +35,6 @@ $(document).ready(function(){
             default:
                 $('#floralSegmentItems').hide();
                 $('#produceSegmentItems').hide();
-                
         }
 
     });
@@ -43,11 +43,28 @@ $(document).ready(function(){
         (thisSegment)==='Floral'?alert('call crm'):'';
     });
 
+    function hideStoresAndSales(){
+        $('#AnnualSales').val('');
+        $('#NumberOfStores').val('');
+        $('#annualSalesSegement').hide();
+        $('#numberOfStoresSegment').hide();
+
+    }
+    function toggleSales(){
+        $('#annualSalesSegement').show();
+        $('#numberOfStoresSegment').hide();
+    }
+    function toggleStores(){
+        $('#annualSalesSegement').hide();
+        $('#numberOfStoresSegment').show();
+    }
     $('#produceSegment').on('change',function(event){
-        if(jQuery.inArray($(this).val(),arSegmentOne)!== -1)
+        if(jQuery.inArray($(this).val(),arSegmentOne)!== -1){
+            hideStoresAndSales();
             alert('Call to CRM');
+        }            
         else{
-            (jQuery.inArray($(this).val(),arSegmentTwo)=== -1 ?$('#annualSalesSegement').show():$('#numberOfStoresSegment').show());
+            (jQuery.inArray($(this).val(),arSegmentTwo)=== -1 ? toggleSales():toggleStores());
         }
             
         

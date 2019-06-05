@@ -10,9 +10,16 @@ fieldset {
     margin-right:0.5em;
     padding-top:0.2em;
     text-align:right;
-    font-weight:bold;
+    font-weight:bolder;
     }
 fieldset div{
     margin-top:.75em;
 }
-  
+.InsertCoName{display:inline-block;}  
+#continueProcessButton{
+  display:none;
+}
+
+#completeApplication{
+  display:none;
+}

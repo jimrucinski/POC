@@ -1,0 +1,15 @@
+
+  [
+    {
+      "isMember": false,
+      "companyName" : "JimCo",
+      "companyContact" : "",
+      "duesAmount" : "$1400"
+    },
+    {
+      "isMember":true,
+      "companyName": "HankCo",
+      "companyContact": "Benjamin Dover",
+      "duesAmount": "$2200"
+    }
+  ]

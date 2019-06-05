@@ -1,0 +1,10 @@
+{
+  "members" : [
+    { 
+      "isMember":"true",
+      "companyName" : "Jims Fruitcake",
+      "companyContact" : "Benjamin Dover",
+      "duesAmount" : "2200"
+      }
+  ]
+}

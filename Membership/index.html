@@ -8,6 +8,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     </head>
     <body>
+        
         <form id="membership">
             <fieldset>
                 <legend>PMA Membership Applicaton</legend>
@@ -282,18 +283,21 @@
                 <div id="floralSegmentItems">
                     <label for="floralSegment">Floral Business Segment</label>
                     <select name="floralSegment" id="floralSegment">
-                        <option></option>
+                       <!-- <option></option>
+                        
                         <option value="SolutionProviders">Business Solutions Providers</option>
                         <option value="Distributors">Distributors</option>
                         <option value="Exporters">Exporters</option>
                         <option value="Growers">Growers</option>
                         <option value="Importers">Importers</option>
                         <option value="Wholesalers">Wholesalers</option>
+                        -->
                     </select>
                 </div>
                 <div id="produceSegmentItems">
                     <label for="produceSegment">Produce Business Segments</label>
                     <select name="produceSegment" id="produceSegment">
+                        <!--
                         <option></option>
                         <option value="Associations">Associations</option>
                         <option value="Brokers">Brokers</option>
@@ -328,6 +332,7 @@
                         <option value="Transportation">Transportation</option>
                         <option value="WholesaleGrocers">Wholesale Grocers</option>
                         <option value="Wholesalers">Wholesalers</option>
+                        -->
                     </select>
                 </div>
                 <div id="numberOfStoresSegment">
@@ -337,6 +342,10 @@
                 <div id="annualSalesSegement">
                     <label for="annualSales">Annual Sales</label>
                     <input type="text" id="AnnualSales" name="AnnualSales"/>
+                </div>
+                <div id="pricingSegment">
+                    <label for="pricing">Pricing</label>
+                    <select name="pricing" id="pricing"></select>
                 </div>
                 <div id="submission">
                     <input type="button" id="CheckMemberStatus" name="CheckMemberStatus" value="Submit"/>

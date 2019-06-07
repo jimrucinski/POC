@@ -96,6 +96,41 @@ $(document).ready(function(){
             $('#memberCheckMessage').html(output);
             });
     });
+    $("#mainBusiness").change(function(){
+
+        $.getJSON('BusinessTypes.json',function(data){
+            $('#produceSegment').empty();
+           $.each(data, function(){
+            $('#produceSegment').append($('<option></option>'));
+               $.each(this,function(k,v){
+                if(this.business.toUpperCase() ===$('#mainBusiness').val().toUpperCase() ){
+                    $('#produceSegment').append($('<option></option>').val(this.businessType).html(this.businessType));
+
+                }
+                //else{alert(this.businessType)}
+                   /* $.each(this,function(k,v){
+                        //alert('drop = ' + $('#mainBusiness').val());
+                        //alert('it = ' + v);
+                        if(k ==='businessType' && v.toUpperCase() ===$('#mainBusiness').val().toUpperCase() ){
+                            alert('its  = ' + v);
+                            alert(this);
+
+                        }
+                        //build floral business segment dropdown
+                        if(k === 'segments'){$("#floralSegment").empty();
+                            $('#floralSegment').append($('<option></option>'));
+                            $.each(this,function(k,v){
+                                $('#floralSegment').append($('<option></option>').val(v.segment).html(v.segment));
+                            })
+                        }//end build floral business segment dropdown
+                    })*/
+               });
+           });
+        });
+    })
+     
+        
+
     $("#continueProcessButton").click(function(){
         $("#completeApplication").css('display','block');
         $( ".InsertCoName" ).text(companyName);

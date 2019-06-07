@@ -1,0 +1,179 @@
+{
+    "BusinessSegmentPricing":[{        
+        "businessType":"floral",
+        "business":"floral",
+        "segments":[
+            {"segment":"business solutions providers"},
+            {"segment":"distributors"},
+            {"segment":"exporters"},            
+            {"segment":"growers"},
+            {"segment":"importers"},
+            {"segment":"wholesalers"}
+        ],
+        "sales":[
+            {"$0-5 million":{"US":900,"nonUS":900}},
+            {"$5-25 million":{"US":1170,"nonUS":1170}},
+            {"$25-50 million":{"US":1520,"nonUS":1520}},
+            {"$50-75 million":{"US":1975,"nonUS":1975}},
+            {"$75+ million":{"US":2570,"nonUS":2570}}
+            ]
+        }
+    ,
+        {        
+        "businessType":"produce marketers",
+        "business":"produce",
+        "segments":[
+            {"segment":"growers"},
+            {"segment":"shippers"},
+            {"segment":"processors"},            
+            {"segment":"wholesalers"},
+            {"segment":"distributors"},
+            {"segment":"brokers"},
+            {"segment":"importers"},
+            {"segment":"exporters"},
+            {"segment":"foodservice"}
+        ],
+        "sales":[
+            {"$0-5 million":{"US":1535,"nonUS":1180}},
+            {"$5-10 million":{"US":2050,"nonUS":1575}},
+            {"$10-25 million":{"US":2725,"nonUS":2095}},
+            {"$50-100 million":{"US":4815,"nonUS":3710}},
+            {"$100-200 million":{"US":6410,"nonUS":4940}},
+            {"$200-300 million":{"US":8520,"nonUS":6570}},
+            {"$300+ million":{"US":11340,"nonUS":8735}}
+            ]
+        }
+        ,
+        {        
+        "businessType":"small growers",
+        "business":"produce",
+        "segments":[
+            {"segment":"growers"}
+        ],
+        "sales":[
+            {"<$500,000":{"US":295,"SA":4150}}
+            ]
+        }
+        ,
+        {        
+        "businessType":"business solution providers",
+        "business":"produce",
+        "segments":[
+            {"segment":"ag supplies"},
+            {"segment":"business services"},
+            {"segment":"consultants"},            
+            {"segment":"equipment"},
+            {"segment":"machinery"},
+            {"segment":"finance"},
+            {"segment":"packaging"},
+            {"segment":"transportation"},
+            {"segment":"logistics"},
+            {"segment":"trade press"}
+        ],
+        "sales":[
+            {"$0-5 million":{"US":1535,"nonUS":1180, "SA":14530}},
+            {"$5-10 million":{"US":2075,"nonUS":1560, "SA":19150}},
+            {"$10-50 million":{"US":3190,"nonUS":2425, "SA":29735}},
+            {"$50+ million":{"US":4815,"nonUS":3710, "SA":46455}}
+            ]
+        }
+        ,
+        {        
+        "businessType":"asia supplier",
+        "business":"produce",
+            "segments":[
+                {"segment":"produce marketers"},
+                {"segment":"business solution providers"}
+            ],
+            "sales":[
+                {"$0-5 million":{"US":1065}},
+                {"$5-10 million":{"US":1430}},
+                {"$10-50 million":{"US":2200}},
+                {"$50+ million":{"US":3335}}
+                ]
+            }      
+        ,
+        {        
+        "businessType":"brazil supplier",
+        "business":"produce",
+            "segments":[
+                {"segment":"produce marketers"},
+                {"segment":"business solution providers"}
+            ],
+            "sales":[
+                {"$0-5 million":{"US":1065}},
+                {"$5-10 million":{"US":1430}},
+                {"$10-50 million":{"US":2200}},
+                {"$50+ million":{"US":3335}}
+                ]
+            }     
+        ,
+        {        
+        "businessType":"supermarkets",
+        "business":"produce",
+            "segments":[
+                {"segment":"supermarkets"}
+            ],
+            "stores":[
+                {"1-10":{"US":310,"nonUS":310,"SA":3845}},
+                {"11-49":{"US":1270,"nonUS":1010,"SA":12605}},
+                {"50-199":{"US":2050,"nonUS":2050,"SA":25585}},
+                {"200-399 / 200+ International":{"US":2265,"nonUS":2110,"SA":26365}},
+                {"400+":{"US":2820,"nonUS":null,"SA":null}}
+                ]
+            }   
+        ,
+        {        
+        "businessType":"wholesale grocers",
+        "business":"produce",
+            "segments":[
+                {"segment":"grocers"}
+            ],
+            "stores":[
+                {"1-10":{"US":310,"nonUS":310,"SA":3845}},
+                {"11-49":{"US":1270,"nonUS":1010,"SA":12605}},
+                {"50-199":{"US":2050,"nonUS":2050,"SA":25585}},
+                {"200-399 / 200+ International":{"US":2265,"nonUS":2110,"SA":26365}},
+                {"400+":{"US":2820,"nonUS":null,"SA":null}}
+                ]
+            }     
+        ,
+        {        
+        "businessType":"virtual retailers / e-commerce",
+        "business":"produce",
+            "segments":[
+                {"segment":"online produce retailers"}
+            ],
+            "sales":[
+                {"<100 million":{"US":1270,"nonUS":1065,"SA":13310}},
+                {"100-500 million":{"US":2265,"nonUS":2200,"SA":27455}},
+                {"500+ million":{"US":2820,"nonUS":2820,"SA":42545}}
+                ]
+            }  
+            ,
+        {        
+        "businessType":"foodservice operators",
+        "business":"produce",
+            "segments":[
+                {"segment":"restaurants"},
+                {"segment":"hotels"},
+                {"segment":"feeing institutions"}
+            ],
+            "sales":[
+                {"":{"US":1310,"nonUS":1010,"SA":12870}}
+                ]
+            }   
+            ,
+        {        
+        "businessType":"convenience stores",
+        "business":"produce",
+            "segments":[
+                {"segment":"convenience stores"}
+            ],
+            "sales":[
+                {"":{"US":1310,"nonUS":1010,"SA":12870}}
+                ]
+            }           
+    ]
+}
+

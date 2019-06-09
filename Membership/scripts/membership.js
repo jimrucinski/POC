@@ -10,6 +10,13 @@ $(document).ready(function(){
     $('#numberOfStoresSegment').hide();
     $('#annualSalesSegement').hide();
     
+    $("#CheckMemberStatus").click(function(){
+        //$("#completeApplication").css('display','block');
+        //$( ".InsertCoName" ).text(companyName);
+    });
+
+
+
     $('#mainBusiness').on('change', function(event) {
         thisSegment = $(this).val();
 
@@ -84,7 +91,6 @@ $(document).ready(function(){
                        output += msg + val.companyContact;
                     else{
                         companyName=val.companyName;
-                        alert('company Name = ' + companyName);
                         //duesAmount = vale.duesAmount;
                         output = "Based on the information provided your yealy dues will be " + val.duesAmount;
                         $("#continueProcessButton").css('display','inline-block');
@@ -103,36 +109,42 @@ $(document).ready(function(){
            $.each(data, function(){
             $('#produceSegment').append($('<option></option>'));
                $.each(this,function(k,v){
+                
                 if(this.business.toUpperCase() ===$('#mainBusiness').val().toUpperCase() ){
                     $('#produceSegment').append($('<option></option>').val(this.businessType).html(this.businessType));
-
                 }
-                //else{alert(this.businessType)}
-                   /* $.each(this,function(k,v){
-                        //alert('drop = ' + $('#mainBusiness').val());
-                        //alert('it = ' + v);
-                        if(k ==='businessType' && v.toUpperCase() ===$('#mainBusiness').val().toUpperCase() ){
-                            alert('its  = ' + v);
-                            alert(this);
-
-                        }
-                        //build floral business segment dropdown
-                        if(k === 'segments'){$("#floralSegment").empty();
-                            $('#floralSegment').append($('<option></option>'));
-                            $.each(this,function(k,v){
-                                $('#floralSegment').append($('<option></option>').val(v.segment).html(v.segment));
-                            })
-                        }//end build floral business segment dropdown
-                    })*/
+              
                });
            });
         });
     })
      
-        
-
-    $("#continueProcessButton").click(function(){
-        $("#completeApplication").css('display','block');
-        $( ".InsertCoName" ).text(companyName);
-    })
+        $('#produceSegment').change(function(){
+            $.getJSON('BusinessTypes.json',function(data){
+                $('#AnnualSales').empty();
+               $.each(data, function(){
+                    $.each(this,function(k,v){
+                        if($('#produceSegment').val().toUpperCase() === this.businessType.toUpperCase()  ){
+                           $('#annualSalesLabel').text(this.qualifierLabel);
+                           $('#AnnualSales').append($('<option></option>'));
+                            $.each(this.qualifier, function() {                                                   
+                                $.each(this, function(k, v) {
+                                    if(k===""){                                        
+                                        $("#AnnualSales").find("option").eq(0).remove();
+                                        $('#AnnualSales').append($('<option></option>').val(v.US).text('nothing'));
+                                        $('#annualSalesSegement').hide();
+                                    }
+                                    else
+                                    {
+                                        $("#annualSalesSegement").show();
+                                        $('#AnnualSales').append($('<option></option>').val(v.US).html(k));
+                                    }
+                                });
+                            });
+                        }
+                    });
+               });
+            });
+        })
+    
 });

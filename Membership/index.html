@@ -2,17 +2,21 @@
 <html>
     <head>
         <link rel="stylesheet" href="./css/membership.css">
+        <link rel="stylesheet" href="./css/formValidation.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./scripts/formSubmission.js"></script>
         <script src="./scripts/membership.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     </head>
     <body>
         
-        <form id="membership">
+        <form id="prelimMembership" method="post" action="">
             <fieldset>
-                <legend>PMA Membership Applicaton</legend>
-                <div>
+                <legend>PMA Membership United States Application</legend>
+                <!--<div>
+                    
                 <label for="selectCountry">Country</label>
                     <select name="selectCountry">
                         <option></option>
@@ -266,7 +270,7 @@
                         <option value="ZMB">Zambia</option>
                         <option value="ZWE">Zimbabwe</option>
                     </select>
-                </div>
+                </div>-->
                 <div>
                     <label for="companyName">Company Name</label>
                     <input type="text" name="companyName" id="companyName" />
@@ -282,73 +286,26 @@
                 </div>
                 <div id="floralSegmentItems">
                     <label for="floralSegment">Floral Business Segment</label>
-                    <select name="floralSegment" id="floralSegment">
-                       <!-- <option></option>
-                        
-                        <option value="SolutionProviders">Business Solutions Providers</option>
-                        <option value="Distributors">Distributors</option>
-                        <option value="Exporters">Exporters</option>
-                        <option value="Growers">Growers</option>
-                        <option value="Importers">Importers</option>
-                        <option value="Wholesalers">Wholesalers</option>
-                        -->
-                    </select>
+                    <select name="floralSegment" id="floralSegment"></select>
                 </div>
                 <div id="produceSegmentItems">
                     <label for="produceSegment">Produce Business Segments</label>
-                    <select name="produceSegment" id="produceSegment">
-                        <!--
-                        <option></option>
-                        <option value="Associations">Associations</option>
-                        <option value="Brokers">Brokers</option>
-                        <option value="BusinessSrvices">Business services</option>
-                        <option value="Consultants">Consultants</option>
-                        <option value="ConvenienceStore">Convenience Store</option>
-                        <option value="Distributors">Distributors</option>
-                        <option value="EducationalInstitutions">Educational Institutions</option>
-                        <option value="Equipment">Equipment</option>
-                        <option value="Exporters">Exporters</option>
-                        <option value="FeedingInstitutions">Feeding Institutions</option>
-                        <option value="FinanceServices">Finance services</option>
-                        <option value="FoodserviceOperations">Foodservice Operations</option>
-                        <option value="GovernmentEntities">Government Entities</option>
-                        <option value="Growers">Growers</option>
-                        <opton value="Grocers">Grocers</opton>
-                        <option value="Hotels">Hotels</option>
-                        <option value="Importers">Importers</option>
-                        <option value="Logistics">Logistics</option>
-                        <option value="Machinery">Machinery</option>
-                        <option value="NotForProfit">Not For Profit</option>
-                        <option value="OnlineProduceRetailers">Online produce retailers</option>                        
-                        <option value="Packaging">Packaging</option>
-                        <option value="Processors">Processors</option>
-                        <option value="PromotionalBoards">Promotional Boards</option>
-                        <option value="ProvidersOfAgSupplies">Providers of Ag Supplies</option>
-                        <option value="Restaurants">Restaurants</option>
-                        <option value="Shippers">Shippers</option>
-                        <option value="Supermarkets">Supermarkets</option>
-                        <option value="Technology">Technology</option>
-                        <option value="TradePress">Trade Press</option>
-                        <option value="Transportation">Transportation</option>
-                        <option value="WholesaleGrocers">Wholesale Grocers</option>
-                        <option value="Wholesalers">Wholesalers</option>
-                        -->
-                    </select>
+                    <select name="produceSegment" id="produceSegment"></select>
                 </div>
+                <!--
                 <div id="numberOfStoresSegment">
                     <label for="numberOfStores">Number of Stores</label>
                     <input type="text" id="NumberOfStores" name="NumberOfStores"/>
                 </div>
+                -->
                 <div id="annualSalesSegement">
-                    <label for="annualSales">Annual Sales</label>
-                    <input type="text" id="AnnualSales" name="AnnualSales"/>
+                    <label for="annualSales" id="annualSalesLabel" name="annualSalesLabel"></label>
+                    <select  id="AnnualSales" name="AnnualSales">                        
+                    </select>
                 </div>
-                <div id="pricingSegment">
-                    <label for="pricing">Pricing</label>
-                    <select name="pricing" id="pricing"></select>
-                </div>
+                
                 <div id="submission">
-                    <input type="button" id="CheckMemberStatus" name="CheckMemberStatus" value="Submit"/>
+                    <input type="submit" id="CheckMemberStatus" name="CheckMemberStatus" value="Submit"/>
                 </div>
                 <div id="memberCheckMessage">
 

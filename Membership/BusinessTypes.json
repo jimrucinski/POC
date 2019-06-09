@@ -10,7 +10,7 @@
             {"segment":"importers"},
             {"segment":"wholesalers"}
         ],
-        "sales":[
+        "qualifier":[
             {"$0-5 million":{"US":900,"nonUS":900}},
             {"$5-25 million":{"US":1170,"nonUS":1170}},
             {"$25-50 million":{"US":1520,"nonUS":1520}},
@@ -33,7 +33,7 @@
             {"segment":"exporters"},
             {"segment":"foodservice"}
         ],
-        "sales":[
+        "qualifier":[
             {"$0-5 million":{"US":1535,"nonUS":1180}},
             {"$5-10 million":{"US":2050,"nonUS":1575}},
             {"$10-25 million":{"US":2725,"nonUS":2095}},
@@ -41,7 +41,8 @@
             {"$100-200 million":{"US":6410,"nonUS":4940}},
             {"$200-300 million":{"US":8520,"nonUS":6570}},
             {"$300+ million":{"US":11340,"nonUS":8735}}
-            ]
+            ],
+        "qualifierLabel":"Total yearly sales"
         }
         ,
         {        
@@ -50,9 +51,11 @@
         "segments":[
             {"segment":"growers"}
         ],
-        "sales":[
+        "qualifier":[
             {"<$500,000":{"US":295,"SA":4150}}
             ]
+            ,
+        "qualifierLabel":"Total yearly sales"
         }
         ,
         {        
@@ -70,28 +73,32 @@
             {"segment":"logistics"},
             {"segment":"trade press"}
         ],
-        "sales":[
+        "qualifier":[
             {"$0-5 million":{"US":1535,"nonUS":1180, "SA":14530}},
             {"$5-10 million":{"US":2075,"nonUS":1560, "SA":19150}},
             {"$10-50 million":{"US":3190,"nonUS":2425, "SA":29735}},
             {"$50+ million":{"US":4815,"nonUS":3710, "SA":46455}}
             ]
+            ,
+        "qualifierLabel":"Total yearly sales"
         }
         ,
         {        
         "businessType":"asia supplier",
         "business":"produce",
-            "segments":[
-                {"segment":"produce marketers"},
-                {"segment":"business solution providers"}
-            ],
-            "sales":[
-                {"$0-5 million":{"US":1065}},
-                {"$5-10 million":{"US":1430}},
-                {"$10-50 million":{"US":2200}},
-                {"$50+ million":{"US":3335}}
-                ]
-            }      
+        "segments":[
+            {"segment":"produce marketers"},
+            {"segment":"business solution providers"}
+        ],
+        "qualifier":[
+            {"$0-5 million":{"US":1065}},
+            {"$5-10 million":{"US":1430}},
+            {"$10-50 million":{"US":2200}},
+            {"$50+ million":{"US":3335}}
+            ]
+            ,
+        "qualifierLabel":"Total yearly sales"
+        }      
         ,
         {        
         "businessType":"brazil supplier",
@@ -100,12 +107,14 @@
                 {"segment":"produce marketers"},
                 {"segment":"business solution providers"}
             ],
-            "sales":[
+            "qualifier":[
                 {"$0-5 million":{"US":1065}},
                 {"$5-10 million":{"US":1430}},
                 {"$10-50 million":{"US":2200}},
                 {"$50+ million":{"US":3335}}
                 ]
+                ,
+        "qualifierLabel":"Total yearly sales"
             }     
         ,
         {        
@@ -114,13 +123,15 @@
             "segments":[
                 {"segment":"supermarkets"}
             ],
-            "stores":[
+            "qualifier":[
                 {"1-10":{"US":310,"nonUS":310,"SA":3845}},
                 {"11-49":{"US":1270,"nonUS":1010,"SA":12605}},
                 {"50-199":{"US":2050,"nonUS":2050,"SA":25585}},
                 {"200-399 / 200+ International":{"US":2265,"nonUS":2110,"SA":26365}},
                 {"400+":{"US":2820,"nonUS":null,"SA":null}}
                 ]
+                ,
+        "qualifierLabel":"Total number of stores"
             }   
         ,
         {        
@@ -129,13 +140,15 @@
             "segments":[
                 {"segment":"grocers"}
             ],
-            "stores":[
+            "qualifier":[
                 {"1-10":{"US":310,"nonUS":310,"SA":3845}},
                 {"11-49":{"US":1270,"nonUS":1010,"SA":12605}},
                 {"50-199":{"US":2050,"nonUS":2050,"SA":25585}},
                 {"200-399 / 200+ International":{"US":2265,"nonUS":2110,"SA":26365}},
                 {"400+":{"US":2820,"nonUS":null,"SA":null}}
                 ]
+                ,
+        "qualifierLabel":"Total number of stores"
             }     
         ,
         {        
@@ -144,11 +157,13 @@
             "segments":[
                 {"segment":"online produce retailers"}
             ],
-            "sales":[
-                {"<100 million":{"US":1270,"nonUS":1065,"SA":13310}},
-                {"100-500 million":{"US":2265,"nonUS":2200,"SA":27455}},
-                {"500+ million":{"US":2820,"nonUS":2820,"SA":42545}}
+            "qualifier":[
+                {"<$100 million":{"US":1270,"nonUS":1065,"SA":13310}},
+                {"$100-$500 million":{"US":2265,"nonUS":2200,"SA":27455}},
+                {"$500+ million":{"US":2820,"nonUS":2820,"SA":42545}}
                 ]
+                ,
+        "qualifierLabel":"Total yearly sales"
             }  
             ,
         {        
@@ -159,9 +174,11 @@
                 {"segment":"hotels"},
                 {"segment":"feeing institutions"}
             ],
-            "sales":[
+            "qualifier":[
                 {"":{"US":1310,"nonUS":1010,"SA":12870}}
                 ]
+                ,
+        "qualifierLabel":null
             }   
             ,
         {        
@@ -170,9 +187,11 @@
             "segments":[
                 {"segment":"convenience stores"}
             ],
-            "sales":[
+            "qualifier":[
                 {"":{"US":1310,"nonUS":1010,"SA":12870}}
                 ]
+                ,
+        "qualifierLabel": null
             }           
     ]
 }

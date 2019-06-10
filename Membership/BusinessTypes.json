@@ -11,12 +11,14 @@
             {"segment":"wholesalers"}
         ],
         "qualifier":[
-            {"$0-5 million":{"US":900,"nonUS":900}},
-            {"$5-25 million":{"US":1170,"nonUS":1170}},
-            {"$25-50 million":{"US":1520,"nonUS":1520}},
-            {"$50-75 million":{"US":1975,"nonUS":1975}},
-            {"$75+ million":{"US":2570,"nonUS":2570}}
+            {"$0-5 million":{"US":"$900","nonUS":"$900"}},
+            {"$5-25 million":{"US":"$1,170","nonUS":"$1,170"}},
+            {"$25-50 million":{"US":"$1,520","nonUS":"$1,520"}},
+            {"$50-75 million":{"US":"$1,975","nonUS":"$1,975"}},
+            {"$75+ million":{"US":"$2,570","nonUS":"$2,570"}}
             ]
+            ,
+        "qualifierLabel":"Total yearly sales"
         }
     ,
         {        
@@ -34,13 +36,13 @@
             {"segment":"foodservice"}
         ],
         "qualifier":[
-            {"$0-5 million":{"US":1535,"nonUS":1180}},
-            {"$5-10 million":{"US":2050,"nonUS":1575}},
-            {"$10-25 million":{"US":2725,"nonUS":2095}},
-            {"$50-100 million":{"US":4815,"nonUS":3710}},
-            {"$100-200 million":{"US":6410,"nonUS":4940}},
-            {"$200-300 million":{"US":8520,"nonUS":6570}},
-            {"$300+ million":{"US":11340,"nonUS":8735}}
+            {"$0-5 million":{"US":"$1,535","nonUS":"$1,180"}},
+            {"$5-10 million":{"US":"$2,050","nonUS":"$1,575"}},
+            {"$10-25 million":{"US":"$2,725","nonUS":"$2,095"}},
+            {"$50-100 million":{"US":"$4,815","nonUS":"$3,710"}},
+            {"$100-200 million":{"US":"$6,410","nonUS":"$4,940"}},
+            {"$200-300 million":{"US":"$8,520","nonUS":"$6,570"}},
+            {"$300+ million":{"US":"$11,340","nonUS":"$8,735"}}
             ],
         "qualifierLabel":"Total yearly sales"
         }
@@ -74,10 +76,10 @@
             {"segment":"trade press"}
         ],
         "qualifier":[
-            {"$0-5 million":{"US":1535,"nonUS":1180, "SA":14530}},
-            {"$5-10 million":{"US":2075,"nonUS":1560, "SA":19150}},
-            {"$10-50 million":{"US":3190,"nonUS":2425, "SA":29735}},
-            {"$50+ million":{"US":4815,"nonUS":3710, "SA":46455}}
+            {"$0-5 million":{"US":"$1,535","nonUS":"$1,180", "SA":"R 14,530"}},
+            {"$5-10 million":{"US":"$2,075","nonUS":"$1,560", "SA":"R 19,150"}},
+            {"$10-50 million":{"US":"$3,190","nonUS":"$2,425", "SA":"R 29,735"}},
+            {"$50+ million":{"US":"$4,815","nonUS":"$3,710", "SA":"R 46,455"}}
             ]
             ,
         "qualifierLabel":"Total yearly sales"
@@ -91,10 +93,10 @@
             {"segment":"business solution providers"}
         ],
         "qualifier":[
-            {"$0-5 million":{"US":1065}},
-            {"$5-10 million":{"US":1430}},
-            {"$10-50 million":{"US":2200}},
-            {"$50+ million":{"US":3335}}
+            {"$0-5 million":{"US":"$1,065"}},
+            {"$5-10 million":{"US":"$1,430"}},
+            {"$10-50 million":{"US":"$2,200"}},
+            {"$50+ million":{"US":"$3,335"}}
             ]
             ,
         "qualifierLabel":"Total yearly sales"
@@ -108,10 +110,10 @@
                 {"segment":"business solution providers"}
             ],
             "qualifier":[
-                {"$0-5 million":{"US":1065}},
-                {"$5-10 million":{"US":1430}},
-                {"$10-50 million":{"US":2200}},
-                {"$50+ million":{"US":3335}}
+                {"$0-5 million":{"US":"$1,065"}},
+                {"$5-10 million":{"US":"$1,430"}},
+                {"$10-50 million":{"US":"$2,200"}},
+                {"$50+ million":{"US":"$3,335"}}
                 ]
                 ,
         "qualifierLabel":"Total yearly sales"
@@ -124,11 +126,11 @@
                 {"segment":"supermarkets"}
             ],
             "qualifier":[
-                {"1-10":{"US":310,"nonUS":310,"SA":3845}},
-                {"11-49":{"US":1270,"nonUS":1010,"SA":12605}},
-                {"50-199":{"US":2050,"nonUS":2050,"SA":25585}},
-                {"200-399 / 200+ International":{"US":2265,"nonUS":2110,"SA":26365}},
-                {"400+":{"US":2820,"nonUS":null,"SA":null}}
+                {"1-10":{"US":"$310","nonUS":"$310","SA":"R 3,845"}},
+                {"11-49":{"US":"$1,270","nonUS":"$1,010","SA":"R 12605"}},
+                {"50-199":{"US":"$2,050","nonUS":"$2,050","SA":"R 25585"}},
+                {"200-399 / 200+ International":{"US":"$2,265","nonUS":"$2,110","SA":"R 26365"}},
+                {"400+":{"US":"$2,820","nonUS":null,"SA":null}}
                 ]
                 ,
         "qualifierLabel":"Total number of stores"
@@ -141,11 +143,11 @@
                 {"segment":"grocers"}
             ],
             "qualifier":[
-                {"1-10":{"US":310,"nonUS":310,"SA":3845}},
-                {"11-49":{"US":1270,"nonUS":1010,"SA":12605}},
-                {"50-199":{"US":2050,"nonUS":2050,"SA":25585}},
-                {"200-399 / 200+ International":{"US":2265,"nonUS":2110,"SA":26365}},
-                {"400+":{"US":2820,"nonUS":null,"SA":null}}
+                {"1-10":{"US":"$310","nonUS":"$310","SA":"R 3845"}},
+                {"11-49":{"US":"$1,270","nonUS":"$1,010","SA":"R 12,605"}},
+                {"50-199":{"US":"$2,050","nonUS":"$2,050","SA":"R 25,585"}},
+                {"200-399 / 200+ International":{"US":"$2,265","nonUS":"$2,110","SA":"R 26,365"}},
+                {"400+":{"US":"$2,820","nonUS":null,"SA":null}}
                 ]
                 ,
         "qualifierLabel":"Total number of stores"
@@ -158,9 +160,9 @@
                 {"segment":"online produce retailers"}
             ],
             "qualifier":[
-                {"<$100 million":{"US":1270,"nonUS":1065,"SA":13310}},
-                {"$100-$500 million":{"US":2265,"nonUS":2200,"SA":27455}},
-                {"$500+ million":{"US":2820,"nonUS":2820,"SA":42545}}
+                {"<$100 million":{"US":"$1,270","nonUS":"$1,065","SA":"R 13,310"}},
+                {"$100-$500 million":{"US":"$2,265","nonUS":"$2,200","SA":"R 27,455"}},
+                {"$500+ million":{"US":"$2,820","nonUS":"$2,820","SA":"R 42,545"}}
                 ]
                 ,
         "qualifierLabel":"Total yearly sales"
@@ -175,7 +177,7 @@
                 {"segment":"feeing institutions"}
             ],
             "qualifier":[
-                {"":{"US":1310,"nonUS":1010,"SA":12870}}
+                {"":{"US":"$1,310","nonUS":"$1,010","SA":"R 12,870"}}
                 ]
                 ,
         "qualifierLabel":null
@@ -188,7 +190,7 @@
                 {"segment":"convenience stores"}
             ],
             "qualifier":[
-                {"":{"US":1310,"nonUS":1010,"SA":12870}}
+                {"":{"US":"$1,310","nonUS":"$1,010","SA":"R 12,870"}}
                 ]
                 ,
         "qualifierLabel": null

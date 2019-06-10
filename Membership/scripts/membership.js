@@ -10,8 +10,8 @@ $(document).ready(function(){
     $('#numberOfStoresSegment').hide();
     $('#annualSalesSegement').hide();
     
-    $("#CheckMemberStatus").click(function(){
-        //$("#completeApplication").css('display','block');
+    $("#continueProcessButton").click(function(){
+        $("#completeApplication").css('display','block');
         //$( ".InsertCoName" ).text(companyName);
     });
 
@@ -22,19 +22,24 @@ $(document).ready(function(){
 
         switch(thisSegment){
             case 'Floral':
-                $('#floralSegmentItems').show();
-                $('#produceSegmentItems').hide();
+                //$('#floralSegmentItems').show();
+                $('#produceSegmentItems').show();
                 $('#numberOfStoresSegment').hide();
                 $('#annualSalesSegement').hide();
                 $('#produceSegment').val('');
-                $('#NumberOfStores').val('');
+               // $('#NumberOfStores').val('');
                 $('#AnnualSales').val('');
+                $('#annualSalesSegement').hide();
+                $('#memberCheckMessage').hide();
+                $("#completeApplication").hide();
                 break;
             case 'Produce':
                 $('#floralSegmentItems').hide();
                 $('#produceSegmentItems').show();
-
                 $('#floralSegment').val('');
+                $('#annualSalesSegement').hide();
+                $('#memberCheckMessage').hide();
+                $("#completeApplication").hide();
                 break;
             case 'ProduceAndFloral':
                 $('#produceSegment').val('');
@@ -52,6 +57,17 @@ $(document).ready(function(){
     $('#floralSegment').on('change',function(event){
         (thisSegment)==='Floral'?alert('call crm'):'';
     });
+    $('#produceSegment').on('change',function(event){
+        $('#annualSalesSegement').hide();
+        $('#memberCheckMessage').hide();
+        
+    })
+
+    $('#AnnualSales').on('change', function(event){
+        $('#memberCheckMessage').hide();
+    })
+
+
 
     function hideStoresAndSales(){
         $('#AnnualSales').val('');
@@ -71,7 +87,6 @@ $(document).ready(function(){
     $('#produceSegment').on('change',function(event){
         if(jQuery.inArray($(this).val(),arSegmentOne)!== -1){
             hideStoresAndSales();
-            alert('Call to CRM');
         }            
         else{
             (jQuery.inArray($(this).val(),arSegmentTwo)=== -1 ? toggleSales():toggleStores());
@@ -79,8 +94,9 @@ $(document).ready(function(){
     });
 
     $("#CheckMemberStatus").click(function() {
+        /*
         var coName = $('#companyName').val();
-        //alert('coName = ' + coName);
+       
         
         $.getJSON('memberCheck.json',function(data){
             
@@ -101,6 +117,7 @@ $(document).ready(function(){
             output += '</p>';
             $('#memberCheckMessage').html(output);
             });
+            */
     });
     $("#mainBusiness").change(function(){
 

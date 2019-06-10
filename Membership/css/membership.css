@@ -11,9 +11,6 @@ fieldset div{
     margin-top:.75em;
 }
 .InsertCoName{display:inline-block;}  
-#continueProcessButton{
-  display:none;
-}
 
 #completeApplication{
   display:none;

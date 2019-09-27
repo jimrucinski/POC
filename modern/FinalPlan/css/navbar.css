@@ -1,0 +1,52 @@
+.navbar-default{
+    transition:1500ms ease;
+    background:transparent;
+    width:100%;
+    max-width:1920px;
+    margin:auto;
+    height:50px;
+    padding-top:15px;
+    color:#fff;
+    font-weight: 600;
+    opacity:1;
+    border:solid 2px red;
+  }
+  .navbar-default.scrolled{
+    background:#B3D235 ;
+    color:#000;
+    opacity:.95;
+  }
+  
+  .navbar-default ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width:100%;
+    max-width:1000px;
+    position: absolute;
+    right:1em;
+  }
+  
+  .navbar-default li {
+    float: left;
+    text-transform: uppercase;
+    font-weight:lighter;
+    text-align: center;
+    vertical-align: middle;
+    width:20%;
+  }
+  
+  .navbar-default li a {
+    display: block;
+  
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    
+  }
+  
+  .navbar-default li a:hover {
+    background-color: #111111;
+  }
+  

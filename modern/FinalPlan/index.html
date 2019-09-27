@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/carousel.css" >
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/grid.css">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $(window).scroll(function(){
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 10);
+    });
+
+   $("#myCarousel").swiperight(function() {
+      $(this).carousel('prev');
+    });
+   $("#myCarousel").swipeleft(function() {
+      $(this).carousel('next');
+    
+   });
+   
+    });
+</script>
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" style="position:fixed;z-index:100;">
+        <ul>
+            <li>topics</li>
+            <li>events</li>
+            <li>membership</li>
+            <li>about</li>
+            <li>my pma</li>
+        </ul>
+    </nav>
+        <div class="row">
+            <div class="column">
+
+        
+      <div class="container">
+          
+        <div id="myCarousel" class="carousel" data-ride="carousel" data-interval="0">
+            
+            <div class="row carousel-indicators" style="background-color:#2c3539;color:#fff">
+                <div  data-target="#myCarousel" data-slide-to="0" class="column">Global Trade</a></div>
+                <div data-target="#myCarousel" data-slide-to="1" class="column"><a href="#">food safety</a></div>
+                <div data-target="#myCarousel" data-slide-to="2" class="column">consumer</div>
+                <div data-target="#myCarousel" data-slide-to="3" class="column">events</div>
+            </div>
+            <!--
+          <ol class="carousel-indicators" style="background-color:#2C3539">
+            <li data-target="#myCarousel" data-slide-to="0" class="active">global trade</li>
+            <li data-target="#myCarousel" data-slide-to="1" class="megaMenu">food safety</li>
+            <li data-target="#myCarousel" data-slide-to="2" class="megaMenu">consumer</li>
+            <li data-target="#myCarousel" data-slide-to="3" class="megaMenu">events</li>
+          </ol>
+-->
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <div id="imgHolder"><img src="./images/GlobalTradeBig.jpg" alt="Global Trade"></div>
+              <div class="carousel-caption carouselCaption">
+                <h2>Global Trade</h2>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+              </div>
+            </div>
+
+            <div class="item" >
+              <img src="./images/food-safety.jpg" alt="Food Safety">
+              <div class="carousel-caption carouselCaption">
+                  <h2>Food Safety</h2>
+                  <p>Oh yea this will work out just fine. I don't see anything wrong with this adventure.</p>
+                </div>
+            </div>
+          
+            <div class="item">
+              <img src="./images/consumer.jpg" alt="consumer">
+              <div class="carousel-caption carouselCaption">
+                  <h2>Cool Consumers Wear Hats</h3>
+                  <p>eat up chuck!</p>
+                </div>
+            </div>
+            <div class="item">
+                    <img src="./images/Kayak3.jpg" alt="events">
+                    <div class="carousel-caption carouselCaption">
+                        <h2>Events are things</h3>
+                        <p>I like things</p>
+                      </div>
+                  </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+          
+        </div>
+        
+      </div>
+    </div>
+</div>
+      
+      <div class="row">
+            <div class="column" style="background-color: #0082A7;min-height:200px;padding:1em;">
+                <h2 style="padding-left:1em;margin-bottom:0;">Stuff that you are required to look at</h2>
+                <p style="padding:1em;color:#fff;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
+                <div class="row" style="background: linear-gradient( 
+                    #0082A7,
+                    #0082A7 190px,
+                    #fff 20px,
+                    #fff 40px);">
+                    <div class="column" style="text-align:center;color:#000;">
+                        
+                        <img src="images/Kayak3.jpg" style="box-shadow: 0 15px 20px rgba(0, 0, 0, 0.80);width:80%;"/>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                    <div class="column" style="text-align:center;color:#000">                            
+                        <img src="images/kayak1-400v.jpg" style="box-shadow: 0 15px 20px rgba(0, 0, 0, 0.80);width:80%;"/>
+                        <p>this gives the illusion of overlapping content. The text and part of the image are in the colal section.</p>
+                    </div>
+                    <div class="column" style="text-align:center;color:#000">                            
+                        <img src="images/kayak2.jpg" style="box-shadow: 0 15px 20px rgba(0, 0, 0, 0.80);width:80%;"/>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+
+
+        
+
+</body>
+</html>

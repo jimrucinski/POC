@@ -1,0 +1,70 @@
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+}
+
+.carousel-indicators a {
+  text-indent: 0;
+  color: #fff;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding-top: 1em;
+}
+
+.carousel-indicators li,
+.carousel-indicators a.active {
+  float: left;
+  width: 25%;
+  height: 50px;
+  margin: 0;
+  border-radius: 0;
+  border: 0;
+  background: transparent;
+}
+
+.carousel-indicators a.active {
+  background-color: rgba(0, 0, 0, 0.75);
+  border: solid 2px #72BF44;
+}
+
+.carousel-caption {
+  top: 137.5px;
+  height: 183.33333px;
+  background-color: rgba(0, 0, 0, 0.45);
+  max-width: 800px;
+  padding: .5em .5em .5em .5em;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-inner {
+  width: 100%;
+  max-height: 550px !important;
+}
+
+.carouselCaption h3 {
+
+}
+
+@media (max-width: 400px) {
+  #imgHolder {
+    width: 100%;
+    height: 400px;
+  }
+  #imgHolder img {
+    width: 100%;
+    height: 600px;
+    margin: -530px -400 -230 -680px;
+  }
+}
+/*# sourceMappingURL=carousel.css.map */

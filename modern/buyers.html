@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style type="text/css">
+            .ListButton{ background-color:#cccccc;
+                border-radius:20px;
+                color:#000;
+                min-width:150px;
+                text-align:center;
+                margin-top:20px;
+                line-height: 70px;
+                height: 70px;}
+                
+                #solutionsBuyers:focus{
+                    background-color:#90c740;
+                    color:#fff;
+                }
+                #floralBuyers:focus{
+                    background-color:#0372b7;
+                    color:#fff;
+                }
+                #produceBuyers:focus{
+                    background-color:#cc515b;
+                    color:#fff;
+                }
+
+            .BuyersList{display:inline-block;font-size: smaller;padding-right:2em;vertical-align: top;width:30%;}
+            .listButtons{margin-bottom:1em;}
+            #AllBuyers{width:100%;margin-top:1em;}
+
+            @media screen and (max-width: 500px) {
+                .ListButton{
+                    margin-top:1em;
+                    line-height: 30px;
+                    height: 30px;
+                    display:block;
+                    width:100%;
+                    }
+                .BuyersList{width:100%;float:none;font-size:larger;}
+                #buyers1{display:block;}
+                #buyers2{display:block;}
+                #buyers3{display:block;}
+            }
+        </style>
+        <script>
+            var arFloral=['1800flowers.Com','99 Cent Only Stores','Ahold Delhaize','Albertsons Companies','Allegiance Retail Services','Amazonfresh','Associated Wholesale Grocers','Beverly &amp; Associates','Bicco Farms','Big Y Foods, Inc.','Bloomaker','Boiling Point Restaurant S. CA, Inc','Caito Foods','Calgary Co-Op','Canton Food Co. Inc.','Clearview Horticultural Products','Colour Republic','Coosemans - Los Angeles','Crosset Company','D\'Agostino Supermarkets, NYC','Daymon Worldwide, Inc.','DLJ Produce','Dollar General','Don Quijote Hawaii','Dos Gringos','Dramm Echter','DWF Wholesale Florists','Elitech Technology, Inc','Fantasy Farms','Farm Fresh Flowers','Flora Pack Inc','Florist Distributing, Inc., A Hy-Vee Company','Food Lion','Fresh Quality Produce/LA Vegetable','FreshBlooms','Gelson\'s Markets','General Produce Co., Ltd.','GIANT Food Stores, LLC.','Giant Martins','Golden Flowers','Golden Kingdom Produce','Greistedes Supermarkets, NYC','GS1 US','HAC, Inc.','HAJ Supermarkets','Harp\'s Food Stores','H-E-B','Holland America Flowers','I.F. &amp; P. Foods, LLC','Jolo Flowers','Keany Produce &amp; Gourmet','Key Floral, Inc.','Kings Food Markets','Klepac Greenhouses, Inc.','Konst Alstroemeria','La Bodega Produce','Lawrence Hopman Ltd','Longo Brothers Fruit Markets Inc.','Lowe\'s Supermarket','Lynch Group Australia','Markon Cooperative, Inc.','Micky\'s Minis Flora Express','New Leaf Community Markets','Nicholas Markets, Inc','Peirone Produce Company','Piazza Produce, LLLC','Prime Source Floral Dist. Inc.','Procacci Brother\'s','R.S. Hanline &amp; Company, Inc.','Raley\'s','Retail Business Services','Roselily.com','Roundy\'s','Save-on-Foods Limited Partnership','Service Truck Brokers','Sprouts Farmers Market','Stein\'s Garden &amp; Home','Stop and Shop Company','Sun Belle Inc.','Sunkist Growers','Swoish Produce','Target Stores','The Specialty Crop Company','The Stop &amp; Shop Supermarket Co.','Topco','UNFI','United Supermarkets','UrbanStems','Valley Produce','Walmart','Walmart Puerto Rico','Wegmans Food Markets, Inc.','Westbrook Floral','Whole Foods Market','Yoke\'s Fresh Markets'];
+            var arSolutions=['99 Cent Only Stores','A.S. Wilcox and Sons, Ltd.','AeroFarms','Affiliated Foods Inc.','Ag-Fume Services, Inc.','AGRICOLA ACTOPAN SPR DE RL DE CV','AGRICOLA CIRCASIA SAS','Agricola Coscomatepec, S. De P.R. De R.L.','Agrivera Food Group','All Fresh Produce','Alsum Farms &amp; Produce Inc.','Amazonfresh','AmHydro','Anawi Export SAC','Andersen Organics','Applewood Fresh Growers, LLC','Associated Label and Packaging','Associated Wholesale Grocers','ASWilcox &amp; Sons Ltd','Barrenechea Sucesores, S.C.','Bayer','Bayer Cropscience Pty Ltd','BBI Produce','Belmark Inc','Bicco Farms','Bloomaker','Blue Book Services','Boiling Point Restaurant S. CA, Inc','Booker Trans','Bridges Organic Produce','Brisbane Markets Limited','Bunzl Agriculture Group','Bushel Boy Farms','Caito. Foods','California Avocado Commission','California Giant Berry Farms','Calpine Containers Inc.','Canton Food Co. Inc.','Carlin Group','Carlson AirFlo Merchandising Systems','Charnan Brand','CHEP','CHEP GUATEMALA, S. A.','City Wide Produce Ltd.','Clearview Horticultural Products','Coast Produce Company','Cocina Fresca Salsa','Colorada Fresh Pineapples','Colour Republic','Continental Fresh','Coosemans - Los Angeles','Crunch Time Apple Growers','Cultivos Selectos, S.A.','CURRY &amp; COMPANY','D\'Agostino Supermarkets, NYC','D\'Arrigo New York','De Silva Spices Inc','Del Fresco Produce Ltd.','Devik International, Inc','Direct Source Produce Company Ltd.','Dollar General','Don Quijote Hawaii','Dos Gringos','Double D Farms Organics','Dragonberry Produce','Dramm Echter','Driscoll\'s','Dynasty Farms','EcoRipe Tropicals','edp australia pty. ltd.','EE Print Pack','Elitech Technology, Inc','Empaques de Colon','Enlasa Group','Evolution Fresh','Fall Creek Farm &amp; Nursery, Inc.','Fenmarc Produce Ltd','Fewel Farms LLC','Fisher Bros Logistics/CMC Farming','FJ Packaging, Inc.','Florida Fruit &amp; Vegetable','Florist Distributing, Inc., A Hy-Vee Company','Food Lion','Food Lovers Market','Four Seasons Produce, Inc.','Fresh Express','Fresh Quality Produce/LA Vegetable','Fresh State Ltd','Fresh Tex Produce, LLC','Fresh Thyme','Frugasa SA de CV','Garland Food','Gem-Pack','Gem-Pack Berries, LLC','General Produce Co., Ltd.','Geodis','George Hand Product Inc.','GIANT Food Stores, LLC.','Girard\'s Dressings','Giro Pack Inc','Golden Flowers','Golden Kingdom Produce','Gourmet Mushrooms Inc','Gourmet Trading Company','Graphic Label LLC','GreenPoint','GREENPOINT DISTRIBUTING LLC','Greif/CorrChoice','Greistedes Supermarkets, NYC','Grupo Athos','Grupo Siesa','Grupo Vebia','GS1 US','HAJ Supermarkets','Harmoni International Spice, Inc.','Harris-Teeter Super Markets','H-E-B, Inc.','HM.Clause, Inc.','Hortifrut SA','Houweling\'s Group','Htech cz s.r.o.','Ideas y Espacios de Mexico SA de CV','IFG','Intergrow Greenhouses, Inc.','Ippolito International','J.O. Alvarez, Inc.','JBT','Jenkins Freshpac Systems Ltd','John Greene Logistics Co','Jolo Flowers','Kapiris Bros','Kentucky Fresh Harvest','Kern Ridge Growers, LLC','King Fresh Produce, LLC','KM Packaging Services Limited','Konst Alstroemeria','Koppert Machines B.V.','Kronen Corp.','L&amp;M','L&amp;M Transportation','La Bodega Produce','Lakeside Produce','Lantao Fruits','Liberty Fruit Co., Inc.','Lipman','Live Oak Farms','Longship','Lowe\'s Supermarket','LUDAN PRODUCE, LLC','Maas Farms','Mackays Marketing','Markon Cooperative, Inc.','marshalls+dent+wilmoth lawyers','Mastronardi Produce','Maui Fresh International, LLC','Military Produce Group LLC','Misfits Market','Mooney Farms','Mouton Citrus','Mucci Farms','MUNOZ ARAYA SERVICIOS LIMITADA','NACS','National Mango Board','National Potato Council','Native Maine Produce and Specialty','NatureFreshFarms','Naturipe Farms','NFI Industries','Ngroup Performance Partners','Nicholas Markets, Inc','Norfolk Banana &amp; Produce','North American Produce Buyers','NT','Nunhems USA, Inc.','Oh So Healthy!','One Banana North America Corp.','OneHarvest','Ozblu Marketing LLC','Pacific International Marketing','Pacificpro Logistics, LLC','Palenque Foods International','Parkland Potato Varieties','Peirone','Perfection Fresh Australia','PMA A-NZ','Polar Fruit','Potandon Produce L.L.C.','Primage','Prime Source Floral Dist. Inc.','Pro Citrus Network, Inc.','PRO ORGANICS - UNFI CANADA','PRO*ACT, LLC','Procacci Brother\'s','Produce Business','Qproducts &amp; Services','Quality Packaging &amp; Supplies, Inc.','Quebec Distributing Co.','Quintay Fruit','REVOL GREENS','Rinker Systems','RJO Produce Marketing','Roundy\'s','Roy Farms, Inc.','Sargento Foods Inc.','Schraad &amp; Associates, Inc.','Schreurs &amp; Sons','Seeka','SellEthics Mktg. Group, Inc.','Senator International Chile S.A.','Serra Brothers Inc.','Service Truck Brokers','Shanghai Fruitday E-Commerce Co., Ltd.','Shenandoah Growers','Simple Logistics LLC','SmartWash Solutions, LLC','South Carolina Department of Agriculture','Southwind Farms','Specialty Produce','Starbucks Coffee Company','Starr Ranch Growers','StickyLickits','Strohauer Farms, Inc.','Strube Celery &amp; Vegetable Co.','Suja','Sun Belle Inc.','Sun Vista Farms','Sun World Innovations','Sunkist Growers','Sunrise Logistics, Inc.','SUNWEST FRUIT COMPANY','Supreme Berry Farms, LLC','Surpack','Swoish Produce','Target Stores','Taylor Farms','TC Tropical Products','The Modern Acre','The NPD Group','THOMSEN CHILE S.A.','Total Produce North America','Total Produce PLC','Tourtellot &amp; Co., Inc.','Trombini Industrial SA','TropicalFruit Export S.A.','Union Pacific','United Supermarkets','UrbanStems','USA Pears','Valley Produce','Veg-Land/JBJ Distributing','Volm Companies, Inc.','Walmart Puerto Rico','Warner Packaging','Washington Family Farms','WECO The Science of Optical Sorting','Wegmans Food Markets','Westbrook Floral','Westlake Produce Co.','White Prince Mushrooms','Wilbur-Ellis Company','WinCo Foods, Inc.','Wish Farms','ZZ2'];
+            var arProduce=['(MTW) Miami Tropical Wholesaler, Inc.','42 Curated','99 Cent Only Stores','99 International, Inc.','A.M.S. Export, LLC','A.S. Wilcox and Sons, Ltd.','Affiliated Foods Inc.','AGRICOLA ACTOPAN SPR DE RL DE CV','AGRICOLA CIRCASIA SAS','Agricola Coscomatepec, S. De P.R. De R.L.','Agricultural Risk Management LLC','Agro-Alimentos Tejeda SPR De RL De CV','Ahold Delhaize','Aldi, Inc.','All Fresh Produce','Allan Bros. Incorporated','Allegiance Retail Services','Alsum Farms &amp; Produce Inc.','Amazonfresh','Amcor Flexibles Asia Pacific','American Fresh Produce LLC','Anagram International','Andersen Organics','Arc En Ciel Produce','Archibald Fresh','Associated Wholesale Grocers','ASWilcox &amp; Sons Ltd','Avocados From Mexico','AVOCAFRUT SA DE CV','B&amp;C Fresh Sales','Bayer Vegetable Seeds','Belen Trading, LLC','Bellflower Produce','Berry Cruz','Beverly &amp; Associates','Biotecnologia Top Seeds Sa De Cv','Black Rhino Express','Blue Apron','Boiling Point Restaurant S. CA, Inc','Boskovich Farms Inc','Botsford  Goodfellow','Bridges Organic Produce','Brisbane Markets Limited','Bunzl Agriculture Group','Bushel Boy Farms','C&amp;C Produce','C&amp;S','CA Association of Food Banks','Caito. Foods','Cal Flavor Avocado','Calgary Co-Op','California Avocado Commission','Calpine Containers Inc.','Canton Food Co. Inc.','CAPCO Farms','Capespan North America','CarbAmericas Inc.','Carlson AirFlo Merchandising Systems','Carter &amp; Spencer Group','Catania Worldwide','Citrus Plus Inc','City Wide Produce Ltd.','CMR GROUP','Coast Produce Company','Coast Tropical','Cocina Fresca Salsa','Colour Republic','Contel Fresh, Inc','Cool Pak','Coosemans - Los Angeles','Crown Packaging','Cultivos Selectos, S.A.','CURRY &amp; COMPANY','D\'Agostino Supermarkets, NYC','Darden Restaurants','D\'Arrigo New York','DAVALAN SALES, INC.','Daymon Worldwide, Inc.','DeCA','DECCO','Del Campo Supreme','Del Fresco Produce Ltd.','Desert Produce Sales LLC','Devik International, Inc','Direct Source Produce Company Ltd.','Diversified Restaurant Systems','DLJ Produce','Dole','Dollar General','Don Quijote Hawaii','Double D Farms Organics','Dragonberry Produce','Dramm Echter','Driscoll\'s','Dubacano, S.A. de C.V.','Dynasty Farms','EcoRipe Tropicals','Elitech Technology, Inc','Enterprise Paper Co. Ltd.','Entourage Freight Solutions','Envases Plasticos del Centro','Evolution Fresh','Family Tree Farms','FAVE Produce','Faw &amp; Sons Produce','FC Bloxom','Fenmarc Produce Ltd','Fierman Produce Exchange','First Pick Farms LLC','FJ Packaging, Inc.','FLAVORFUL BRANDS','Food Circus Supermarkets, Inc.','Food Lion','Foodnet Supermarkets Inc','Four Seasons Produce, Inc.','Freight Flow','Fresh Concepts, Inc.','Fresh Direct, Ltd.','Fresh Quality Produce/LA Vegetable','Fresh State Ltd','Fresh Tex Produce, LLC','Fresh Thyme','Freshko Produce Services','FROM Societ&agrave; Agricola Cooperativa','Frontera Produce LTD','Frugasa SA de CV','Fruitservice Gmbh','Fruver Importaciones SA de CV','Full Harvest Technologies, Inc.','Fusion Marketing','General Produce Co., Ltd.','George Hand Product Inc.','Georgia Department of Agriculture','GIANT Food Stores, LLC.','Giant Martins','Giorgio Fresh','Girard\'s Dressings','Glenmoor Brokerage','Global Citrus Group Inc.','Global Farms','Gold Coast Packing, Inc.','Golden Kingdom Produce','Gourmet Garden','Gourmet Trading Company','Grapa Varieties','Great Lakes International Trading, Inc','Great West Produce','Greenhouse Delight Foods','Greenleaf Produce Company','GreenPoint','GREENPOINT DISTRIBUTING LLC','Greistedes Supermarkets, NYC','GS1 US','Guan Chan International Dist.','HAC, Inc.','HAJ Supermarkets','Harmoni International Spice, Inc.','Harmon\'s','H-E-B, Inc.','HelloFresh','Henry Avocado Corp.','Heritage Produce Distributing','Herman Produce Sales','Hermono Produce Inc','HM.CLAUSE','Home Chef','Hugh H. Branch, Inc.','HUGO\'S','I.F. &amp; P. Foods, LLC','Ideas y Espacios de Mexico SA de CV','IFG','Imperfect Produce','Index Fresh, Inc','Ingleby Farms &amp; Forests','Ingleby Peru','Initiative Foods','Intergrow Greenhouses, Inc.','International Fruit Company','J.O. Alvarez, Incorporated','JBT','Jewel Osco','JOH','John Cerasuolo Co., Inc.','John Greene Logistics Co','John Vena, Inc.','Jolo Flowers','Kaiser International, LLC.','Kaliroy Fresh, LLC.','Kapiris Bros','Kay Bee Exports','Keany Produce &amp; Gourmet','Kentucky Fresh Harvest','Kern Ridge Growers, LLC','Khat Al Fakeha Trading Est.','Kinetic Sales &amp; Marketing Ltd.','King Fresh Produce, LLC','Kings Food Markets','KNH','Konst Alstroemeria','Kroger','LA &amp; SF Specialty','La Bodega Produce','La Galera Produce L.L.C.','Lakeside Produce','Legacy Farms','Libby Platus','Liberty Fruit Co., Inc.','Lidl US, LLC','Lipman','Longo Brothers Fruit Markets Inc.','Love Corn','Lowes Food Stores, Inc.','Lowe\'s Supermarket','Mackays Marketing','Maher Marketing','Markon Cooperative, Inc.','marshalls+dent+wilmoth lawyers','Mastronardi Produce','Maui Fresh International, LLC','Maya Management Group','Mayorazgo Export, S.L.','McDaniel Fruit Company Inc','Meijer','Meraki Fine Goods','Metro Richelieu Inc.','MH Produce','Micky\'s Minis Flora Express','Military Produce Group LLC','MILMARK SALES','Misfits Market','MOR International','Mor USA Inc.','Moss Adams LLP','Mucci Farms','MUNOZ ARAYA SERVICIOS LIMITADA','Murphy Tomatoes','National Mango Board','National Potato Council','National Watermelon Promotion Board','Native Maine Produce and Specialty','NatureFreshFarms','New Leaf Community Markets','New Seasons Market','Nicholas Markets, Inc','Norfolk Banana &amp; Produce','North American Produce Buyers','Nova World Fresh, LLC','Oh So Healthy!','OneHarvest','Onions Direct LLC','Ozblu Marketing LLC','P4 Group','Pacific Sun Dist., Inc.','Palenque Foods International','Pan Hellenic Food of NY Corp.','Peak of the Market','Peirone Produce Company','Perfection Fresh Australia','Philip Balsamo Company','Piazza Produce, LLLC','PINTO BROTHERS','PMA A-NZ','Premier Produce','Primo Growers and Distributors Inc','Privairk Tamra','Pro Citrus Network, Inc.','PRO ORGANICS - UNFI CANADA','PRO*ACT, LLC','Produce Exchange Australia','Produce House LLC','Progressive Brokerage','Pyramid Foods','Quality Packaging &amp; Supplies, Inc.','Quebec Distributing Co.','R &amp; C Berndt DBA Sierra Produce','R.S. Hanline &amp; Company, Inc.','R.S.Hanline, Inc.','Rancho Resplandor','Reese Group Inc.','Retail Business Services','River Fresh Farms','Rivermaid Trading Co','RJO Produce Marketing','Rocky Produce, Inc.','RR Fresh Fruits  Vegetables Inc.','RUSSDAVIS WHOLESALE','Sage Fruit Company','Sam\'s Club MX','Sanwa Food Group','Sargento Foods Inc.','Save-on-Foods Limited Partnership','Schnuck Markets, Inc.','Schraad &amp; Associates, Inc.','Seeka','SellEthics Marketing Group, Inc','Serra Brothers Inc.','Service Truck Brokers','Shanghai Fruitday E-Commerce Co., Ltd.','sj distributor inc','Smart Foodservice','SmartWash Solutions, LLC','Snoboy','Sobeys, Inc.','Sopema Trading LLC','Southern Specialties','Spartan Nash','Specialty Produce','Spezzano Consulting Service, Inc.','Stanley Orchards Sales, LLC.','Starbucks Coffee Company','Starr Ranch','Stein\'s Garden &amp; Home','StickyLickits','STONEHILL PRODUCE INC.','Stop &amp; Shop','Strohauer Farms, Inc.','Strube Celery &amp; Vegetable Co.','Suja','Sun Belle Inc.','Suncrest','Sunkist Growers','Sunrise Produce Company','Sunwest Fruit Company','Surpack','Swoish Produce','Target Stores','TC Tropical Products','The Modern Acre','The Moscoe Group','The Produce Exchange','The Stop &amp; Shop Supermarket Co.','The Watercress Company / WFI','THOMAS FRESH','THOMSEN CHILE S.A.','TMC Produce Solutions Corp','Total Produce North America','Total Produce PLC','Townsend Farms','United Supermarkets','UrbanStems','USA Pears','Valley Produce','Valleyfresh North America','Veg-Land/JBJ Distributing','Wa Xing','Wal-Mart','Walmart Puerto Rico','Warner Packaging','Wegmans Food Markets, Inc.','Well-Pict Berries','Westlake Produce Co.','White Prince Mushrooms','Whole Foods Market','Willow Group Ltd','WinCo Foods, Inc.','WJL Distributors','Yi Bao Produce Group Inc','ZZ2'];
+            $(document).ready(function(){
+                var ar;
+                var max;
+                var currentB;
+                $(".ListButton").click(function(){
+
+                    switch($(this).attr("src")){
+                        case "floral":
+                            ar = arFloral;
+                            max=33;
+                            currentB = "Floral Buyers";
+                            break;
+                        case "solutions":
+                            ar= arSolutions;
+                            max=90;
+                            currentB = "Solutions Buyers"
+                            break;
+                        case "produce":
+                            ar= arProduce;
+                            max=125;
+                            currentB = "Produce / Complementary Buyers";
+                            break;
+                    };
+   
+                   $("#buyers1").empty();
+                   $("#buyers2").empty();
+                   $("#buyers3").empty();
+                   $("#currentBuyers").text(currentB);
+                   //$("#buyers4").empty();
+                   var cnt =1;
+                   var cur = 1;
+                   
+                   $.each(ar, function(key,value){
+
+                        $("#buyers"+cur).append(value + '<br/>');
+                        cnt++;
+                        if(cnt>max){
+                            cur++;
+                            cnt=1;
+                        }
+                   });
+
+                  });
+            })
+        </script>
+
+    </head>
+    <body>
+        <div id="listButtons">
+        <button id="produceBuyers" class="ListButton" src="produce">show produce / complementary</button>
+        <button id="floralBuyers" class="ListButton" src="floral">show floral</button>
+        <button id="solutionsBuyers" class="ListButton" src="solutions">show solutions</button>
+        
+    </div>
+    <div id="AllBuyers" >
+        <h2 id="currentBuyers"></h2>
+        <div class="BuyersList" id="buyers1"></div>
+        <div class="BuyersList" id="buyers2"></div>
+        <div class="BuyersList" id="buyers3"></div>
+        <!--<span class="BuyersList" id="buyers4"></span>-->
+    </div>
+    </body>
+</html>

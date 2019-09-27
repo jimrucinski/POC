@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example 5</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./css/flexgrid.css">
+    <link rel="stylesheet" href="css/BoxStyles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Prata" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+
+    <style>
+        
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+            $(window).scroll(function(){
+                $('nav').toggleClass('scrolled', $(this).scrollTop() > 120);
+            });
+    </script>
+  </head>
+  <body>
+<main>
+<nav class="navbar navbar-default navbar-fixed-top" style="position:fixed;z-index:100;">
+    <ul>
+        <li>topics</li>
+        <li>events</li>
+        <li>membership</li>
+        <li>about</li>
+        <li>my pma</li>
+    </ul>
+</nav>
+<div class="row">
+  <div class="column" style="padding:0;">
+      <div class="module" >
+          <img src="images/brazil.jpg" style="width:100%;max-width:1920px;" />
+            <hero style="background-color: #838BB5;width:100%;padding-left:.5em;">
+              <div class="blurForText">
+                <h1>Fresh Summit delivers global connections, consumer insights and innovative business solutions</h1>
+                <h2>Register now to join 22,000+ produce and floral professionsla from 60+ countries</h2>
+              </div>
+            <button class="myButton">Register Now</button>
+            </hero>
+        </div>
+  </div>
+</div>
+
+<div class="row">
+  
+  <div class="column">
+    <div class="row">
+      <div class="column">
+        <h3>Speakers</h3>
+      </div>
+    </div>
+      <div class="row">
+          <div class="column">
+            <div class="row">
+              <div class="column">
+                <img src="images/Queen Latifah cir.png" width="140"  >
+              </div>
+              <div class="bodyCopy speaker">
+                  Queen Latifah is a musician, critically acclaimed television and film actress, label president, author and entrepreneur. Latifah has had amazing success in Hollywood and 
+                  in 2006 became the first hip hop artist to be crowned with a star on the Hollywood Walk of Fame. 
+              </div>  
+          </div> 
+          </div>               
+        </div>
+
+
+    <div class="column" style="margin:auto;">
+        <div class="row">
+            <div class="column">
+              <div class="row">
+                <div class="column">
+                  <img src="images/Magic Johnson cir.png" width="140"  >
+                </div>
+                <div class="bodyCopy speaker">
+                    Earvin “Magic” Johnson has successfully parlayed his skills from the basketball court into boardroom as Chairman and CEO of Magic Johnson Enterprises (MJE). In 2012, Johnson made history when he became co-owner of MLB’s Los Angeles Dodgers. He also co-owns WNBA’s Los Angeles Sparks and MLS’s Los Angeles Football Club. He continues to expand his influence through businesses including: EquiTrust Life Insurance Company, ASPiRE television network and SodexoMAGIC. 
+                </div>  
+            </div>                
+          </div>
+        </div>
+      </div>
+      <div class="column" style="margin:auto;">
+          <div class="row">
+              <div class="column">
+                <div class="row">
+                  <div class="column">
+                    <img src="images/Robert Herjavec cir.png" width="140"  >
+                  </div>
+                  <div class="bodyCopy speaker">
+                      Robert Herjavec is a dynamic entrepreneur and leading Shark on ABC’s Shark Tank. Born in Eastern Europe, he arrived in North America on a boat with his parents after escaping communism in the former Yugoslavia. From delivering newspapers, and waiting tables, to launching a computer company from his basement, his drive to achieve has led him to the fulfillment of a better life for himself and his family. 
+                  </div>  
+              </div>                
+            </div>
+        </div>
+        </div>
+        <div class="column" style="margin:auto;">
+            <div class="row">
+                <div class="column">
+                  <div class="row">
+                    <div class="column">
+                      <img src="images/Cathy Burn cir.png" width="140"  >
+                    </div>
+                    <div class="bodyCopy speaker">
+                        She started as a part-time service clerk. She’s since been named a Top Woman in Grocery by Progressive Grocer, a Supermarket News’ Power 50, Mass Market Retailer’s Most Influential Women in Mass Market Retailing and The Packer’s Produce Marketer of the Year. Cathy works tirelessly to help PMA members more effectively engage with each other and consumers. Prior to PMA, Cathy was the president of Food Lion, Harveys and Reid’s, and remains an active board member for a variety of nonprofits in children’s health, the food industry and female leadership development. Cathy enjoys cycling, surfing and photographic adventures with her husband and daughters.
+                    </div>  
+                </div>                
+              </div>
+          </div>
+        </div>
+        </div>
+        <div class="column" style="padding:0;" >
+    
+            <div class="row">
+              <div class="column" >
+                  <div class="module"   style="cursor: pointer"  id="testArticle">
+                      <img src="images/ExhibitorResources.jpg" style="width:100%"/>
+                          <header>
+                          <div class="blurForText">
+                            <h1>
+                          Exhibitor Resources
+                          </h1>
+                          <h2>Every damn thing you could possible need to know about exhibiting at Fresh Summit. Plus Kyle's phone number.</h2>
+                        </div>
+                      </header>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column" >
+                <h4>Start Planning</h4>
+                  <p class="smallText">
+                    <ul>
+                      <li>Booth Policies</li>
+                      <li>Future Event Dates</li>
+                      <li>Booth Display Guideline</li>
+                      <li>Exhibitor Schedule</li>
+                      <li>Hotel Reservations</li>
+                      <li>Register sub-exhibitors</li>
+                      <li>2018 Post Show Report</li>
+                    </ul>
+                  </p>
+              </div> 
+              <div class="column" >
+                  <h4>Maximize Exposure</h4>
+                    <p class="smallText">
+                      <ul>
+                        <li>Fresh Ideas Showcase</li>
+                        <li>Best of Show Contest</li>
+                        <li>Tips for Success</li>
+                        <li>Download Attendee Lists</li>
+                        <li>Customize an Email signature</li>
+                        <li>connect with Press &amp; Media</li>
+                      </ul>
+                    </p>
+                </div> 
+                <div class="column" >
+                    <h4>Importand Dates</h4>
+                      <p class="smallText">
+                        <ul>
+                          <li>August 9: Last day to REgister sub-exhibitors</li>
+                          <li>September 23: vendor discount deadline</li>
+                          <li>October 13: Last day to register badges online</li>
+      
+                        </ul>
+                      </p>
+                  </div>        
+            </div>
+            <div class="row" >
+                 
+              <div class="column" >
+                    <p class="bodyCopy">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to 
+                        using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web 
+                        page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites 
+                        still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose 
+                        (injected humour and the like).
+                    </p>
+                </div>  
+                <div class="column" >
+                    <p class="bodyCopy">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to 
+                        using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web 
+                        page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites 
+                        still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose 
+                        (injected humour and the like).
+                    </p>
+                </div> 
+                <div class="column" >
+                    <p class="bodyCopy">
+                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to 
+                        using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web 
+                        page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites 
+                        still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose 
+                        (injected humour and the like).
+                    </p>
+                </div>   
+              </div>
+              <div class="row" >
+                <div class="column">
+                  <img src="images/food-safety.jpg" style="width:100%;">
+                </div>
+              </div>
+        </div>
+</div>
+        
+
+<div class="row" style="">
+    <div class="column" style="background-color: cornflowerblue;min-height:200px;padding:0;">
+        <h2 style="padding-left:1em;margin-bottom:0;">Stuff that you are required to look at</h2>
+        <p style="padding:1em;">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
+        <div class="row" style="background: linear-gradient( 
+            cornflowerblue,
+            cornflowerblue 190px,
+            #fff 20px,
+            #fff 40px);">
+            <div class="column" style="text-align:center;color:#000;">
+                
+                <img src="images/Kayak3.jpg" style="box-shadow: 0 15px 20px rgba(0, 0, 0, 0.80);width:80%;"/>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div class="column" style="text-align:center;color:#000">
+                    
+                    <img src="images/kayak1-400v.jpg" style="box-shadow: 0 15px 20px rgba(0, 0, 0, 0.80);width:80%;"/>
+                    <p>this gives the illusion of overlapping content. The text and part of the image are in the colal section.</p>
+            </div>
+            <div class="column" style="text-align:center;color:#000">
+                    
+                    <img src="images/kayak2.jpg" style="box-shadow: 0 15px 20px rgba(0, 0, 0, 0.80);width:80%;"/>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+      
+      <div class="module smalltext"   style="cursor: pointer"  id="testArticle">
+          I inserted two columns above this cell.
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+  <div class="column">
+      <div class="module"   style="cursor: pointer"  id="testArticle">
+          <img src="images/kayak1.jpeg" style="width:100%;"/>
+              <header>
+              <h1>
+              Drivers and Barriers for Produce Consumption in the U.S.
+              </h1>
+              <h1>This study gives insight into when, why and how U.S. consumers choose fruits and vegetables.</h1>
+          </header>
+      </div>
+  </div>
+</div>
+
+<!--
+<div class="row">
+  <div class="column _25">
+    Twenty-five Percent
+  </div>
+  <div class="column _75">
+    Seventy-five Percent
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="row">
+      <div class="column">
+        Nested
+      </div>
+      <div class="column">
+        Nested
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    Nothing Nested
+  </div>
+</div>
+
+<h2>Contained Grid</h2>
+
+<main>
+  <div class="row">
+    <div class="column _25">
+      Twenty-five Percent
+    </div>
+    <div class="column _5">
+      Fifty Percent
+    </div>
+    <div class="column _25">
+      Twenty-five Percent
+    </div>
+  </div>
+-->
+</main>
+
+</body>

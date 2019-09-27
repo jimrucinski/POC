@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style type="text/css">
+            .respAtAGlanceTable{display:table;width:100%;}
+            .respRow{display:table-row;}
+            .respAtAGlanceCell{display:table-cell;width:100px;text-align:center;background-color:#f7f7f7;border:#ffffff 2px solid;padding:10px 10px 10px 10px}
+            .respHeader{background-color:#B2D135;color:#000;font-weight:bolder;display:table-cell;max-width:100px;text-align:center;border:#ffffff 2px solid;}
+            .greenDot {
+                color:green;
+                font-size:1.5em;
+                font-weight:bolder;
+         
+              }
+              .redDot {
+                color:red;
+                font-size:2em;
+                font-weight:bolder;
+              }
+              .redDot:after{
+                  content:"\00D7";
+              }
+              .greenDot:after{
+                  content:"\2713"
+              }
+              .blackDot{
+                height: 15px;
+                width: 15px;
+                background-color:#000;
+                border-radius: 50%;
+                display: inline-block;
+              }
+              .blueDot{
+                height: 15px;
+                width: 15px;
+                background-color:cornflowerblue;
+                border-radius: 50%;
+                display: inline-block;
+              }
+              .details{
+                  text-align: left;
+                  font-style: oblique;
+              }
+              .indicator{
+                  text-align: center;
+              }
+              .DOW{
+                  padding-left:.5em;
+              }
+              .DOWdetails{
+                  padding-left:.5em;
+                  
+              }
+            @media screen and (max-width: 500px) {
+            .respTable{width:100%;}
+            .respHeader{display:none;}
+            .respAtAGlanceCell:nth-of-type(1){font-weight:bolder;text-align:left;padding-left:5px;background-color:#B2D135;color:#000;}
+            .respAtAGlanceCell{display:block;width:100%;padding-left:10px;text-align:left;font-weight:bolder;}
+            .respAtAGlanceCell:before{float:left;font-weight:lighter;}
+            .respAtAGlanceCell:nth-of-type(2):after{content:"All Access Pass";}
+            .respAtAGlanceCell:nth-of-type(3):after{content:"Retailers / Foodservice All Access Pass";}
+            .respAtAGlanceCell:nth-of-type(4):after{content:"Trade Show Only Pass";}
+            .dot{margin-right:1em;}
+            .DOW:before{content:"\2022"}
+            .DOWdetails{font-weight:lighter;margin-left:.25rem;}
+           
+            }
+        </style>
+
+</head>
+<body>
+        <div class="respAtAGlanceTable">
+            <div class="respRow">
+                <div class="respHeader">Badge Access Levels</div>
+                <div class="respHeader">All Access Pass</div>
+                <div class="respHeader">Retailers / Foodservice All Access Pass</div>
+                <div class="respHeader">Trade Show Only Pass</div>
+            </div>
+            
+            <div class="respRow">
+                <div class="respAtAGlanceCell" style="text-align: left;">
+                    <strong>WELCOMING RECEPTION</strong><div class="details">Global Street Festival</div>                
+                </div>
+                <div class="respAtAGlanceCell">	<span class="greenDot dot"></span></div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>
+                <div class="respAtAGlanceCell"><span class="redDot dot"></span></div>             
+            </div>
+            <div class="respRow">
+                <div class="respAtAGlanceCell" style="text-align: left;">
+                    <strong>EXPOSITION</strong>                
+                </div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>             
+            </div>
+            <div class="respRow">
+                <div class="respAtAGlanceCell" style="text-align: left;">
+                        <strong>FRESH IDEAS SHOWCASE</strong>
+                        <div class="details">See what's new across the supply chain as exhibitors showcase their latest products and services.</div>                
+                </div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>             
+            </div>
+            <div class="respRow">
+                <div class="respAtAGlanceCell" style="text-align: left;">
+                    <strong>EXPERIENCE EXTENSIONS & LEARNING LOUNGES</strong><div class="details">Join industry leaders in informal conversations about hot topics. Gain insights. Share perspectives.</div>
+                </div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>
+                <div class="respAtAGlanceCell"><span class="redDot dot"></span></div>             
+            </div>
+            <div class="respRow">
+                <div class="respAtAGlanceCell" style="text-align: left;">
+                        <strong>FORUMS FOR THE FUTURE</strong><div class="details">Seating: first come, first served.</div>
+                        <div class="DOW"><strong>Thursday Brunch</strong><div class="DOWdetails" >State of the Industry, Cathy Burns, PMA CEO</div></div>
+                        <div class="DOW"><strong>Thursday Afternoon</strong><div class="DOWdetails">Robert Herjavec, Entrepreneur and Leading Shark, Shark Tank</div></div>
+                        <div class="DOW"><strong>Friday Breakfast</strong><div class="DOWdetails">Earvin "Magic" Johnson, Chairman and CEO of Magic Johnson Enterprises (MUE)</div></div>
+                    </div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>
+                <div class="respAtAGlanceCell"><span class="redDot dot"></span></div>                            
+            </div>
+            
+            <div class="respRow">
+                <div class="respAtAGlanceCell" style="text-align: left;">
+                    <strong>FLORAL "BEACH BASH" RECEPTION</strong><div class="details">Floral Marketer of the Year Award Presentation</div>
+                </div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>             
+            </div>
+            <div class="respRow">
+                <div class="respAtAGlanceCell" style="text-align: left;">
+                    <strong>SCIENCE & TECHNOLOGY RECEPTION</strong>
+                </div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>
+                <div class="respAtAGlanceCell"><span class="greenDot dot"></span></div>             
+            </div>
+        </div>
+
+        <div class="respAtAGlanceTable">
+            <div class="respRow" >
+                <div class="respHeader" style="width:40%;">&nbsp;</div>
+                <div class="respHeader">Seperate Registration Fee</div>
+                <div class="respHeader">Invitation Only</div>
+            </div>
+            <div class="respRow">
+                <div class="respAtAGlanceCell" style="text-align: left;">
+                    <strong>RETAIL PRODUCE TOUR</strong>
+                </div>
+                <div class="respAtAGlanceCell"><span class="blackDot dot"></span></div>
+                <div class="respAtAGlanceCell"><span class="blueDot dot"></span></div>          
+            </div>
+            <div class="respRow">
+                <div class="respAtAGlanceCell" style="text-align: left;">
+                    <strong>VIP RECEPTION</strong>
+                </div>
+                <div class="respAtAGlanceCell">&nbsp;</div>
+                <div class="respAtAGlanceCell"><span class="blueDot dot"></span></div>          
+            </div>
+            <div class="respRow">
+                <div class="respAtAGlanceCell" style="text-align: left;">
+                    <strong>CGT WOMEN'S FRESH PERSPECTIVES LEADERSHIP BREAKFAST</strong>
+                    <div class="details">Queen Latifah, Actress, Author, Entrepreneur</div>
+                </div>
+                <div class="respAtAGlanceCell"><span class="blackDot dot"></span></div>
+                <div class="respAtAGlanceCell">&nbsp;</div>          
+            </div>
+            <div class="respRow">
+                <div class="respAtAGlanceCell" style="text-align: left;">
+                    <strong>CGT 5K RACE FOR TALENT</strong>
+                </div>
+                <div class="respAtAGlanceCell"><span class="blackDot dot"></span></div>
+                <div class="respAtAGlanceCell">&nbsp;</div>          
+            </div>
+            <div class="respRow">
+                <div class="respAtAGlanceCell" style="text-align: left;">
+                    <strong>CGT EMERGING LEADERS PROGRAM CAPSTONE AND GRADUATION</strong>
+                </div>
+                <div class="respAtAGlanceCell">&nbsp;</div>
+                <div class="respAtAGlanceCell"><span class="blueDot dot"></span></div>          
+            </div>
+            <div class="respRow">
+                <div class="respAtAGlanceCell" style="text-align: left;">
+                    <strong>CGT CONTRIBUTOR & VOLUNTEER RECEPTION</strong>
+                </div>
+                <div class="respAtAGlanceCell">&nbsp;</div>
+                <div class="respAtAGlanceCell"><span class="blueDot dot"></span></div>          
+            </div>
+        </div>
+
+</body>

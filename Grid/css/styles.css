@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: .02rem;
+}
+
+#wrapper {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.flex-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+ 
+}
+
+.col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  
+  min-height: 150px;
+  margin: .25rem;
+  padding: .5rem;
+  color: #000;
+}
+
+
+.flex-grid-fourths {
+  width:100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-grid-fourths .col {
+  width: 25%;
+  background-color: #fff;
+  border:1px solid #ccc;
+  font-size: 1rem;
+  padding:.25em;
+}
+
+.pricingHeader{
+  font-weight: bolder;
+  color:#fff;
+  font-size:1.25em;
+  text-align: center;
+}
+
+.pricingHeaderStudent{
+  background-color:#5f7bc9;
+
+
+}
+.pricingHeaderStudentAccent{
+  background-color: cornflowerblue;
+  color:#fff;
+  text-align:center;
+  padding:0 0 1em 0;
+  margin-bottom:2em;
+
+}
+.pricingPrice{
+  font-size:3em;
+  padding:.5em;
+}
+.pricingContent
+{
+  color:#000;
+  font-size:1.5em;
+}
+.pricingContent ul{
+  margin:0;
+  padding:0;
+}
+.pricingContent ul li{
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+  line-height: 2em;
+  text-align:center;
+  padding:1em 0 1em 0;
+  
+}
+#pricingStucent hr{
+  border: .5em solid cornflowerblue;
+}
+
+.pricingHeaderAnzMembership{
+  background-color:#2e7871;
+
+}
+.pricingHeaderAnzMembershipAccent{
+  background-color: #40A9A0;
+  color:#fff;
+  text-align:center;
+  padding:0 0 1em 0;
+  margin-bottom:2em;
+
+}
+
+
+#pricingAnzMembership hr{
+  border: .5em solid #40A9A0;
+}
+
+.pricingHeaderDiamond{
+  background-color:#5b9936;
+
+}
+.pricingHeaderDiamondAccent{
+  background-color: #72BF44;
+  color:#fff;
+  text-align:center;
+  padding:0 0 1em 0;
+  margin-bottom:2em;
+}
+
+#pricingDiamond hr{
+  border: .5em solid #72BF44;
+}
+
+.pricingHeaderPlatinum{
+  background-color:#c9613a;
+
+}
+.pricingHeaderPlatinumAccent{
+  background-color: #F47546;
+  color:#fff;
+  text-align:center;
+  padding:0 0 1em 0;
+  margin-bottom:2em;
+}
+
+#pricingPlatinum hr{
+  border: .5em solid #F47546;
+}
+
+@media (max-width: 700px) {
+  .flex-grid {
+    display: block;
+}
+.flex-grid-fourths{
+  display:block;
+
+}
+.flex-grid-fourths .col{
+  width:100%;
+
+}
+}
+/*# sourceMappingURL=styles.css.map */

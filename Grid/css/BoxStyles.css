@@ -1,0 +1,151 @@
+.module {
+    /*background-attachment: fixed;*/
+    width: 100%;  
+    position: relative;
+    overflow: hidden;   
+
+
+    }
+    .module img{
+        vertical-align: bottom;
+    }
+    .module > hero{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+ 
+    /* background: inherit;*/
+        /*background-attachment: fixed;*/
+        overflow: hidden; 
+        
+    }
+
+    .module > hero > h1 {
+
+    color: white;
+    position: relative;
+    z-index: 1;
+    font-weight:400;
+    
+    
+    
+    }
+.module > hero > h2{
+    font-weight: 400;
+    padding: 0 .5em;
+}
+    
+
+    .module > header {
+    position: absolute;
+    top:30%;
+    bottom: 0;
+    left: 0;
+    width: 33%;
+    padding: 20px 10px;
+   /* background: inherit;*/
+    /*background-attachment: fixed;*/
+    overflow: hidden;
+    height:100%;
+
+    
+    
+    }
+    .module > header::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: inherit;
+    
+    /*background-attachment: fixed;*/
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    }
+    .module > header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;/*how much overlay do you want*/
+    background: rgba(0, 0, 0, 0.30);
+    }
+    .module > header > h1 {
+    
+    color: white;
+    position: relative;
+    z-index: 1;
+    /*background: rgba(0, 0, 0, 0.10);*/
+    }
+    .module > header > h2 {
+        margin: 0;
+        color: white;
+        position: relative;
+        z-index: 1;
+        font-weight:400;
+        /*background: rgba(0, 0, 0, 0.10);*/
+        }
+    .module > header > h4{
+        color:#fff;
+        text-emphasis: em;
+        text-shadow: 1px 1px #000;      
+    }
+
+* {
+box-sizing: border-box;
+
+}
+@media only screen and (max-width: 500px){
+    .module > header {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding:0 10px 0 10px;
+       /* background: inherit;*/
+        /*background-attachment: fixed;*/
+        overflow: hidden;
+        }
+
+        .module > hero{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10px 100px 10px;
+        /* background: inherit;*/
+            /*background-attachment: fixed;*/
+            overflow: hidden; 
+        }
+    
+        .module > hero > h1 {
+        margin: 0;
+        color: white;
+        position: relative;
+        font-size:1em;
+        z-index: 1;
+        }
+
+        .module > header > h1 {
+            margin: 0;
+            color: white;
+            position: relative;
+            padding-bottom:1em;
+            z-index: 1;
+            }
+        .module > header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90%;
+            background: rgba(0, 0, 0, 0.25);
+            filter: blur(10px);
+            -webkit-filter: blur(10px)
+            }
+}

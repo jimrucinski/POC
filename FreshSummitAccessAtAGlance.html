@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<head>
+    <style>
+
+       
+        .greenDot {
+            height: 15px;
+            width: 15px;
+            background-color:green;
+            border-radius: 50%;
+            display: inline-block;
+     
+          }
+          .redDot {
+            height: 15px;
+            width: 15px;
+            background-color:red;
+            border-radius: 50%;
+            display: inline-block;
+          }
+          .details{
+              text-align: left;
+              font-style: oblique;
+          }
+          .indicator{
+              text-align: center;
+          }
+          .DOW{
+              padding-left:1em;
+          }
+    
+        @media  screen
+            and (min-device-width: 320px)
+            and (max-device-width: 700px){        
+
+        
+            }
+            table{width:100%;
+            border:#000000 1px solid;
+            border-collapse: collapse;}
+
+            table td{border:1px solid #000000;}
+            table thead{background-color:#000000;color:#fff}
+            .details{font-style:normal;font-size: .8em;}
+            
+    @media screen and (max-width: 600px) {
+
+    table {
+      border: 0;
+    }
+
+    table thead {
+      display: none;
+    }
+
+    table tr {
+      margin-bottom: 2em;
+      display: block;
+      border-bottom: 2px solid #333333;
+    }
+
+    table td {
+      display: block;
+
+      font-size: 13px;
+
+    }
+  
+    table td:last-child {
+      border-bottom: 0;
+    }
+
+    table td:before {
+      content: attr(data-label);
+        float:left;
+      font-weight: bold;
+    }
+  
+    .indicator{
+        text-align: right;
+    }
+        
+    .eventTitle{
+        font-size:1.2em;
+        background-color:#ebebeb;
+    }
+    .details{font-size: .75em;}
+    }
+    .DOW{
+        padding-left:0;
+    }
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Fresh Summit Access At-A-Glance</h2>
+        <table>
+            <thead>
+                <th>Badge Access Levels</th>
+                <th>All Access Pass</th>
+                <th>Retailers / Foodservice All Access Pass</th>
+                <th>Trade Show Only Pass</th>
+            </thead>
+            <tr>
+                <td class="eventTitle"><strong>WELCOMING RECEPTION</strong><div class="details">Global Street Festival</div></td>
+                <td data-label="All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Retailers / Foodservice All Access Pass"  class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Trade Show Only Pass" class="indicator"><span class="redDot"></span></td>
+            </tr>
+            <tr>
+                <td class="eventTitle"><strong>EXPOSITION</strong></td>
+                <td data-label="All Access Pass"  class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Retailers / Foodservice All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Trade Show Only Pass" class="indicator"><span class="greenDot"></span></td>
+            </tr>
+            <tr>
+                <td class="eventTitle"><strong>FRESH IDEAS SHOWCASE</strong><div class="details">See what's new across the supply chain as exhibitors showcase their latest products and services.</div></td>
+                <td data-label="All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Retailers / Foodservice All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Trade Show Only Pass" class="indicator"><span class="greenDot"></span></td>
+            </tr>
+            <tr>
+                <td class="eventTitle"><strong>EXPERIENCE EXTENSIONS & LEARNING LOUNGES</strong><div class="details">Join industry leaders in informal conversations about hot topics. Gain insights. Share perspectives.</div></td>
+                <td data-label="All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Retailers / Foodservice All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Trade Show Only Pass" class="indicator"><span class="redDot"></span></td>
+            </tr>
+            <tr>
+                <td class="eventTitle"><strong>FORUMS FOR THE FUTURE</strong><div class="details">Seating: first come, first served.</div></td>
+                <td data-label="All Access Pass">&nbsp;</td>
+                <td data-label="Retailers / Foodservice All Access Pass">&nbsp;</td>
+                <td data-label="Trade Show Only Pass">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="eventTitle"><div class="DOW"><strong>Thursday Brunch</strong><div class="details">State of the Industry, Cathy Burns, PMA CEO</div></div></td>
+                <td data-label="All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Retailers / Foodservice All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Trade Show Only Pass" class="indicator"><span class="redDot"></span></td>
+            </tr>
+            <tr>
+                <td class="eventTitle"><div class="DOW"><strong>Thursday Afternoon</strong><div class="details">Robert Herjavec, Entrepreneur and Leading Shark, Shark Tank</div></div></td>
+                <td data-label="All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Retailers / Foodservice All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Trade Show Only Pass" class="indicator"><span class="redDot"></span></td>
+            </tr>
+            <tr>
+                <td  class="eventTitle"><div class="DOW"><strong>Friday Breakfast</strong><div class="details">Earvin "Magic" Johnson, Chairman and CEO of Magic Johnson Enterprises (MUE)</div></div></td>
+                <td data-label="All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Retailers / Foodservice All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Trade Show Only Pass" class="indicator"><span class="redDot"></span></td>
+            </tr>
+            <tr>
+                <td class="eventTitle"><strong>FLORAL "BEACH BASH" RECEPTION</strong><div class="details">Floral Marketer of the Year Award Presentation</div></td>
+                <td data-label="All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Retailers / Foodservice All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Trade Show Only Pass" class="indicator"><span class="greenDot"></span></td>
+            </tr>
+            <tr>
+                <td class="eventTitle"><strong>SCIENCE & TECHNOLOGY RECEPTION</strong></td>
+                <td data-label="All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Retailers / Foodservice All Access Pass" class="indicator"><span class="greenDot"></span></td>
+                <td data-label="Trade Show Only Pass" class="indicator"><span class="greenDot"></span></td>
+            </tr>
+        </table>
+    </div>
+    
+</div>
+
+</body>

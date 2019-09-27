@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example 5</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="./scripts/bootstrap.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- http://lazcreative.com/blog/adding-swipe-support-to-bootstrap-carousel-3-0/ -->
+<script src="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+
+   <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet"> 
+
+   <script>
+       $(document).ready(function() {  
+
+  	
+	});  
+
+   </script>
+</head>
+
+ <body>
+        <style>
+                .flex-grid {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                }
+                .col {
+                -webkit-box-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                min-height: 150px;
+                margin: .25rem;
+                padding: .5rem;
+                color: #000;
+                }
+                .flex-grid-fourths {
+                width:100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                }
+                .flex-grid-fourths .col {
+                width: 25%;
+                background-color: #fff;
+                border:1px solid #ccc;
+                font-size: 1rem;
+                padding:.25em;
+                }
+                .colorBar{
+                    min-height:300px;
+                }
+                .pricingHeader{
+                font-weight: bolder;
+                color:#fff;
+                font-size:1.3em;
+                text-align: center;
+                height:1.5em;
+            
+                }
+                .pricingHeaderStudent{
+                background-color:#63243a;
+                }
+                .pricingHeaderStudentAccent{
+                background-color: #B14169;
+                color:#fff;
+                text-align:center;
+                padding:0 0 1em 0;
+                margin-bottom:2em;
+                }
+                .pricingPrice{
+                font-size:2.25em;
+                padding:.5em;
+                line-height:1.25em;
+                }
+            .pricingMemo{
+            padding:.25em;
+            }
+                .pricingContent
+                {
+                color:#000;
+                font-size:1.5em;
+                }
+                .pricingContent ul{
+                margin:0;
+                padding:0;
+                }
+                .pricingContent ul li{
+                font-size:.75em;
+                font-weight:300;
+                list-style: none;
+                border-bottom: 1px solid #ccc;
+                line-height: 1.1em;
+                text-align:center;
+                padding:.5em 0 .5em 0;
+                }
+                #pricingStucent hr{
+                border: .5em solid #B14169;
+                }
+                .pricingHeaderAnzMembership{
+                background-color:#2e7871;
+                }
+                .pricingHeaderAnzMembershipAccent{
+                background-color: #40A9A0;
+                color:#fff;
+                text-align:center;
+                padding:0 0 1em 0;
+                margin-bottom:2em;
+                }
+                #pricingAnzMembership hr{
+                border: .5em solid #40A9A0;
+                }
+                .pricingHeaderDiamond{
+                background-color:#5b9936;
+                }
+                .pricingHeaderDiamondAccent{
+                background-color: #72BF44;
+                color:#fff;
+                text-align:center;
+                padding:0 0 1em 0;
+                margin-bottom:2em;
+                }
+                #pricingDiamond hr{
+                border: .5em solid #72BF44;
+                }
+                .pricingHeaderPlatinum{
+                background-color:#c9613a;
+                }
+                .pricingHeaderPlatinumAccent{
+                background-color: #F47546;
+                color:#fff;
+                text-align:center;
+                padding:0 0 1em 0;
+                margin-bottom:2em;
+                }
+                #pricingPlatinum hr{
+                border: .5em solid #F47546;
+                }
+                @media (max-width: 700px) {
+                .flex-grid {
+                display: block;
+                }
+                .flex-grid-fourths{
+                display:block;
+                }
+                .flex-grid-fourths .col{
+                width:100%;
+                }
+                }
+                /*# sourceMappingURL=styles.css.map */
+            </style>
+            <div class="flex-grid">
+            <div class="flex-grid-fourths">
+            <div class="col">
+                <div id="pricingStucent">
+                    <div class="colorBar">
+                        <div class="pricingHeader pricingHeaderStudent ">Student Membership</div>
+                        <div class="colorBar pricingHeaderStudentAccent">
+                            <div class="pricingPrice">FREE</div>
+                            <div class="pricingMemo">For tertiary students currently completing their degree.</div>
+                        </div>
+                    </div>
+                    <div class="pricingContent">
+                    <ul>
+                        <li>Opportunity to navigate your way to a job in the fresh produce industry</li>
+                        <li>Invitation to PMA A-NZ industry networking events</li>
+                        <li>Access to webinars, seminars and professional development events</li>
+                        <li>Opportunity to connect with the PMA A-NZ member community</li>
+                        <li>Access to PMA research and resources, including the PMA A-NZ State of the Industry Report</li>
+                    </ul>
+                    <center><a href="~/link.aspx?_id=6107DBFBF3A346DFAF425BE394A39599&amp;_z=z" class="btn" style="margin-top:1em;background-color:#63243a;">Join Now</a></center>
+                    </div>
+                    <hr class="pricingStudentBar" />
+                    </div>
+            </div>
+            <div class="col">
+            <div id="pricingAnzMembership">
+            <div class="pricingHeader pricingHeaderAnzMembership">Membership</div>
+            <div class="pricingHeaderAnzMembershipAccent">
+            <div class="pricingPrice">"From $1,300"</div>
+            <div class="pricingMemo">Connect with people and ideas that can help make your opportunities bigger and your problems smaller.</div>
+            </div>
+            <div class="pricingContent">
+            <ul>
+                <li>PMA A-NZ Membership covers all employees within your organisation</li>
+                <li>Invitation to PMA A-NZ industry networking events</li>
+                <li>Access to webinars, seminars and professional development events</li>
+                <li>Discounted member rates to Hort Connections </li>
+                <li>Discounted rates to the Produce Executive Program and Future Leaders Program</li>
+                <li>Access to PMA research and resources, including the PMA A-NZ State of the Industry Report</li>
+                <li>Membership to PMA Global Member Directory with over 2,800 member organisations</li>
+                <li>Access to food safety information and professionals</li>
+                <li>Complimentary subscription to Produce Plus </li>
+                <li>Discounted member rates for GS1 Australia Recall</li>
+            </ul>
+            <center><a href="~/link.aspx?_id=54E5250B21FC4DC596BFF9E430FFD6F0&amp;_z=z" class="btn" style="margin-top:1em;background-color:#2e7871;">Join Now</a></center>
+            </div>
+            <hr class="pricingAnzMembershipBar" />
+            </div>
+            </div>
+            <div class="col">
+            <div id="pricingDiamond">
+            <div class="pricingHeader pricingHeaderDiamond">Diamond Club Membership</div>
+            <div class="pricingHeaderDiamondAccent">
+            <div class="pricingPrice">$5,000 + Membership</div>
+            <div class="pricingMemo">Join the leading network of fresh produce executives.</div>
+            </div>
+            <div class="pricingContent">
+            <ul>
+                <li>Inclusive of all PMA A-NZ Membership benefits</li>
+                <li>Diamond Club membership covers all employees within your organisation</li>
+                <li>Exclusive invitation to the annual Diamond Club Dinner</li>
+                <li>Invitation to CEO round-table networking dinners hosted around the country </li>
+                <li>Opportunity to participate in PMA A-NZ Future Leader Accelerator Program hosted at Asia Fruit Logistica in Hong Kong</li>
+                <li>Early bird access to PMA A-NZ reports and resources </li>
+                <li>Targeted session breakdown with a member of the PMA A-NZ team </li>
+                <li>10% discount on all exhibition booths in the Trade Show at Hort Connections </li>
+                <li>Organisation recognition on the PMA A-NZ website </li>
+                <li>Support and cross promotion of activities and campaigns on social media and through e-newsletters </li>
+            </ul>
+            <center><a href="~/link.aspx?_id=54E5250B21FC4DC596BFF9E430FFD6F0&amp;_z=z" class="btn" style="margin-top:1em;background-color:#5b9936;">Join Now</a></center>
+            </div>
+            <hr class="pricingDiamondBar" />
+            </div>
+            </div>
+            <div class="col">
+            <div id="pricingPlatinum">
+            <div class="pricingHeader pricingHeaderPlatinum">Platinum Sponsorship</div>
+            <div class="pricingHeaderPlatinumAccent">
+            <div class="pricingPrice">$20,000</div>
+            <div class="pricingMemo">Position your brand as a leading supporter of the fresh produce industry.</div>
+            </div>
+            <div class="pricingContent">
+            <ul>
+                <li>Inclusive of PMA A-NZ membership and Diamond Club benefits</li>
+                <li>Invitation to Platinum Sponsor only engagement occasions </li>
+                <li>Collaboration with the PMA A-NZ Board of Directors </li>
+                <li>Cross promotion opportunities to our member community </li>
+                <li>Brand exposure and promotion through logo inclusion at all PMA A-NZ events, monthly newsletters, website, social media and event collateral</li>
+            </ul>
+            <center><a href="~/link.aspx?_id=54E5250B21FC4DC596BFF9E430FFD6F0&amp;_z=z" class="btn" style="margin-top:1em;background-color:#c9613a;">Join Now</a></center>
+            </div>
+            <hr class="pricingPlatinumBar" />
+            </div>
+            </div>
+            </div>
+            </div>
+</body>
+</html>

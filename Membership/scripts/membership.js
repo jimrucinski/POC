@@ -60,11 +60,13 @@ $(document).ready(function(){
     $('#produceSegment').on('change',function(event){
         $('#annualSalesSegement').hide();
         $('#memberCheckMessage').hide();
+        $("#completeApplication").hide();
         
     })
 
     $('#AnnualSales').on('change', function(event){
         $('#memberCheckMessage').hide();
+        $("#completeApplication").hide();
     })
 
 

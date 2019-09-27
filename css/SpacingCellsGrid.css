@@ -1,0 +1,66 @@
+* {
+	box-sizing: border-box;
+}
+
+$default-space: 0.625rem;
+$grid-column-count: 3;
+
+.o-grid {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	align-content: stretch;
+	justify-content: space-between;
+	min-width: 100%;
+	
+	&__cell {
+		flex-shrink: 0;
+		flex-grow: 1;
+		
+		@for $i from 1 through $grid-column-count {
+            &--size-#{$i} {
+                width: percentage(1/$i);
+            }
+        }
+	}
+	
+	&--spaced {
+		margin-top: -$default-space / 2;
+		margin-left: -$default-space / 2;
+		width: calc(100% + #{$default-space});
+		
+		> .o-grid__cell {
+			padding: $default-space / 2;
+		}
+	}
+}
+
+
+// demo styles
+body {
+	background-color: #000;
+	color: #FFF;
+	font-family: sans-serif;
+	text-align: center;
+	margin: $default-space;
+}
+
+h1, .c-item {
+	background-color: #111;
+	outline: 1px solid;
+}
+
+h1 {
+	margin-top: 0;
+	margin-bottom: $default-space;
+	text-transform: uppercase;
+	padding: $default-space * 2 $default-space;
+	
+	> span {
+		display: block;
+	}
+}
+
+.c-item {
+	padding: $default-space;
+}
